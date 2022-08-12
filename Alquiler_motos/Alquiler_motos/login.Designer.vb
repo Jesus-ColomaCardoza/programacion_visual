@@ -24,10 +24,10 @@ Partial Class login
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.btnaceptar = New System.Windows.Forms.Button()
-        Me.btncancelar = New System.Windows.Forms.Button()
+        Me.txtuser = New System.Windows.Forms.TextBox()
+        Me.txtpassword = New System.Windows.Forms.TextBox()
+        Me.btn_aceptar = New System.Windows.Forms.Button()
+        Me.btn_cancelar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -48,50 +48,54 @@ Partial Class login
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Clave"
         '
-        'TextBox1
+        'txtuser
         '
-        Me.TextBox1.Location = New System.Drawing.Point(150, 195)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(180, 20)
-        Me.TextBox1.TabIndex = 2
+        Me.txtuser.Location = New System.Drawing.Point(150, 195)
+        Me.txtuser.Name = "txtuser"
+        Me.txtuser.Size = New System.Drawing.Size(180, 20)
+        Me.txtuser.TabIndex = 2
+        Me.txtuser.Text = "admin"
         '
-        'TextBox2
+        'txtpassword
         '
-        Me.TextBox2.Location = New System.Drawing.Point(150, 248)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(180, 20)
-        Me.TextBox2.TabIndex = 3
+        Me.txtpassword.Location = New System.Drawing.Point(150, 248)
+        Me.txtpassword.Name = "txtpassword"
+        Me.txtpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtpassword.Size = New System.Drawing.Size(180, 20)
+        Me.txtpassword.TabIndex = 3
+        Me.txtpassword.Text = "1234"
         '
-        'btnaceptar
+        'btn_aceptar
         '
-        Me.btnaceptar.Location = New System.Drawing.Point(75, 379)
-        Me.btnaceptar.Name = "btnaceptar"
-        Me.btnaceptar.Size = New System.Drawing.Size(75, 23)
-        Me.btnaceptar.TabIndex = 4
-        Me.btnaceptar.Text = "Aceptar"
-        Me.btnaceptar.UseVisualStyleBackColor = True
+        Me.btn_aceptar.Location = New System.Drawing.Point(75, 379)
+        Me.btn_aceptar.Name = "btn_aceptar"
+        Me.btn_aceptar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_aceptar.TabIndex = 4
+        Me.btn_aceptar.Text = "Aceptar"
+        Me.btn_aceptar.UseVisualStyleBackColor = True
         '
-        'btncancelar
+        'btn_cancelar
         '
-        Me.btncancelar.Location = New System.Drawing.Point(255, 379)
-        Me.btncancelar.Name = "btncancelar"
-        Me.btncancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btncancelar.TabIndex = 5
-        Me.btncancelar.Text = "Cancelar"
-        Me.btncancelar.UseVisualStyleBackColor = True
+        Me.btn_cancelar.Location = New System.Drawing.Point(255, 379)
+        Me.btn_cancelar.Name = "btn_cancelar"
+        Me.btn_cancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_cancelar.TabIndex = 5
+        Me.btn_cancelar.Text = "Cancelar"
+        Me.btn_cancelar.UseVisualStyleBackColor = True
         '
         'login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(412, 505)
-        Me.Controls.Add(Me.btncancelar)
-        Me.Controls.Add(Me.btnaceptar)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btn_cancelar)
+        Me.Controls.Add(Me.btn_aceptar)
+        Me.Controls.Add(Me.txtpassword)
+        Me.Controls.Add(Me.txtuser)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "login"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -100,8 +104,8 @@ Partial Class login
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents btnaceptar As Button
-    Friend WithEvents btncancelar As Button
+    Friend WithEvents txtuser As TextBox
+    Friend WithEvents txtpassword As TextBox
+    Friend WithEvents btn_aceptar As Button
+    Friend WithEvents btn_cancelar As Button
 End Class
