@@ -17,11 +17,13 @@ Public Class cliente
             comando.CommandText = "exec sp_mostrarcliente '" + txt_id.Text + "'"
             data = comando.ExecuteReader()
 
-            ClienteTableAdapter.GetDataBy(txt_id.Text)
-            ClienteTableAdapter.FillBy(Alquiler_motosDataSet.cliente, txt_id.Text)
-            'ClienteTableAdapter.Fill(Alquiler_motosDataSet.cliente)
+
 
             If (data.Read) Then
+                ClienteTableAdapter.GetDataBy(txt_id.Text)
+                ClienteTableAdapter.FillBy(Alquiler_motosDataSet.cliente, txt_id.Text)
+                'ClienteTableAdapter.Fill(Alquiler_motosDataSet.cliente)
+
                 txt_tc.Text = data(1)
                 txt_dni.Text = data(2)
                 txt_nom.Text = data(3)

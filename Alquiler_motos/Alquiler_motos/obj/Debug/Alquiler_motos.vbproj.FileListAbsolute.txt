@@ -13,3 +13,4 @@ C:\Users\LENOVIO\Desktop\SAVE\trabajos\ciclo VII\programacion visual\sistema_alq
 C:\Users\LENOVIO\Desktop\SAVE\trabajos\ciclo VII\programacion visual\sistema_alquiler_motos\Alquiler_motos\Alquiler_motos\obj\Debug\Alquiler_motos.pdb
 C:\Users\LENOVIO\Desktop\SAVE\trabajos\ciclo VII\programacion visual\sistema_alquiler_motos\Alquiler_motos\Alquiler_motos\bin\Debug\Alquiler_motos.pdb
 C:\Users\LENOVIO\Desktop\SAVE\trabajos\ciclo VII\programacion visual\sistema_alquiler_motos\Alquiler_motos\Alquiler_motos\bin\Debug\Alquiler_motos.xml
+C:\Users\LENOVIO\Desktop\SAVE\trabajos\ciclo VII\programacion visual\sistema_alquiler_motos\Alquiler_motos\Alquiler_motos\obj\Debug\Alquiler_motos.trabajador.resources

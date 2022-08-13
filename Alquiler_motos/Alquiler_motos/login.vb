@@ -1,4 +1,6 @@
 ﻿Public Class login
+
+
     Private Sub btnaceptar_Click(sender As Object, e As EventArgs) Handles btn_aceptar.Click
         'Data Source = DESKTOP-AHI2VUU;Initial Catalog=Alquiler_motos;Integrated Security=True
         '. para no escribir el nombre del servidor
@@ -15,4 +17,6 @@
     Private Sub btn_cancelar_Click(sender As Object, e As EventArgs) Handles btn_cancelar.Click
         Close()
     End Sub
+
+
 End Class

@@ -64,31 +64,31 @@ Partial Class menu_principal
         'TrabajadorToolStripMenuItem
         '
         Me.TrabajadorToolStripMenuItem.Name = "TrabajadorToolStripMenuItem"
-        Me.TrabajadorToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.TrabajadorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.TrabajadorToolStripMenuItem.Text = "Trabajador"
         '
         'ClienteToolStripMenuItem
         '
         Me.ClienteToolStripMenuItem.Name = "ClienteToolStripMenuItem"
-        Me.ClienteToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.ClienteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ClienteToolStripMenuItem.Text = "Clientes"
         '
         'MotosToolStripMenuItem
         '
         Me.MotosToolStripMenuItem.Name = "MotosToolStripMenuItem"
-        Me.MotosToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.MotosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.MotosToolStripMenuItem.Text = "Motos"
         '
         'AgenciasToolStripMenuItem
         '
         Me.AgenciasToolStripMenuItem.Name = "AgenciasToolStripMenuItem"
-        Me.AgenciasToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.AgenciasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AgenciasToolStripMenuItem.Text = "Agencias"
         '
         'GarajesToolStripMenuItem
         '
         Me.GarajesToolStripMenuItem.Name = "GarajesToolStripMenuItem"
-        Me.GarajesToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.GarajesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.GarajesToolStripMenuItem.Text = "Garajes"
         '
         'GestiónToolStripMenuItem

@@ -24,7 +24,7 @@ Partial Class cliente
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(cliente))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txt_id = New System.Windows.Forms.TextBox()
         Me.txt_nom = New System.Windows.Forms.TextBox()
         Me.txt_ape = New System.Windows.Forms.TextBox()
@@ -61,16 +61,22 @@ Partial Class cliente
         Me.p_cliente = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btn_listar = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         CType(Me.tablacliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Alquiler_motosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.p_cliente.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'txt_id
         '
         Me.txt_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_id.Location = New System.Drawing.Point(364, 28)
+        Me.txt_id.Location = New System.Drawing.Point(564, 30)
         Me.txt_id.Name = "txt_id"
         Me.txt_id.Size = New System.Drawing.Size(228, 22)
         Me.txt_id.TabIndex = 0
@@ -106,7 +112,7 @@ Partial Class cliente
         Me.btn_buscar.ForeColor = System.Drawing.Color.White
         Me.btn_buscar.Image = CType(resources.GetObject("btn_buscar.Image"), System.Drawing.Image)
         Me.btn_buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_buscar.Location = New System.Drawing.Point(743, 70)
+        Me.btn_buscar.Location = New System.Drawing.Point(943, 72)
         Me.btn_buscar.Name = "btn_buscar"
         Me.btn_buscar.Size = New System.Drawing.Size(120, 45)
         Me.btn_buscar.TabIndex = 4
@@ -118,7 +124,7 @@ Partial Class cliente
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(251, 31)
+        Me.Label1.Location = New System.Drawing.Point(451, 33)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(94, 16)
         Me.Label1.TabIndex = 5
@@ -233,7 +239,7 @@ Partial Class cliente
         Me.btn_actualizar.ForeColor = System.Drawing.Color.White
         Me.btn_actualizar.Image = CType(resources.GetObject("btn_actualizar.Image"), System.Drawing.Image)
         Me.btn_actualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_actualizar.Location = New System.Drawing.Point(743, 190)
+        Me.btn_actualizar.Location = New System.Drawing.Point(943, 192)
         Me.btn_actualizar.Name = "btn_actualizar"
         Me.btn_actualizar.Size = New System.Drawing.Size(120, 45)
         Me.btn_actualizar.TabIndex = 17
@@ -248,7 +254,7 @@ Partial Class cliente
         Me.btn_eliminar.ForeColor = System.Drawing.Color.White
         Me.btn_eliminar.Image = CType(resources.GetObject("btn_eliminar.Image"), System.Drawing.Image)
         Me.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_eliminar.Location = New System.Drawing.Point(743, 127)
+        Me.btn_eliminar.Location = New System.Drawing.Point(943, 129)
         Me.btn_eliminar.Name = "btn_eliminar"
         Me.btn_eliminar.Size = New System.Drawing.Size(120, 45)
         Me.btn_eliminar.TabIndex = 18
@@ -263,7 +269,7 @@ Partial Class cliente
         Me.btn_insertar.ForeColor = System.Drawing.Color.White
         Me.btn_insertar.Image = CType(resources.GetObject("btn_insertar.Image"), System.Drawing.Image)
         Me.btn_insertar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_insertar.Location = New System.Drawing.Point(743, 247)
+        Me.btn_insertar.Location = New System.Drawing.Point(943, 249)
         Me.btn_insertar.Name = "btn_insertar"
         Me.btn_insertar.Size = New System.Drawing.Size(120, 45)
         Me.btn_insertar.TabIndex = 19
@@ -275,18 +281,18 @@ Partial Class cliente
         '
         Me.tablacliente.AutoGenerateColumns = False
         Me.tablacliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.tablacliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tablacliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdclienteDataGridViewTextBoxColumn, Me.TipoclienteDataGridViewTextBoxColumn, Me.DniDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn})
         Me.tablacliente.DataSource = Me.ClienteBindingSource
-        Me.tablacliente.Location = New System.Drawing.Point(12, 365)
+        Me.tablacliente.Location = New System.Drawing.Point(8, 52)
         Me.tablacliente.Name = "tablacliente"
         Me.tablacliente.Size = New System.Drawing.Size(851, 201)
         Me.tablacliente.TabIndex = 20
@@ -382,7 +388,7 @@ Partial Class cliente
         Me.p_cliente.Controls.Add(Me.Label6)
         Me.p_cliente.Controls.Add(Me.txt_correo)
         Me.p_cliente.Controls.Add(Me.Label5)
-        Me.p_cliente.Location = New System.Drawing.Point(12, 72)
+        Me.p_cliente.Location = New System.Drawing.Point(212, 74)
         Me.p_cliente.Name = "p_cliente"
         Me.p_cliente.Size = New System.Drawing.Size(717, 222)
         Me.p_cliente.TabIndex = 22
@@ -391,7 +397,7 @@ Partial Class cliente
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(12, 327)
+        Me.Label10.Location = New System.Drawing.Point(13, 11)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(212, 25)
         Me.Label10.TabIndex = 23
@@ -402,22 +408,64 @@ Partial Class cliente
         Me.btn_listar.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.btn_listar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_listar.ForeColor = System.Drawing.Color.White
-        Me.btn_listar.Location = New System.Drawing.Point(643, 317)
+        Me.btn_listar.Image = CType(resources.GetObject("btn_listar.Image"), System.Drawing.Image)
+        Me.btn_listar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_listar.Location = New System.Drawing.Point(639, 3)
         Me.btn_listar.Name = "btn_listar"
-        Me.btn_listar.Size = New System.Drawing.Size(220, 35)
+        Me.btn_listar.Size = New System.Drawing.Size(220, 41)
         Me.btn_listar.TabIndex = 24
         Me.btn_listar.Text = "Listar Clientes"
         Me.btn_listar.UseVisualStyleBackColor = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.btn_listar)
+        Me.Panel1.Controls.Add(Me.tablacliente)
+        Me.Panel1.Location = New System.Drawing.Point(212, 322)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(873, 274)
+        Me.Panel1.TabIndex = 25
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.Label12)
+        Me.Panel2.Controls.Add(Me.Label11)
+        Me.Panel2.Location = New System.Drawing.Point(15, 30)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(182, 566)
+        Me.Panel2.TabIndex = 26
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(15, 344)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(139, 37)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "Clientes"
+        '
+        'Label12
+        '
+        Me.Label12.Image = CType(resources.GetObject("Label12.Image"), System.Drawing.Image)
+        Me.Label12.Location = New System.Drawing.Point(19, 174)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(140, 148)
+        Me.Label12.TabIndex = 1
         '
         'cliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(877, 578)
-        Me.Controls.Add(Me.btn_listar)
-        Me.Controls.Add(Me.Label10)
+        Me.ClientSize = New System.Drawing.Size(1094, 611)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.p_cliente)
-        Me.Controls.Add(Me.tablacliente)
         Me.Controls.Add(Me.btn_insertar)
         Me.Controls.Add(Me.btn_eliminar)
         Me.Controls.Add(Me.btn_actualizar)
@@ -433,6 +481,10 @@ Partial Class cliente
         CType(Me.Alquiler_motosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.p_cliente.ResumeLayout(False)
         Me.p_cliente.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -474,4 +526,8 @@ Partial Class cliente
     Friend WithEvents p_cliente As Panel
     Friend WithEvents Label10 As Label
     Friend WithEvents btn_listar As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
 End Class
