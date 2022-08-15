@@ -31,8 +31,8 @@ Partial Class menu_principal
         Me.AgenciasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GarajesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ComprobantesDePagoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ComprobantesDePagoToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReservaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DetalleReservaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ComprobantesDePagoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -64,51 +64,51 @@ Partial Class menu_principal
         'TrabajadorToolStripMenuItem
         '
         Me.TrabajadorToolStripMenuItem.Name = "TrabajadorToolStripMenuItem"
-        Me.TrabajadorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TrabajadorToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.TrabajadorToolStripMenuItem.Text = "Trabajador"
         '
         'ClienteToolStripMenuItem
         '
         Me.ClienteToolStripMenuItem.Name = "ClienteToolStripMenuItem"
-        Me.ClienteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClienteToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.ClienteToolStripMenuItem.Text = "Clientes"
         '
         'MotosToolStripMenuItem
         '
         Me.MotosToolStripMenuItem.Name = "MotosToolStripMenuItem"
-        Me.MotosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MotosToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.MotosToolStripMenuItem.Text = "Motos"
         '
         'AgenciasToolStripMenuItem
         '
         Me.AgenciasToolStripMenuItem.Name = "AgenciasToolStripMenuItem"
-        Me.AgenciasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AgenciasToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.AgenciasToolStripMenuItem.Text = "Agencias"
         '
         'GarajesToolStripMenuItem
         '
         Me.GarajesToolStripMenuItem.Name = "GarajesToolStripMenuItem"
-        Me.GarajesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GarajesToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.GarajesToolStripMenuItem.Text = "Garajes"
         '
         'GestiónToolStripMenuItem
         '
-        Me.GestiónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ComprobantesDePagoToolStripMenuItem, Me.ComprobantesDePagoToolStripMenuItem1, Me.ComprobantesDePagoToolStripMenuItem2})
+        Me.GestiónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReservaToolStripMenuItem, Me.DetalleReservaToolStripMenuItem1, Me.ComprobantesDePagoToolStripMenuItem2})
         Me.GestiónToolStripMenuItem.Name = "GestiónToolStripMenuItem"
         Me.GestiónToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
         Me.GestiónToolStripMenuItem.Text = "Gestión"
         '
-        'ComprobantesDePagoToolStripMenuItem
+        'ReservaToolStripMenuItem
         '
-        Me.ComprobantesDePagoToolStripMenuItem.Name = "ComprobantesDePagoToolStripMenuItem"
-        Me.ComprobantesDePagoToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
-        Me.ComprobantesDePagoToolStripMenuItem.Text = "Reservas"
+        Me.ReservaToolStripMenuItem.Name = "ReservaToolStripMenuItem"
+        Me.ReservaToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
+        Me.ReservaToolStripMenuItem.Text = "Reservas"
         '
-        'ComprobantesDePagoToolStripMenuItem1
+        'DetalleReservaToolStripMenuItem1
         '
-        Me.ComprobantesDePagoToolStripMenuItem1.Name = "ComprobantesDePagoToolStripMenuItem1"
-        Me.ComprobantesDePagoToolStripMenuItem1.Size = New System.Drawing.Size(199, 22)
-        Me.ComprobantesDePagoToolStripMenuItem1.Text = "Detalle de reservas"
+        Me.DetalleReservaToolStripMenuItem1.Name = "DetalleReservaToolStripMenuItem1"
+        Me.DetalleReservaToolStripMenuItem1.Size = New System.Drawing.Size(199, 22)
+        Me.DetalleReservaToolStripMenuItem1.Text = "Detalle de reservas"
         '
         'ComprobantesDePagoToolStripMenuItem2
         '
@@ -162,8 +162,8 @@ Partial Class menu_principal
     Friend WithEvents AgenciasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GarajesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GestiónToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ComprobantesDePagoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ComprobantesDePagoToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ReservaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DetalleReservaToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ComprobantesDePagoToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents ConsultasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AcercaDeToolStripMenuItem As ToolStripMenuItem

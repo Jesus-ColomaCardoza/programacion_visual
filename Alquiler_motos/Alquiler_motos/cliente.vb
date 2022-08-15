@@ -17,10 +17,8 @@ Public Class cliente
             comando.CommandText = "exec sp_mostrarcliente '" + txt_id.Text + "'"
             data = comando.ExecuteReader()
 
-
-
             If (data.Read) Then
-                ClienteTableAdapter.GetDataBy(txt_id.Text)
+                'ClienteTableAdapter.GetDataBy(txt_id.Text)
                 ClienteTableAdapter.FillBy(Alquiler_motosDataSet.cliente, txt_id.Text)
                 'ClienteTableAdapter.Fill(Alquiler_motosDataSet.cliente)
 
@@ -47,7 +45,6 @@ Public Class cliente
         Catch ex As Exception
 
         End Try
-
 
     End Sub
 

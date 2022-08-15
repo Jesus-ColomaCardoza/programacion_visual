@@ -89,6 +89,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Alquiler_motosDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Alquiler_motosDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alquiler_motosDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Alquiler_motosDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alquiler_motosDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Alquiler_motosDataSet_reserva.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alquiler_motosDataSet_reserva.xsd</DependentUpon>
+    </Compile>
     <Compile Include="cliente.Designer.vb">
       <DependentUpon>cliente.vb</DependentUpon>
     </Compile>
@@ -124,6 +139,21 @@
     </Compile>
     <Compile Include="menu_principal.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modelo_cbx_agencia.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelo_cbx_agencia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo_cbx_cliente.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelo_cbx_cliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="modelo_cbx_trabajador.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelo_cbx_trabajador.xsd</DependentUpon>
     </Compile>
     <Compile Include="moto.Designer.vb">
       <DependentUpon>moto.vb</DependentUpon>
@@ -176,17 +206,26 @@
     <EmbeddedResource Include="cliente.resx">
       <DependentUpon>cliente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="detalle_reserva.resx">
+      <DependentUpon>detalle_reserva.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menu_principal.resx">
       <DependentUpon>menu_principal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="moto.resx">
+      <DependentUpon>moto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reserva.resx">
+      <DependentUpon>reserva.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="trabajador.resx">
       <DependentUpon>trabajador.vb</DependentUpon>
@@ -214,6 +253,72 @@
     </None>
     <None Include="Alquiler_motosDataSet1.xss">
       <DependentUpon>Alquiler_motosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet2.xsc">
+      <DependentUpon>Alquiler_motosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Alquiler_motosDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Alquiler_motosDataSet2.xss">
+      <DependentUpon>Alquiler_motosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet3.xsc">
+      <DependentUpon>Alquiler_motosDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Alquiler_motosDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Alquiler_motosDataSet3.xss">
+      <DependentUpon>Alquiler_motosDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet_reserva.xsc">
+      <DependentUpon>Alquiler_motosDataSet_reserva.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet_reserva.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Alquiler_motosDataSet_reserva.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Alquiler_motosDataSet_reserva.xss">
+      <DependentUpon>Alquiler_motosDataSet_reserva.xsd</DependentUpon>
+    </None>
+    <None Include="modelo_cbx_agencia.xsc">
+      <DependentUpon>modelo_cbx_agencia.xsd</DependentUpon>
+    </None>
+    <None Include="modelo_cbx_agencia.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>modelo_cbx_agencia.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="modelo_cbx_agencia.xss">
+      <DependentUpon>modelo_cbx_agencia.xsd</DependentUpon>
+    </None>
+    <None Include="Modelo_cbx_cliente.xsc">
+      <DependentUpon>Modelo_cbx_cliente.xsd</DependentUpon>
+    </None>
+    <None Include="Modelo_cbx_cliente.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Modelo_cbx_cliente.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Modelo_cbx_cliente.xss">
+      <DependentUpon>Modelo_cbx_cliente.xsd</DependentUpon>
+    </None>
+    <None Include="modelo_cbx_trabajador.xsc">
+      <DependentUpon>modelo_cbx_trabajador.xsd</DependentUpon>
+    </None>
+    <None Include="modelo_cbx_trabajador.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>modelo_cbx_trabajador.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="modelo_cbx_trabajador.xss">
+      <DependentUpon>modelo_cbx_trabajador.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
