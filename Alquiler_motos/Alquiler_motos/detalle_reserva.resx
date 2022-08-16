@@ -121,7 +121,7 @@
   <data name="Label12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAClRJREFUeF7tnWtQVOcZxw1+aJMPST+1005m/GKbL02bdqe457qw5xgLXoogGrzE
+        vwAADr8BOAVTJAAAClRJREFUeF7tnWtQVOcZxw1+aJMPST+1005m/GKbL02bdqe457qw5xgLXoogGrzE
         W8CYKDoiMV7q4BijVsWIhCiIolyCmnrXFOUiaKyaeEExQDrxmjE1JtVxHHQi5u37LmfJ+yzHzYqr7L7n
         +c/8xnFyspz3//z27DmHI/TCYDAYDOYxxeVyPWP26/dbQ5alONWtiIRH/stL/aU//NJaKoZLjKG4xxq6
         UmPqyvf9PSoRGa8unTd0eZmm/fnX1vqdG48k/d5QlTN2RYmOocm3qQxZVhXOS5wqGfQdf8uuHCdhanIx
@@ -204,17 +204,8 @@
   <metadata name="Alquiler_motosDataSet_dreserva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="Alquiler_motosDataSet_dreserva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="ReservaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
-  </metadata>
-  <metadata name="ReservaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <metadata name="Modelo_cbx_reserva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>658, 17</value>
   </metadata>
   <metadata name="Modelo_cbx_reserva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>658, 17</value>

@@ -25,4 +25,8 @@
 
 
     End Sub
+
+    Private Sub btn_buscar_Click(sender As Object, e As EventArgs) Handles btn_buscar.Click
+
+    End Sub
 End Class

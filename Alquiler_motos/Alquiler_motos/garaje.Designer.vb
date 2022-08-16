@@ -24,7 +24,7 @@ Partial Class garaje
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(garaje))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -127,14 +127,14 @@ Partial Class garaje
         '
         Me.tablacliente.AutoGenerateColumns = False
         Me.tablacliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.tablacliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tablacliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdgarajeDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.CapacidadDataGridViewTextBoxColumn})
         Me.tablacliente.DataSource = Me.GarajeBindingSource
@@ -180,17 +180,15 @@ Partial Class garaje
         Me.p_cliente.Controls.Add(Me.txt_direccion)
         Me.p_cliente.Controls.Add(Me.Label9)
         Me.p_cliente.Controls.Add(Me.Label6)
-        Me.p_cliente.Controls.Add(Me.txt_id)
-        Me.p_cliente.Controls.Add(Me.Label1)
-        Me.p_cliente.Location = New System.Drawing.Point(197, 20)
+        Me.p_cliente.Location = New System.Drawing.Point(197, 81)
         Me.p_cliente.Name = "p_cliente"
-        Me.p_cliente.Size = New System.Drawing.Size(414, 190)
+        Me.p_cliente.Size = New System.Drawing.Size(414, 129)
         Me.p_cliente.TabIndex = 50
         '
         'nud_capacidad
         '
         Me.nud_capacidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nud_capacidad.Location = New System.Drawing.Point(144, 134)
+        Me.nud_capacidad.Location = New System.Drawing.Point(120, 83)
         Me.nud_capacidad.Name = "nud_capacidad"
         Me.nud_capacidad.Size = New System.Drawing.Size(90, 26)
         Me.nud_capacidad.TabIndex = 42
@@ -199,7 +197,7 @@ Partial Class garaje
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(32, 139)
+        Me.Label2.Location = New System.Drawing.Point(8, 88)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(83, 16)
         Me.Label2.TabIndex = 41
@@ -208,7 +206,7 @@ Partial Class garaje
         'txt_direccion
         '
         Me.txt_direccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_direccion.Location = New System.Drawing.Point(144, 84)
+        Me.txt_direccion.Location = New System.Drawing.Point(120, 33)
         Me.txt_direccion.Name = "txt_direccion"
         Me.txt_direccion.Size = New System.Drawing.Size(228, 22)
         Me.txt_direccion.TabIndex = 40
@@ -227,7 +225,7 @@ Partial Class garaje
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(32, 93)
+        Me.Label6.Location = New System.Drawing.Point(8, 42)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(73, 16)
         Me.Label6.TabIndex = 14
@@ -236,16 +234,16 @@ Partial Class garaje
         'txt_id
         '
         Me.txt_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_id.Location = New System.Drawing.Point(144, 45)
+        Me.txt_id.Location = New System.Drawing.Point(343, 34)
         Me.txt_id.Name = "txt_id"
-        Me.txt_id.Size = New System.Drawing.Size(228, 22)
+        Me.txt_id.Size = New System.Drawing.Size(203, 22)
         Me.txt_id.TabIndex = 37
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(32, 48)
+        Me.Label1.Location = New System.Drawing.Point(246, 34)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(91, 16)
         Me.Label1.TabIndex = 39
@@ -325,7 +323,9 @@ Partial Class garaje
         Me.Controls.Add(Me.p_cliente)
         Me.Controls.Add(Me.btn_insertar)
         Me.Controls.Add(Me.btn_eliminar)
+        Me.Controls.Add(Me.txt_id)
         Me.Controls.Add(Me.btn_actualizar)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btn_buscar)
         Me.Name = "garaje"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -340,6 +340,7 @@ Partial Class garaje
         Me.p_cliente.PerformLayout()
         CType(Me.nud_capacidad, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
