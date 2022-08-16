@@ -282,6 +282,201 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_agencia">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_agencia.agenciaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_agencia.agenciaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_agencia.agenciaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_agenciaTableAdapters.agenciaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_agenciaTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_agenciaTableAdapters.TableAdapterManager.UpdateUpdatedRows(Alquiler_motos.Alquiler_motosDataSet_agencia,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_agenciaTableAdapters.TableAdapterManager.UpdateInsertedRows(Alquiler_motos.Alquiler_motosDataSet_agencia,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_agenciaTableAdapters.TableAdapterManager.UpdateDeletedRows(Alquiler_motos.Alquiler_motosDataSet_agencia,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_agenciaTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_agenciaTableAdapters.TableAdapterManager.UpdateAll(Alquiler_motos.Alquiler_motosDataSet_agencia)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_agenciaTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_agenciaTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_dreserva">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_dreserva.detalle_reservaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_dreserva.detalle_reservaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_dreserva.detalle_reservaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_dreservaTableAdapters.detalle_reservaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_dreservaTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_dreservaTableAdapters.TableAdapterManager.UpdateUpdatedRows(Alquiler_motos.Alquiler_motosDataSet_dreserva,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_dreservaTableAdapters.TableAdapterManager.UpdateInsertedRows(Alquiler_motos.Alquiler_motosDataSet_dreserva,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_dreservaTableAdapters.TableAdapterManager.UpdateDeletedRows(Alquiler_motos.Alquiler_motosDataSet_dreserva,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_dreservaTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_dreservaTableAdapters.TableAdapterManager.UpdateAll(Alquiler_motos.Alquiler_motosDataSet_dreserva)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_dreservaTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_dreservaTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_garaje">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_garaje.garajeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_garaje.garajeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_garaje.garajeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_garajeTableAdapters.garajeTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_garajeTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_garajeTableAdapters.TableAdapterManager.UpdateUpdatedRows(Alquiler_motos.Alquiler_motosDataSet_garaje,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_garajeTableAdapters.TableAdapterManager.UpdateInsertedRows(Alquiler_motos.Alquiler_motosDataSet_garaje,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_garajeTableAdapters.TableAdapterManager.UpdateDeletedRows(Alquiler_motos.Alquiler_motosDataSet_garaje,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_garajeTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_garajeTableAdapters.TableAdapterManager.UpdateAll(Alquiler_motos.Alquiler_motosDataSet_garaje)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_garajeTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_garajeTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 <member name="T:Alquiler_motos.Alquiler_motosDataSet_reserva">
 <summary>
 Represents a strongly typed in-memory cache of data.
@@ -343,6 +538,136 @@ Update Order Option
 </summary>
 </member>
 <member name="T:Alquiler_motos.Alquiler_motosDataSet_reservaTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_tcliente">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_tcliente.tipo_clienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_tcliente.tipo_clienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_tcliente.tipo_clienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_tclienteTableAdapters.tipo_clienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_tclienteTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_tclienteTableAdapters.TableAdapterManager.UpdateUpdatedRows(Alquiler_motos.Alquiler_motosDataSet_tcliente,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_tclienteTableAdapters.TableAdapterManager.UpdateInsertedRows(Alquiler_motos.Alquiler_motosDataSet_tcliente,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_tclienteTableAdapters.TableAdapterManager.UpdateDeletedRows(Alquiler_motos.Alquiler_motosDataSet_tcliente,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_tclienteTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_tclienteTableAdapters.TableAdapterManager.UpdateAll(Alquiler_motos.Alquiler_motosDataSet_tcliente)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_tclienteTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_tclienteTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_tcomprobante">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_tcomprobante.tipo_comprobanteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_tcomprobante.tipo_comprobanteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_tcomprobante.tipo_comprobanteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_tcomprobanteTableAdapters.tipo_comprobanteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_tcomprobanteTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_tcomprobanteTableAdapters.TableAdapterManager.UpdateUpdatedRows(Alquiler_motos.Alquiler_motosDataSet_tcomprobante,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_tcomprobanteTableAdapters.TableAdapterManager.UpdateInsertedRows(Alquiler_motos.Alquiler_motosDataSet_tcomprobante,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_tcomprobanteTableAdapters.TableAdapterManager.UpdateDeletedRows(Alquiler_motos.Alquiler_motosDataSet_tcomprobante,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_tcomprobanteTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_tcomprobanteTableAdapters.TableAdapterManager.UpdateAll(Alquiler_motos.Alquiler_motosDataSet_tcomprobante)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_tcomprobanteTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_tcomprobanteTableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
 </summary>
@@ -473,6 +798,136 @@ Update Order Option
 </summary>
 </member>
 <member name="T:Alquiler_motos.Modelo_cbx_clienteTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_reserva">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_reserva.reservaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_reserva.reservaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_reserva.reservaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_reservaTableAdapters.reservaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_reservaTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Alquiler_motos.modelo_cbx_reservaTableAdapters.TableAdapterManager.UpdateUpdatedRows(Alquiler_motos.modelo_cbx_reserva,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.modelo_cbx_reservaTableAdapters.TableAdapterManager.UpdateInsertedRows(Alquiler_motos.modelo_cbx_reserva,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.modelo_cbx_reservaTableAdapters.TableAdapterManager.UpdateDeletedRows(Alquiler_motos.modelo_cbx_reserva,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.modelo_cbx_reservaTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Alquiler_motos.modelo_cbx_reservaTableAdapters.TableAdapterManager.UpdateAll(Alquiler_motos.modelo_cbx_reserva)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_reservaTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_reservaTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_tcliente">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_tcliente.tipo_clienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_tcliente.tipo_clienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_tcliente.tipo_clienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_tclienteTableAdapters.tipo_clienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_tclienteTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Alquiler_motos.modelo_cbx_tclienteTableAdapters.TableAdapterManager.UpdateUpdatedRows(Alquiler_motos.modelo_cbx_tcliente,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.modelo_cbx_tclienteTableAdapters.TableAdapterManager.UpdateInsertedRows(Alquiler_motos.modelo_cbx_tcliente,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.modelo_cbx_tclienteTableAdapters.TableAdapterManager.UpdateDeletedRows(Alquiler_motos.modelo_cbx_tcliente,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.modelo_cbx_tclienteTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Alquiler_motos.modelo_cbx_tclienteTableAdapters.TableAdapterManager.UpdateAll(Alquiler_motos.modelo_cbx_tcliente)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_tclienteTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_tclienteTableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
 </summary>

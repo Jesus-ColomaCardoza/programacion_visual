@@ -163,4 +163,9 @@ Public Class moto
             cbox_estado.Text = "No Disponible"
         End If
     End Sub
+
+    Private Sub btn_seleccionar_Click(sender As Object, e As EventArgs) Handles btn_seleccionar.Click
+        detalle_reserva.txt_idmoto.Text = Me.txt_id.Text
+        Me.Close()
+    End Sub
 End Class

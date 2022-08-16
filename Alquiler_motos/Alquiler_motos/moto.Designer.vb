@@ -24,7 +24,7 @@ Partial Class moto
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(moto))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -74,6 +74,7 @@ Partial Class moto
         Me.txt_id = New System.Windows.Forms.TextBox()
         Me.MotoTableAdapter = New Alquiler_motos.Alquiler_motosDataSet2TableAdapters.motoTableAdapter()
         Me.GarajeTableAdapter = New Alquiler_motos.Alquiler_motosDataSet3TableAdapters.garajeTableAdapter()
+        Me.btn_seleccionar = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.tablacliente, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -153,14 +154,14 @@ Partial Class moto
         '
         Me.tablacliente.AutoGenerateColumns = False
         Me.tablacliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.tablacliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tablacliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdmotoDataGridViewTextBoxColumn, Me.IdcarajeDataGridViewTextBoxColumn, Me.PlacaDataGridViewTextBoxColumn, Me.MarcaDataGridViewTextBoxColumn, Me.ModeloDataGridViewTextBoxColumn, Me.ColorDataGridViewTextBoxColumn, Me.MotorDataGridViewTextBoxColumn, Me.CilindrajeDataGridViewTextBoxColumn, Me.PreciohoraDataGridViewTextBoxColumn, Me.EstadoDataGridViewCheckBoxColumn})
         Me.tablacliente.DataSource = Me.MotoBindingSource
@@ -542,11 +543,27 @@ Partial Class moto
         '
         Me.GarajeTableAdapter.ClearBeforeFill = True
         '
+        'btn_seleccionar
+        '
+        Me.btn_seleccionar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btn_seleccionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_seleccionar.ForeColor = System.Drawing.Color.White
+        Me.btn_seleccionar.Image = CType(resources.GetObject("btn_seleccionar.Image"), System.Drawing.Image)
+        Me.btn_seleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_seleccionar.Location = New System.Drawing.Point(806, 11)
+        Me.btn_seleccionar.Name = "btn_seleccionar"
+        Me.btn_seleccionar.Size = New System.Drawing.Size(171, 45)
+        Me.btn_seleccionar.TabIndex = 36
+        Me.btn_seleccionar.Text = "Seleccionar Moto"
+        Me.btn_seleccionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_seleccionar.UseVisualStyleBackColor = False
+        '
         'moto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1094, 611)
+        Me.Controls.Add(Me.btn_seleccionar)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.p_cliente)
@@ -625,4 +642,5 @@ Partial Class moto
     Friend WithEvents Alquiler_motosDataSet3 As Alquiler_motosDataSet3
     Friend WithEvents GarajeBindingSource As BindingSource
     Friend WithEvents GarajeTableAdapter As Alquiler_motosDataSet3TableAdapters.garajeTableAdapter
+    Friend WithEvents btn_seleccionar As Button
 End Class

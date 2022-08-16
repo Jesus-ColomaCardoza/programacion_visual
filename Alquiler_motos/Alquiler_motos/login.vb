@@ -8,15 +8,14 @@
 
         If (txtpassword.Text.Equals("1234") And txtuser.Text.ToLower.Equals("admin")) Then
             menu_principal.Show()
-            Me.Hide()
+            Me.Close()
         Else
             MessageBox.Show("Clave o Usuario incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 
     Private Sub btn_cancelar_Click(sender As Object, e As EventArgs) Handles btn_cancelar.Click
-        Close()
+        menu_principal.Close()
     End Sub
-
 
 End Class

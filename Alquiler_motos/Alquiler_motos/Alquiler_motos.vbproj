@@ -99,10 +99,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Alquiler_motosDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Alquiler_motosDataSet_agencia.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alquiler_motosDataSet_agencia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Alquiler_motosDataSet_dreserva.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alquiler_motosDataSet_dreserva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Alquiler_motosDataSet_garaje.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alquiler_motosDataSet_garaje.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Alquiler_motosDataSet_reserva.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Alquiler_motosDataSet_reserva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Alquiler_motosDataSet_tcliente.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alquiler_motosDataSet_tcliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Alquiler_motosDataSet_tcomprobante.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alquiler_motosDataSet_tcomprobante.xsd</DependentUpon>
     </Compile>
     <Compile Include="cliente.Designer.vb">
       <DependentUpon>cliente.vb</DependentUpon>
@@ -149,6 +174,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Modelo_cbx_cliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="modelo_cbx_reserva.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelo_cbx_reserva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="modelo_cbx_tcliente.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelo_cbx_tcliente.xsd</DependentUpon>
     </Compile>
     <Compile Include="modelo_cbx_trabajador.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -203,11 +238,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="agencia.resx">
+      <DependentUpon>agencia.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cliente.resx">
       <DependentUpon>cliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="detalle_reserva.resx">
       <DependentUpon>detalle_reserva.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="garaje.resx">
+      <DependentUpon>garaje.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>
@@ -226,6 +267,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reserva.resx">
       <DependentUpon>reserva.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tipo_cliente.resx">
+      <DependentUpon>tipo_cliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tipo_comprobante.resx">
+      <DependentUpon>tipo_comprobante.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="trabajador.resx">
       <DependentUpon>trabajador.vb</DependentUpon>
@@ -276,6 +323,39 @@
     <None Include="Alquiler_motosDataSet3.xss">
       <DependentUpon>Alquiler_motosDataSet3.xsd</DependentUpon>
     </None>
+    <None Include="Alquiler_motosDataSet_agencia.xsc">
+      <DependentUpon>Alquiler_motosDataSet_agencia.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet_agencia.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Alquiler_motosDataSet_agencia.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Alquiler_motosDataSet_agencia.xss">
+      <DependentUpon>Alquiler_motosDataSet_agencia.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet_dreserva.xsc">
+      <DependentUpon>Alquiler_motosDataSet_dreserva.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet_dreserva.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Alquiler_motosDataSet_dreserva.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Alquiler_motosDataSet_dreserva.xss">
+      <DependentUpon>Alquiler_motosDataSet_dreserva.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet_garaje.xsc">
+      <DependentUpon>Alquiler_motosDataSet_garaje.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet_garaje.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Alquiler_motosDataSet_garaje.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Alquiler_motosDataSet_garaje.xss">
+      <DependentUpon>Alquiler_motosDataSet_garaje.xsd</DependentUpon>
+    </None>
     <None Include="Alquiler_motosDataSet_reserva.xsc">
       <DependentUpon>Alquiler_motosDataSet_reserva.xsd</DependentUpon>
     </None>
@@ -286,6 +366,28 @@
     </None>
     <None Include="Alquiler_motosDataSet_reserva.xss">
       <DependentUpon>Alquiler_motosDataSet_reserva.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet_tcliente.xsc">
+      <DependentUpon>Alquiler_motosDataSet_tcliente.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet_tcliente.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Alquiler_motosDataSet_tcliente.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Alquiler_motosDataSet_tcliente.xss">
+      <DependentUpon>Alquiler_motosDataSet_tcliente.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet_tcomprobante.xsc">
+      <DependentUpon>Alquiler_motosDataSet_tcomprobante.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet_tcomprobante.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Alquiler_motosDataSet_tcomprobante.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Alquiler_motosDataSet_tcomprobante.xss">
+      <DependentUpon>Alquiler_motosDataSet_tcomprobante.xsd</DependentUpon>
     </None>
     <None Include="modelo_cbx_agencia.xsc">
       <DependentUpon>modelo_cbx_agencia.xsd</DependentUpon>
@@ -308,6 +410,28 @@
     </None>
     <None Include="Modelo_cbx_cliente.xss">
       <DependentUpon>Modelo_cbx_cliente.xsd</DependentUpon>
+    </None>
+    <None Include="modelo_cbx_reserva.xsc">
+      <DependentUpon>modelo_cbx_reserva.xsd</DependentUpon>
+    </None>
+    <None Include="modelo_cbx_reserva.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>modelo_cbx_reserva.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="modelo_cbx_reserva.xss">
+      <DependentUpon>modelo_cbx_reserva.xsd</DependentUpon>
+    </None>
+    <None Include="modelo_cbx_tcliente.xsc">
+      <DependentUpon>modelo_cbx_tcliente.xsd</DependentUpon>
+    </None>
+    <None Include="modelo_cbx_tcliente.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>modelo_cbx_tcliente.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="modelo_cbx_tcliente.xss">
+      <DependentUpon>modelo_cbx_tcliente.xsd</DependentUpon>
     </None>
     <None Include="modelo_cbx_trabajador.xsc">
       <DependentUpon>modelo_cbx_trabajador.xsd</DependentUpon>

@@ -24,7 +24,7 @@ Partial Class cliente
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(cliente))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txt_id = New System.Windows.Forms.TextBox()
         Me.txt_nom = New System.Windows.Forms.TextBox()
         Me.txt_ape = New System.Windows.Forms.TextBox()
@@ -34,7 +34,6 @@ Partial Class cliente
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txt_tc = New System.Windows.Forms.TextBox()
         Me.txt_dni = New System.Windows.Forms.TextBox()
         Me.txt_direc = New System.Windows.Forms.TextBox()
         Me.txt_correo = New System.Windows.Forms.TextBox()
@@ -59,16 +58,22 @@ Partial Class cliente
         Me.ClienteTableAdapter = New Alquiler_motos.Alquiler_motosDataSetTableAdapters.clienteTableAdapter()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.p_cliente = New System.Windows.Forms.Panel()
+        Me.cbx_tc = New System.Windows.Forms.ComboBox()
+        Me.TipoclienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Modelo_cbx_tcliente = New Alquiler_motos.modelo_cbx_tcliente()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btn_listar = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Tipo_clienteTableAdapter = New Alquiler_motos.modelo_cbx_tclienteTableAdapters.tipo_clienteTableAdapter()
         CType(Me.tablacliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Alquiler_motosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.p_cliente.SuspendLayout()
+        CType(Me.TipoclienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Modelo_cbx_tcliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -159,14 +164,6 @@ Partial Class cliente
         Me.Label4.Size = New System.Drawing.Size(69, 16)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Teléfono"
-        '
-        'txt_tc
-        '
-        Me.txt_tc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_tc.Location = New System.Drawing.Point(147, 53)
-        Me.txt_tc.Name = "txt_tc"
-        Me.txt_tc.Size = New System.Drawing.Size(180, 22)
-        Me.txt_tc.TabIndex = 9
         '
         'txt_dni
         '
@@ -281,14 +278,14 @@ Partial Class cliente
         '
         Me.tablacliente.AutoGenerateColumns = False
         Me.tablacliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.tablacliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tablacliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdclienteDataGridViewTextBoxColumn, Me.TipoclienteDataGridViewTextBoxColumn, Me.DniDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn})
         Me.tablacliente.DataSource = Me.ClienteBindingSource
@@ -373,7 +370,7 @@ Partial Class cliente
         '
         Me.p_cliente.BackColor = System.Drawing.Color.Transparent
         Me.p_cliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.p_cliente.Controls.Add(Me.txt_tc)
+        Me.p_cliente.Controls.Add(Me.cbx_tc)
         Me.p_cliente.Controls.Add(Me.Label9)
         Me.p_cliente.Controls.Add(Me.txt_nom)
         Me.p_cliente.Controls.Add(Me.txt_ape)
@@ -392,6 +389,28 @@ Partial Class cliente
         Me.p_cliente.Name = "p_cliente"
         Me.p_cliente.Size = New System.Drawing.Size(717, 222)
         Me.p_cliente.TabIndex = 22
+        '
+        'cbx_tc
+        '
+        Me.cbx_tc.DataSource = Me.TipoclienteBindingSource
+        Me.cbx_tc.DisplayMember = "descripcion"
+        Me.cbx_tc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbx_tc.FormattingEnabled = True
+        Me.cbx_tc.Location = New System.Drawing.Point(147, 48)
+        Me.cbx_tc.Name = "cbx_tc"
+        Me.cbx_tc.Size = New System.Drawing.Size(180, 24)
+        Me.cbx_tc.TabIndex = 30
+        Me.cbx_tc.ValueMember = "descripcion"
+        '
+        'TipoclienteBindingSource
+        '
+        Me.TipoclienteBindingSource.DataMember = "tipo_cliente"
+        Me.TipoclienteBindingSource.DataSource = Me.Modelo_cbx_tcliente
+        '
+        'Modelo_cbx_tcliente
+        '
+        Me.Modelo_cbx_tcliente.DataSetName = "modelo_cbx_tcliente"
+        Me.Modelo_cbx_tcliente.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label10
         '
@@ -439,6 +458,14 @@ Partial Class cliente
         Me.Panel2.Size = New System.Drawing.Size(182, 566)
         Me.Panel2.TabIndex = 26
         '
+        'Label12
+        '
+        Me.Label12.Image = CType(resources.GetObject("Label12.Image"), System.Drawing.Image)
+        Me.Label12.Location = New System.Drawing.Point(19, 174)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(140, 148)
+        Me.Label12.TabIndex = 1
+        '
         'Label11
         '
         Me.Label11.AutoSize = True
@@ -450,13 +477,9 @@ Partial Class cliente
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Clientes"
         '
-        'Label12
+        'Tipo_clienteTableAdapter
         '
-        Me.Label12.Image = CType(resources.GetObject("Label12.Image"), System.Drawing.Image)
-        Me.Label12.Location = New System.Drawing.Point(19, 174)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(140, 148)
-        Me.Label12.TabIndex = 1
+        Me.Tipo_clienteTableAdapter.ClearBeforeFill = True
         '
         'cliente
         '
@@ -481,6 +504,8 @@ Partial Class cliente
         CType(Me.Alquiler_motosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.p_cliente.ResumeLayout(False)
         Me.p_cliente.PerformLayout()
+        CType(Me.TipoclienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Modelo_cbx_tcliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -499,7 +524,6 @@ Partial Class cliente
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents txt_tc As TextBox
     Friend WithEvents txt_dni As TextBox
     Friend WithEvents txt_direc As TextBox
     Friend WithEvents txt_correo As TextBox
@@ -530,4 +554,8 @@ Partial Class cliente
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents cbx_tc As ComboBox
+    Friend WithEvents Modelo_cbx_tcliente As modelo_cbx_tcliente
+    Friend WithEvents TipoclienteBindingSource As BindingSource
+    Friend WithEvents Tipo_clienteTableAdapter As modelo_cbx_tclienteTableAdapters.tipo_clienteTableAdapter
 End Class
