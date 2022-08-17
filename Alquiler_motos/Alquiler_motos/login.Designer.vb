@@ -66,7 +66,7 @@ Partial Class login
         Me.txtuser.Name = "txtuser"
         Me.txtuser.Size = New System.Drawing.Size(180, 29)
         Me.txtuser.TabIndex = 2
-        Me.txtuser.Text = "admin"
+        Me.txtuser.Text = "jesus"
         '
         'txtpassword
         '

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class detalle_reserva
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,11 @@ Partial Class detalle_reserva
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(detalle_reserva))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -65,7 +65,7 @@ Partial Class detalle_reserva
         Me.btn_eliminar = New System.Windows.Forms.Button()
         Me.btn_actualizar = New System.Windows.Forms.Button()
         Me.btn_buscar = New System.Windows.Forms.Button()
-        Me.txt_iddetalle = New System.Windows.Forms.TextBox()
+        Me.txt_id = New System.Windows.Forms.TextBox()
         Me.Detalle_reservaTableAdapter = New Alquiler_motos.Alquiler_motosDataSet_dreservaTableAdapters.detalle_reservaTableAdapter()
         Me.ReservaTableAdapter = New Alquiler_motos.modelo_cbx_reservaTableAdapters.reservaTableAdapter()
         Me.Panel2.SuspendLayout()
@@ -155,21 +155,21 @@ Partial Class detalle_reserva
         Me.btn_listar.Name = "btn_listar"
         Me.btn_listar.Size = New System.Drawing.Size(134, 41)
         Me.btn_listar.TabIndex = 24
-        Me.btn_listar.Text = "Listar Todo"
+        Me.btn_listar.Text = "Listar "
         Me.btn_listar.UseVisualStyleBackColor = False
         '
         'tablacliente
         '
         Me.tablacliente.AutoGenerateColumns = False
         Me.tablacliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.tablacliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tablacliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IddetalleDataGridViewTextBoxColumn, Me.IdreservaDataGridViewTextBoxColumn, Me.IdmotoDataGridViewTextBoxColumn, Me.FechainicioDataGridViewTextBoxColumn, Me.FechafinDataGridViewTextBoxColumn})
         Me.tablacliente.DataSource = Me.DetallereservaBindingSource
@@ -275,9 +275,9 @@ Partial Class detalle_reserva
         Me.btn_seleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_seleccionar.Location = New System.Drawing.Point(259, 78)
         Me.btn_seleccionar.Name = "btn_seleccionar"
-        Me.btn_seleccionar.Size = New System.Drawing.Size(167, 35)
+        Me.btn_seleccionar.Size = New System.Drawing.Size(153, 35)
         Me.btn_seleccionar.TabIndex = 46
-        Me.btn_seleccionar.Text = "Seleccionar moto"
+        Me.btn_seleccionar.Text = "detalle de moto"
         Me.btn_seleccionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_seleccionar.UseVisualStyleBackColor = False
         '
@@ -369,9 +369,9 @@ Partial Class detalle_reserva
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(16, 176)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(91, 16)
+        Me.Label4.Size = New System.Drawing.Size(70, 16)
         Me.Label4.TabIndex = 32
-        Me.Label4.Text = "Fecha Inicio"
+        Me.Label4.Text = "Fecha fin"
         '
         'Label9
         '
@@ -483,13 +483,13 @@ Partial Class detalle_reserva
         Me.btn_buscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_buscar.UseVisualStyleBackColor = False
         '
-        'txt_iddetalle
+        'txt_id
         '
-        Me.txt_iddetalle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_iddetalle.Location = New System.Drawing.Point(396, 28)
-        Me.txt_iddetalle.Name = "txt_iddetalle"
-        Me.txt_iddetalle.Size = New System.Drawing.Size(183, 22)
-        Me.txt_iddetalle.TabIndex = 37
+        Me.txt_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_id.Location = New System.Drawing.Point(396, 28)
+        Me.txt_id.Name = "txt_id"
+        Me.txt_id.Size = New System.Drawing.Size(183, 22)
+        Me.txt_id.TabIndex = 37
         '
         'Detalle_reservaTableAdapter
         '
@@ -512,9 +512,11 @@ Partial Class detalle_reserva
         Me.Controls.Add(Me.btn_actualizar)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btn_buscar)
-        Me.Controls.Add(Me.txt_iddetalle)
+        Me.Controls.Add(Me.txt_id)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "detalle_reserva"
-        Me.Text = "Detalle Reserva"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Detalle de Reserva"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -551,7 +553,7 @@ Partial Class detalle_reserva
     Friend WithEvents btn_actualizar As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents btn_buscar As Button
-    Friend WithEvents txt_iddetalle As TextBox
+    Friend WithEvents txt_id As TextBox
     Friend WithEvents Alquiler_motosDataSet_dreserva As Alquiler_motosDataSet_dreserva
     Friend WithEvents DetallereservaBindingSource As BindingSource
     Friend WithEvents Detalle_reservaTableAdapter As Alquiler_motosDataSet_dreservaTableAdapters.detalle_reservaTableAdapter

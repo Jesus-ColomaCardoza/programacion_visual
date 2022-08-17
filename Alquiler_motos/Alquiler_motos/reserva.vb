@@ -48,9 +48,9 @@ Public Class reserva
                 cbx_idtrabajador.Text = data(2)
                 cbx_idcliente.Text = data(3)
                 cbox_estado.Checked = data(5)
-                MessageBox.Show("Moto encontrado", "Moto", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                MessageBox.Show("Reserva encontrado", "Reserva", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
             Else
-                MessageBox.Show("Moto No encontrado", "Moto", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Reserva No encontrado", "Reserva", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 cbx_agencia.Text = ""
                 cbx_idtrabajador.Text = ""
                 cbx_idcliente.Text = ""
@@ -154,12 +154,9 @@ Public Class reserva
     Private Sub btn_dreserva_Click(sender As Object, e As EventArgs) Handles btn_dreserva.Click
         detalle_reserva.Show()
         Dim d As String
-
         d = Me.txt_id.Text
-
         detalle_reserva.cbx_idreserva.Text = d
-
-        detalle_reserva.cbx_idreserva.Enabled = False
+        'detalle_reserva.cbx_idreserva.Enabled = False
         Me.Close()
     End Sub
 End Class
