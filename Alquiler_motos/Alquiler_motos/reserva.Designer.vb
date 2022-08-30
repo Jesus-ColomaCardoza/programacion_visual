@@ -67,6 +67,9 @@ Partial Class reserva
         Me.AgenciaTableAdapter = New Alquiler_motos.modelo_cbx_agenciaTableAdapters.agenciaTableAdapter()
         Me.TrabajadorTableAdapter = New Alquiler_motos.modelo_cbx_trabajadorTableAdapters.trabajadorTableAdapter()
         Me.ClienteTableAdapter = New Alquiler_motos.Modelo_cbx_clienteTableAdapters.clienteTableAdapter()
+        Me.Modelo_cbx_tcomprobante = New Alquiler_motos.modelo_cbx_tcomprobante()
+        Me.TipocomprobanteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tipo_comprobanteTableAdapter = New Alquiler_motos.modelo_cbx_tcomprobanteTableAdapters.tipo_comprobanteTableAdapter()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.tablacliente, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,6 +82,8 @@ Partial Class reserva
         CType(Me.Modelo_cbx_trabajador, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AgenciaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Modelo_cbx_agencia, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Modelo_cbx_tcomprobante, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TipocomprobanteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -466,6 +471,20 @@ Partial Class reserva
         '
         Me.ClienteTableAdapter.ClearBeforeFill = True
         '
+        'Modelo_cbx_tcomprobante
+        '
+        Me.Modelo_cbx_tcomprobante.DataSetName = "modelo_cbx_tcomprobante"
+        Me.Modelo_cbx_tcomprobante.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TipocomprobanteBindingSource
+        '
+        Me.TipocomprobanteBindingSource.DataMember = "tipo_comprobante"
+        Me.TipocomprobanteBindingSource.DataSource = Me.Modelo_cbx_tcomprobante
+        '
+        'Tipo_comprobanteTableAdapter
+        '
+        Me.Tipo_comprobanteTableAdapter.ClearBeforeFill = True
+        '
         'reserva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -500,6 +519,8 @@ Partial Class reserva
         CType(Me.Modelo_cbx_trabajador, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AgenciaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Modelo_cbx_agencia, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Modelo_cbx_tcomprobante, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TipocomprobanteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -547,4 +568,7 @@ Partial Class reserva
     Friend WithEvents Modelo_cbx_cliente As Modelo_cbx_cliente
     Friend WithEvents ClienteBindingSource As BindingSource
     Friend WithEvents ClienteTableAdapter As Modelo_cbx_clienteTableAdapters.clienteTableAdapter
+    Friend WithEvents Modelo_cbx_tcomprobante As modelo_cbx_tcomprobante
+    Friend WithEvents TipocomprobanteBindingSource As BindingSource
+    Friend WithEvents Tipo_comprobanteTableAdapter As modelo_cbx_tcomprobanteTableAdapters.tipo_comprobanteTableAdapter
 End Class

@@ -42,7 +42,8 @@ Partial Class login
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(64, 234)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(64, 247)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(71, 20)
         Me.Label1.TabIndex = 0
@@ -52,7 +53,8 @@ Partial Class login
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(64, 302)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(64, 315)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 20)
         Me.Label2.TabIndex = 1
@@ -62,43 +64,47 @@ Partial Class login
         '
         Me.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtuser.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtuser.Location = New System.Drawing.Point(141, 235)
+        Me.txtuser.Location = New System.Drawing.Point(141, 248)
         Me.txtuser.Name = "txtuser"
-        Me.txtuser.Size = New System.Drawing.Size(180, 29)
+        Me.txtuser.Size = New System.Drawing.Size(210, 29)
         Me.txtuser.TabIndex = 2
-        Me.txtuser.Text = "jesus"
+        Me.txtuser.Text = "Jesus"
         '
         'txtpassword
         '
         Me.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtpassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtpassword.Location = New System.Drawing.Point(141, 297)
+        Me.txtpassword.Location = New System.Drawing.Point(141, 310)
         Me.txtpassword.Name = "txtpassword"
         Me.txtpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtpassword.Size = New System.Drawing.Size(180, 29)
+        Me.txtpassword.Size = New System.Drawing.Size(210, 29)
         Me.txtpassword.TabIndex = 3
         Me.txtpassword.Text = "1234"
         '
         'btn_aceptar
         '
-        Me.btn_aceptar.BackColor = System.Drawing.Color.Green
+        Me.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.btn_aceptar.FlatAppearance.BorderSize = 0
+        Me.btn_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_aceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_aceptar.ForeColor = System.Drawing.Color.White
-        Me.btn_aceptar.Location = New System.Drawing.Point(28, 388)
+        Me.btn_aceptar.Location = New System.Drawing.Point(28, 440)
         Me.btn_aceptar.Name = "btn_aceptar"
-        Me.btn_aceptar.Size = New System.Drawing.Size(120, 44)
+        Me.btn_aceptar.Size = New System.Drawing.Size(120, 35)
         Me.btn_aceptar.TabIndex = 4
         Me.btn_aceptar.Text = "Aceptar"
         Me.btn_aceptar.UseVisualStyleBackColor = False
         '
         'btn_cancelar
         '
-        Me.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.btn_cancelar.FlatAppearance.BorderSize = 0
+        Me.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_cancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_cancelar.ForeColor = System.Drawing.Color.White
-        Me.btn_cancelar.Location = New System.Drawing.Point(231, 388)
+        Me.btn_cancelar.Location = New System.Drawing.Point(231, 440)
         Me.btn_cancelar.Name = "btn_cancelar"
-        Me.btn_cancelar.Size = New System.Drawing.Size(120, 44)
+        Me.btn_cancelar.Size = New System.Drawing.Size(120, 35)
         Me.btn_cancelar.TabIndex = 5
         Me.btn_cancelar.Text = "Cancelar"
         Me.btn_cancelar.UseVisualStyleBackColor = False
@@ -115,7 +121,7 @@ Partial Class login
         '
         'Label4
         '
-        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.Label4.CausesValidation = False
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(192, 0)
@@ -125,7 +131,7 @@ Partial Class login
         '
         'Label5
         '
-        Me.Label5.BackColor = System.Drawing.Color.Green
+        Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(-3, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(198, 18)
@@ -133,18 +139,18 @@ Partial Class login
         '
         'Label6
         '
-        Me.Label6.BackColor = System.Drawing.Color.Green
-        Me.Label6.Location = New System.Drawing.Point(-3, 487)
+        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(-3, 549)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(198, 18)
         Me.Label6.TabIndex = 10
         '
         'Label7
         '
-        Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.Label7.CausesValidation = False
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(192, 487)
+        Me.Label7.Location = New System.Drawing.Point(192, 549)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(195, 18)
         Me.Label7.TabIndex = 9
@@ -152,7 +158,7 @@ Partial Class login
         'Label8
         '
         Me.Label8.Image = CType(resources.GetObject("Label8.Image"), System.Drawing.Image)
-        Me.Label8.Location = New System.Drawing.Point(25, 225)
+        Me.Label8.Location = New System.Drawing.Point(25, 238)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(41, 38)
         Me.Label8.TabIndex = 11
@@ -160,7 +166,7 @@ Partial Class login
         'Label9
         '
         Me.Label9.Image = CType(resources.GetObject("Label9.Image"), System.Drawing.Image)
-        Me.Label9.Location = New System.Drawing.Point(25, 292)
+        Me.Label9.Location = New System.Drawing.Point(25, 305)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(41, 36)
         Me.Label9.TabIndex = 12
@@ -169,8 +175,8 @@ Partial Class login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(386, 505)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(140, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(386, 567)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label6)
@@ -185,6 +191,7 @@ Partial Class login
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "login"

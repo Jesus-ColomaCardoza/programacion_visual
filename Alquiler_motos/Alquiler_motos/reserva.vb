@@ -14,6 +14,8 @@ Public Class reserva
     End Sub
 
     Private Sub reserva_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'Modelo_cbx_tcomprobante.tipo_comprobante' Puede moverla o quitarla según sea necesario.
+        Me.Tipo_comprobanteTableAdapter.Fill(Me.Modelo_cbx_tcomprobante.tipo_comprobante)
         'TODO: esta línea de código carga datos en la tabla 'Modelo_cbx_cliente.cliente' Puede moverla o quitarla según sea necesario.
         Me.ClienteTableAdapter.Fill(Me.Modelo_cbx_cliente.cliente)
         cbx_idcliente.Text = ""

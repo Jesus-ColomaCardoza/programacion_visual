@@ -30,9 +30,9 @@
     End Sub
 
     Private Sub DetalleReservaToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles DetalleReservaToolStripMenuItem1.Click
-        reserva.Show()
-        reserva.btn_dreserva.Visible() = True
-        reserva.btn_dreserva.Enabled() = True
+        detalle_reserva.Show()
+        'reserva.btn_dreserva.Visible() = True
+        'reserva.btn_dreserva.Enabled() = True
     End Sub
 
     Private Sub TiposDeClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TiposDeClienteToolStripMenuItem.Click
@@ -54,5 +54,9 @@
     Private Sub menu_principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Hide()
         login.Show()
+    End Sub
+
+    Private Sub ComprobantesDePagoToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ComprobantesDePagoToolStripMenuItem2.Click
+        comprobante.Show()
     End Sub
 End Class

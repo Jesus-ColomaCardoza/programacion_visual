@@ -347,6 +347,71 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_comprobante">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_comprobante.comprobanteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_comprobante.comprobanteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_comprobante.comprobanteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_comprobanteTableAdapters.comprobanteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_comprobanteTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_comprobanteTableAdapters.TableAdapterManager.UpdateUpdatedRows(Alquiler_motos.Alquiler_motosDataSet_comprobante,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_comprobanteTableAdapters.TableAdapterManager.UpdateInsertedRows(Alquiler_motos.Alquiler_motosDataSet_comprobante,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_comprobanteTableAdapters.TableAdapterManager.UpdateDeletedRows(Alquiler_motos.Alquiler_motosDataSet_comprobante,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_comprobanteTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_comprobanteTableAdapters.TableAdapterManager.UpdateAll(Alquiler_motos.Alquiler_motosDataSet_comprobante)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_comprobanteTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_comprobanteTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 <member name="T:Alquiler_motos.Alquiler_motosDataSet_dreserva">
 <summary>
 Represents a strongly typed in-memory cache of data.
@@ -928,6 +993,71 @@ Update Order Option
 </summary>
 </member>
 <member name="T:Alquiler_motos.modelo_cbx_tclienteTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_tcomprobante">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_tcomprobante.tipo_comprobanteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_tcomprobante.tipo_comprobanteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_tcomprobante.tipo_comprobanteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_tcomprobanteTableAdapters.tipo_comprobanteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_tcomprobanteTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Alquiler_motos.modelo_cbx_tcomprobanteTableAdapters.TableAdapterManager.UpdateUpdatedRows(Alquiler_motos.modelo_cbx_tcomprobante,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.modelo_cbx_tcomprobanteTableAdapters.TableAdapterManager.UpdateInsertedRows(Alquiler_motos.modelo_cbx_tcomprobante,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.modelo_cbx_tcomprobanteTableAdapters.TableAdapterManager.UpdateDeletedRows(Alquiler_motos.modelo_cbx_tcomprobante,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.modelo_cbx_tcomprobanteTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Alquiler_motos.modelo_cbx_tcomprobanteTableAdapters.TableAdapterManager.UpdateAll(Alquiler_motos.modelo_cbx_tcomprobante)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_tcomprobanteTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Alquiler_motos.modelo_cbx_tcomprobanteTableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
 </summary>

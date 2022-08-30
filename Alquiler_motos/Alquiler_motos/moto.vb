@@ -168,4 +168,23 @@ Public Class moto
         detalle_reserva.txt_idmoto.Text = Me.txt_id.Text
         Me.Close()
     End Sub
+
+    Private Sub txt_filtro_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_filtro.KeyPress
+        If (cbx_filtro.Text Like "Marca") Then
+            MotoTableAdapter.FillBy_filtromarca(Alquiler_motosDataSet2.moto, txt_filtro.Text)
+        ElseIf (cbx_filtro.Text Like "Modelo") Then
+            MotoTableAdapter.FillBy_filtromodelo(Alquiler_motosDataSet2.moto, txt_filtro.Text)
+        ElseIf (cbx_filtro.Text Like "Color") Then
+            MotoTableAdapter.FillBy_filtrocolor(Alquiler_motosDataSet2.moto, txt_filtro.Text)
+        End If
+    End Sub
+
+    Private Sub cbx_filtro_SelectedValueChanged(sender As Object, e As EventArgs) Handles cbx_filtro.SelectedValueChanged
+        If (cbx_filtro.Text Like "Precio") Then
+            txt_filtro.Text = "Precio ordenado: bajo a alto"
+            MotoTableAdapter.FillBy_filtroprecio_asc(Alquiler_motosDataSet2.moto)
+        Else
+            txt_filtro.Text = ""
+        End If
+    End Sub
 End Class

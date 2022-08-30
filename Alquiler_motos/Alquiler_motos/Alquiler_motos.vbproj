@@ -104,6 +104,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Alquiler_motosDataSet_agencia.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Alquiler_motosDataSet_comprobante.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alquiler_motosDataSet_comprobante.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Alquiler_motosDataSet_dreserva.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -185,6 +190,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>modelo_cbx_tcliente.xsd</DependentUpon>
     </Compile>
+    <Compile Include="modelo_cbx_tcomprobante.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelo_cbx_tcomprobante.xsd</DependentUpon>
+    </Compile>
     <Compile Include="modelo_cbx_trabajador.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -243,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cliente.resx">
       <DependentUpon>cliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="comprobante.resx">
+      <DependentUpon>comprobante.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="detalle_reserva.resx">
       <DependentUpon>detalle_reserva.vb</DependentUpon>
@@ -333,6 +346,17 @@
     </None>
     <None Include="Alquiler_motosDataSet_agencia.xss">
       <DependentUpon>Alquiler_motosDataSet_agencia.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet_comprobante.xsc">
+      <DependentUpon>Alquiler_motosDataSet_comprobante.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet_comprobante.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Alquiler_motosDataSet_comprobante.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Alquiler_motosDataSet_comprobante.xss">
+      <DependentUpon>Alquiler_motosDataSet_comprobante.xsd</DependentUpon>
     </None>
     <None Include="Alquiler_motosDataSet_dreserva.xsc">
       <DependentUpon>Alquiler_motosDataSet_dreserva.xsd</DependentUpon>
@@ -432,6 +456,17 @@
     </None>
     <None Include="modelo_cbx_tcliente.xss">
       <DependentUpon>modelo_cbx_tcliente.xsd</DependentUpon>
+    </None>
+    <None Include="modelo_cbx_tcomprobante.xsc">
+      <DependentUpon>modelo_cbx_tcomprobante.xsd</DependentUpon>
+    </None>
+    <None Include="modelo_cbx_tcomprobante.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>modelo_cbx_tcomprobante.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="modelo_cbx_tcomprobante.xss">
+      <DependentUpon>modelo_cbx_tcomprobante.xsd</DependentUpon>
     </None>
     <None Include="modelo_cbx_trabajador.xsc">
       <DependentUpon>modelo_cbx_trabajador.xsd</DependentUpon>

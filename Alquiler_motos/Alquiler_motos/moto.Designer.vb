@@ -24,11 +24,13 @@ Partial Class moto
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(moto))
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txt_filtro = New System.Windows.Forms.TextBox()
+        Me.cbx_filtro = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btn_listar = New System.Windows.Forms.Button()
         Me.tablacliente = New System.Windows.Forms.DataGridView()
@@ -118,6 +120,8 @@ Partial Class moto
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.txt_filtro)
+        Me.Panel1.Controls.Add(Me.cbx_filtro)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.btn_listar)
         Me.Panel1.Controls.Add(Me.tablacliente)
@@ -125,6 +129,24 @@ Partial Class moto
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(873, 274)
         Me.Panel1.TabIndex = 34
+        '
+        'txt_filtro
+        '
+        Me.txt_filtro.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_filtro.Location = New System.Drawing.Point(374, 13)
+        Me.txt_filtro.Name = "txt_filtro"
+        Me.txt_filtro.Size = New System.Drawing.Size(205, 22)
+        Me.txt_filtro.TabIndex = 29
+        '
+        'cbx_filtro
+        '
+        Me.cbx_filtro.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbx_filtro.FormattingEnabled = True
+        Me.cbx_filtro.Items.AddRange(New Object() {"Marca", "Modelo", "Color", "Precio"})
+        Me.cbx_filtro.Location = New System.Drawing.Point(241, 12)
+        Me.cbx_filtro.Name = "cbx_filtro"
+        Me.cbx_filtro.Size = New System.Drawing.Size(120, 24)
+        Me.cbx_filtro.TabIndex = 58
         '
         'Label10
         '
@@ -143,25 +165,26 @@ Partial Class moto
         Me.btn_listar.ForeColor = System.Drawing.Color.White
         Me.btn_listar.Image = CType(resources.GetObject("btn_listar.Image"), System.Drawing.Image)
         Me.btn_listar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_listar.Location = New System.Drawing.Point(639, 3)
+        Me.btn_listar.Location = New System.Drawing.Point(718, 3)
         Me.btn_listar.Name = "btn_listar"
-        Me.btn_listar.Size = New System.Drawing.Size(220, 41)
+        Me.btn_listar.Size = New System.Drawing.Size(141, 41)
         Me.btn_listar.TabIndex = 24
-        Me.btn_listar.Text = "Listar Motos"
+        Me.btn_listar.Text = "Listar Todo"
+        Me.btn_listar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_listar.UseVisualStyleBackColor = False
         '
         'tablacliente
         '
         Me.tablacliente.AutoGenerateColumns = False
         Me.tablacliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.tablacliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tablacliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdmotoDataGridViewTextBoxColumn, Me.IdcarajeDataGridViewTextBoxColumn, Me.PlacaDataGridViewTextBoxColumn, Me.MarcaDataGridViewTextBoxColumn, Me.ModeloDataGridViewTextBoxColumn, Me.ColorDataGridViewTextBoxColumn, Me.MotorDataGridViewTextBoxColumn, Me.CilindrajeDataGridViewTextBoxColumn, Me.PreciohoraDataGridViewTextBoxColumn, Me.EstadoDataGridViewCheckBoxColumn})
         Me.tablacliente.DataSource = Me.MotoBindingSource
@@ -643,4 +666,6 @@ Partial Class moto
     Friend WithEvents GarajeBindingSource As BindingSource
     Friend WithEvents GarajeTableAdapter As Alquiler_motosDataSet3TableAdapters.garajeTableAdapter
     Friend WithEvents btn_seleccionar As Button
+    Friend WithEvents txt_filtro As TextBox
+    Friend WithEvents cbx_filtro As ComboBox
 End Class

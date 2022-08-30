@@ -20,12 +20,12 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("Alquiler_motosDataSet2"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("Alquiler_motosDataSet_comprobante"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class Alquiler_motosDataSet2
+Partial Public Class Alquiler_motosDataSet_comprobante
     Inherits Global.System.Data.DataSet
     
-    Private tablemoto As motoDataTable
+    Private tablecomprobante As comprobanteDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -56,8 +56,8 @@ Partial Public Class Alquiler_motosDataSet2
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("moto")) Is Nothing) Then
-                MyBase.Tables.Add(New motoDataTable(ds.Tables("moto")))
+            If (Not (ds.Tables("comprobante")) Is Nothing) Then
+                MyBase.Tables.Add(New comprobanteDataTable(ds.Tables("comprobante")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -80,9 +80,9 @@ Partial Public Class Alquiler_motosDataSet2
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property moto() As motoDataTable
+    Public ReadOnly Property comprobante() As comprobanteDataTable
         Get
-            Return Me.tablemoto
+            Return Me.tablecomprobante
         End Get
     End Property
     
@@ -128,7 +128,7 @@ Partial Public Class Alquiler_motosDataSet2
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As Alquiler_motosDataSet2 = CType(MyBase.Clone,Alquiler_motosDataSet2)
+        Dim cln As Alquiler_motosDataSet_comprobante = CType(MyBase.Clone,Alquiler_motosDataSet_comprobante)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -153,8 +153,8 @@ Partial Public Class Alquiler_motosDataSet2
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXml(reader)
-            If (Not (ds.Tables("moto")) Is Nothing) Then
-                MyBase.Tables.Add(New motoDataTable(ds.Tables("moto")))
+            If (Not (ds.Tables("comprobante")) Is Nothing) Then
+                MyBase.Tables.Add(New comprobanteDataTable(ds.Tables("comprobante")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -188,10 +188,10 @@ Partial Public Class Alquiler_motosDataSet2
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me.tablemoto = CType(MyBase.Tables("moto"),motoDataTable)
+        Me.tablecomprobante = CType(MyBase.Tables("comprobante"),comprobanteDataTable)
         If (initTable = true) Then
-            If (Not (Me.tablemoto) Is Nothing) Then
-                Me.tablemoto.InitVars
+            If (Not (Me.tablecomprobante) Is Nothing) Then
+                Me.tablecomprobante.InitVars
             End If
         End If
     End Sub
@@ -199,18 +199,18 @@ Partial Public Class Alquiler_motosDataSet2
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "Alquiler_motosDataSet2"
+        Me.DataSetName = "Alquiler_motosDataSet_comprobante"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/Alquiler_motosDataSet2.xsd"
+        Me.Namespace = "http://tempuri.org/Alquiler_motosDataSet_comprobante.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
-        Me.tablemoto = New motoDataTable()
-        MyBase.Tables.Add(Me.tablemoto)
+        Me.tablecomprobante = New comprobanteDataTable()
+        MyBase.Tables.Add(Me.tablecomprobante)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-    Private Function ShouldSerializemoto() As Boolean
+    Private Function ShouldSerializecomprobante() As Boolean
         Return false
     End Function
     
@@ -225,7 +225,7 @@ Partial Public Class Alquiler_motosDataSet2
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As Alquiler_motosDataSet2 = New Alquiler_motosDataSet2()
+        Dim ds As Alquiler_motosDataSet_comprobante = New Alquiler_motosDataSet_comprobante()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -273,41 +273,37 @@ Partial Public Class Alquiler_motosDataSet2
     End Function
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-    Public Delegate Sub motoRowChangeEventHandler(ByVal sender As Object, ByVal e As motoRowChangeEvent)
+    Public Delegate Sub comprobanteRowChangeEventHandler(ByVal sender As Object, ByVal e As comprobanteRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class motoDataTable
-        Inherits Global.System.Data.TypedTableBase(Of motoRow)
+    Partial Public Class comprobanteDataTable
+        Inherits Global.System.Data.TypedTableBase(Of comprobanteRow)
         
-        Private columnid_moto As Global.System.Data.DataColumn
+        Private columnid_comprobante As Global.System.Data.DataColumn
         
-        Private columnid_caraje As Global.System.Data.DataColumn
+        Private columntipo_comprobante As Global.System.Data.DataColumn
         
-        Private columnplaca As Global.System.Data.DataColumn
+        Private columnforma_pago As Global.System.Data.DataColumn
         
-        Private columnmarca As Global.System.Data.DataColumn
+        Private columnid_reserva As Global.System.Data.DataColumn
         
-        Private columnmodelo As Global.System.Data.DataColumn
+        Private columnfecha As Global.System.Data.DataColumn
         
-        Private columncolor As Global.System.Data.DataColumn
+        Private columnsubtotal As Global.System.Data.DataColumn
         
-        Private columnmotor As Global.System.Data.DataColumn
+        Private columnIGV As Global.System.Data.DataColumn
         
-        Private columncilindraje As Global.System.Data.DataColumn
-        
-        Private columnprecio_hora As Global.System.Data.DataColumn
-        
-        Private columnestado As Global.System.Data.DataColumn
+        Private columntotal As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "moto"
+            Me.TableName = "comprobante"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -340,81 +336,65 @@ Partial Public Class Alquiler_motosDataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property id_motoColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property id_comprobanteColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnid_moto
+                Return Me.columnid_comprobante
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property id_carajeColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property tipo_comprobanteColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnid_caraje
+                Return Me.columntipo_comprobante
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property placaColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property forma_pagoColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnplaca
+                Return Me.columnforma_pago
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property marcaColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property id_reservaColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnmarca
+                Return Me.columnid_reserva
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property modeloColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property fechaColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnmodelo
+                Return Me.columnfecha
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property colorColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property subtotalColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columncolor
+                Return Me.columnsubtotal
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property motorColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property IGVColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnmotor
+                Return Me.columnIGV
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property cilindrajeColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property totalColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columncilindraje
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property precio_horaColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnprecio_hora
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property estadoColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnestado
+                Return Me.columntotal
             End Get
         End Property
         
@@ -429,50 +409,50 @@ Partial Public Class Alquiler_motosDataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As motoRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As comprobanteRow
             Get
-                Return CType(Me.Rows(index),motoRow)
+                Return CType(Me.Rows(index),comprobanteRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event motoRowChanging As motoRowChangeEventHandler
+        Public Event comprobanteRowChanging As comprobanteRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event motoRowChanged As motoRowChangeEventHandler
+        Public Event comprobanteRowChanged As comprobanteRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event motoRowDeleting As motoRowChangeEventHandler
+        Public Event comprobanteRowDeleting As comprobanteRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event motoRowDeleted As motoRowChangeEventHandler
+        Public Event comprobanteRowDeleted As comprobanteRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Sub AddmotoRow(ByVal row As motoRow)
+        Public Overloads Sub AddcomprobanteRow(ByVal row As comprobanteRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddmotoRow(ByVal id_moto As String, ByVal id_caraje As String, ByVal placa As String, ByVal marca As String, ByVal modelo As String, ByVal color As String, ByVal motor As String, ByVal cilindraje As Decimal, ByVal precio_hora As Decimal, ByVal estado As Boolean) As motoRow
-            Dim rowmotoRow As motoRow = CType(Me.NewRow,motoRow)
-            Dim columnValuesArray() As Object = New Object() {id_moto, id_caraje, placa, marca, modelo, color, motor, cilindraje, precio_hora, estado}
-            rowmotoRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowmotoRow)
-            Return rowmotoRow
+        Public Overloads Function AddcomprobanteRow(ByVal id_comprobante As String, ByVal tipo_comprobante As String, ByVal forma_pago As String, ByVal id_reserva As String, ByVal fecha As Date, ByVal subtotal As Decimal, ByVal IGV As Decimal, ByVal total As Decimal) As comprobanteRow
+            Dim rowcomprobanteRow As comprobanteRow = CType(Me.NewRow,comprobanteRow)
+            Dim columnValuesArray() As Object = New Object() {id_comprobante, tipo_comprobante, forma_pago, id_reserva, fecha, subtotal, IGV, total}
+            rowcomprobanteRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowcomprobanteRow)
+            Return rowcomprobanteRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function FindByid_moto(ByVal id_moto As String) As motoRow
-            Return CType(Me.Rows.Find(New Object() {id_moto}),motoRow)
+        Public Function FindByid_comprobante(ByVal id_comprobante As String) As comprobanteRow
+            Return CType(Me.Rows.Find(New Object() {id_comprobante}),comprobanteRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As motoDataTable = CType(MyBase.Clone,motoDataTable)
+            Dim cln As comprobanteDataTable = CType(MyBase.Clone,comprobanteDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -480,83 +460,74 @@ Partial Public Class Alquiler_motosDataSet2
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New motoDataTable()
+            Return New comprobanteDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnid_moto = MyBase.Columns("id_moto")
-            Me.columnid_caraje = MyBase.Columns("id_caraje")
-            Me.columnplaca = MyBase.Columns("placa")
-            Me.columnmarca = MyBase.Columns("marca")
-            Me.columnmodelo = MyBase.Columns("modelo")
-            Me.columncolor = MyBase.Columns("color")
-            Me.columnmotor = MyBase.Columns("motor")
-            Me.columncilindraje = MyBase.Columns("cilindraje")
-            Me.columnprecio_hora = MyBase.Columns("precio_hora")
-            Me.columnestado = MyBase.Columns("estado")
+            Me.columnid_comprobante = MyBase.Columns("id_comprobante")
+            Me.columntipo_comprobante = MyBase.Columns("tipo_comprobante")
+            Me.columnforma_pago = MyBase.Columns("forma_pago")
+            Me.columnid_reserva = MyBase.Columns("id_reserva")
+            Me.columnfecha = MyBase.Columns("fecha")
+            Me.columnsubtotal = MyBase.Columns("subtotal")
+            Me.columnIGV = MyBase.Columns("IGV")
+            Me.columntotal = MyBase.Columns("total")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnid_moto = New Global.System.Data.DataColumn("id_moto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnid_moto)
-            Me.columnid_caraje = New Global.System.Data.DataColumn("id_caraje", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnid_caraje)
-            Me.columnplaca = New Global.System.Data.DataColumn("placa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnplaca)
-            Me.columnmarca = New Global.System.Data.DataColumn("marca", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnmarca)
-            Me.columnmodelo = New Global.System.Data.DataColumn("modelo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnmodelo)
-            Me.columncolor = New Global.System.Data.DataColumn("color", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columncolor)
-            Me.columnmotor = New Global.System.Data.DataColumn("motor", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnmotor)
-            Me.columncilindraje = New Global.System.Data.DataColumn("cilindraje", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columncilindraje)
-            Me.columnprecio_hora = New Global.System.Data.DataColumn("precio_hora", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnprecio_hora)
-            Me.columnestado = New Global.System.Data.DataColumn("estado", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnestado)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_moto}, true))
-            Me.columnid_moto.AllowDBNull = false
-            Me.columnid_moto.Unique = true
-            Me.columnid_moto.MaxLength = 4
-            Me.columnid_caraje.MaxLength = 4
-            Me.columnplaca.MaxLength = 8
-            Me.columnmarca.MaxLength = 40
-            Me.columnmodelo.MaxLength = 40
-            Me.columncolor.MaxLength = 40
-            Me.columnmotor.MaxLength = 40
+            Me.columnid_comprobante = New Global.System.Data.DataColumn("id_comprobante", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_comprobante)
+            Me.columntipo_comprobante = New Global.System.Data.DataColumn("tipo_comprobante", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntipo_comprobante)
+            Me.columnforma_pago = New Global.System.Data.DataColumn("forma_pago", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnforma_pago)
+            Me.columnid_reserva = New Global.System.Data.DataColumn("id_reserva", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_reserva)
+            Me.columnfecha = New Global.System.Data.DataColumn("fecha", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnfecha)
+            Me.columnsubtotal = New Global.System.Data.DataColumn("subtotal", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsubtotal)
+            Me.columnIGV = New Global.System.Data.DataColumn("IGV", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIGV)
+            Me.columntotal = New Global.System.Data.DataColumn("total", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntotal)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_comprobante}, true))
+            Me.columnid_comprobante.AllowDBNull = false
+            Me.columnid_comprobante.Unique = true
+            Me.columnid_comprobante.MaxLength = 4
+            Me.columntipo_comprobante.MaxLength = 4
+            Me.columnforma_pago.MaxLength = 40
+            Me.columnid_reserva.MaxLength = 4
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function NewmotoRow() As motoRow
-            Return CType(Me.NewRow,motoRow)
+        Public Function NewcomprobanteRow() As comprobanteRow
+            Return CType(Me.NewRow,comprobanteRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New motoRow(builder)
+            Return New comprobanteRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(motoRow)
+            Return GetType(comprobanteRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.motoRowChangedEvent) Is Nothing) Then
-                RaiseEvent motoRowChanged(Me, New motoRowChangeEvent(CType(e.Row,motoRow), e.Action))
+            If (Not (Me.comprobanteRowChangedEvent) Is Nothing) Then
+                RaiseEvent comprobanteRowChanged(Me, New comprobanteRowChangeEvent(CType(e.Row,comprobanteRow), e.Action))
             End If
         End Sub
         
@@ -564,8 +535,8 @@ Partial Public Class Alquiler_motosDataSet2
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.motoRowChangingEvent) Is Nothing) Then
-                RaiseEvent motoRowChanging(Me, New motoRowChangeEvent(CType(e.Row,motoRow), e.Action))
+            If (Not (Me.comprobanteRowChangingEvent) Is Nothing) Then
+                RaiseEvent comprobanteRowChanging(Me, New comprobanteRowChangeEvent(CType(e.Row,comprobanteRow), e.Action))
             End If
         End Sub
         
@@ -573,8 +544,8 @@ Partial Public Class Alquiler_motosDataSet2
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.motoRowDeletedEvent) Is Nothing) Then
-                RaiseEvent motoRowDeleted(Me, New motoRowChangeEvent(CType(e.Row,motoRow), e.Action))
+            If (Not (Me.comprobanteRowDeletedEvent) Is Nothing) Then
+                RaiseEvent comprobanteRowDeleted(Me, New comprobanteRowChangeEvent(CType(e.Row,comprobanteRow), e.Action))
             End If
         End Sub
         
@@ -582,14 +553,14 @@ Partial Public Class Alquiler_motosDataSet2
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.motoRowDeletingEvent) Is Nothing) Then
-                RaiseEvent motoRowDeleting(Me, New motoRowChangeEvent(CType(e.Row,motoRow), e.Action))
+            If (Not (Me.comprobanteRowDeletingEvent) Is Nothing) Then
+                RaiseEvent comprobanteRowDeleting(Me, New comprobanteRowChangeEvent(CType(e.Row,comprobanteRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub RemovemotoRow(ByVal row As motoRow)
+        Public Sub RemovecomprobanteRow(ByVal row As comprobanteRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -598,7 +569,7 @@ Partial Public Class Alquiler_motosDataSet2
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Alquiler_motosDataSet2 = New Alquiler_motosDataSet2()
+            Dim ds As Alquiler_motosDataSet_comprobante = New Alquiler_motosDataSet_comprobante()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -616,7 +587,7 @@ Partial Public Class Alquiler_motosDataSet2
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "motoDataTable"
+            attribute2.FixedValue = "comprobanteDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -663,270 +634,216 @@ Partial Public Class Alquiler_motosDataSet2
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class motoRow
+    Partial Public Class comprobanteRow
         Inherits Global.System.Data.DataRow
         
-        Private tablemoto As motoDataTable
+        Private tablecomprobante As comprobanteDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tablemoto = CType(Me.Table,motoDataTable)
+            Me.tablecomprobante = CType(Me.Table,comprobanteDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property id_moto() As String
+        Public Property id_comprobante() As String
             Get
-                Return CType(Me(Me.tablemoto.id_motoColumn),String)
+                Return CType(Me(Me.tablecomprobante.id_comprobanteColumn),String)
             End Get
             Set
-                Me(Me.tablemoto.id_motoColumn) = value
+                Me(Me.tablecomprobante.id_comprobanteColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property id_caraje() As String
+        Public Property tipo_comprobante() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablemoto.id_carajeColumn),String)
+                    Return CType(Me(Me.tablecomprobante.tipo_comprobanteColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'id_caraje' de la tabla 'moto' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'tipo_comprobante' de la tabla 'comprobante' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablemoto.id_carajeColumn) = value
+                Me(Me.tablecomprobante.tipo_comprobanteColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property placa() As String
+        Public Property forma_pago() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablemoto.placaColumn),String)
+                    Return CType(Me(Me.tablecomprobante.forma_pagoColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'placa' de la tabla 'moto' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'forma_pago' de la tabla 'comprobante' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablemoto.placaColumn) = value
+                Me(Me.tablecomprobante.forma_pagoColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property marca() As String
+        Public Property id_reserva() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablemoto.marcaColumn),String)
+                    Return CType(Me(Me.tablecomprobante.id_reservaColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'marca' de la tabla 'moto' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'id_reserva' de la tabla 'comprobante' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablemoto.marcaColumn) = value
+                Me(Me.tablecomprobante.id_reservaColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property modelo() As String
+        Public Property fecha() As Date
             Get
                 Try 
-                    Return CType(Me(Me.tablemoto.modeloColumn),String)
+                    Return CType(Me(Me.tablecomprobante.fechaColumn),Date)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'modelo' de la tabla 'moto' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'fecha' de la tabla 'comprobante' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablemoto.modeloColumn) = value
+                Me(Me.tablecomprobante.fechaColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property color() As String
+        Public Property subtotal() As Decimal
             Get
                 Try 
-                    Return CType(Me(Me.tablemoto.colorColumn),String)
+                    Return CType(Me(Me.tablecomprobante.subtotalColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'color' de la tabla 'moto' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'subtotal' de la tabla 'comprobante' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablemoto.colorColumn) = value
+                Me(Me.tablecomprobante.subtotalColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property motor() As String
+        Public Property IGV() As Decimal
             Get
                 Try 
-                    Return CType(Me(Me.tablemoto.motorColumn),String)
+                    Return CType(Me(Me.tablecomprobante.IGVColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'motor' de la tabla 'moto' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'IGV' de la tabla 'comprobante' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablemoto.motorColumn) = value
+                Me(Me.tablecomprobante.IGVColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property cilindraje() As Decimal
+        Public Property total() As Decimal
             Get
                 Try 
-                    Return CType(Me(Me.tablemoto.cilindrajeColumn),Decimal)
+                    Return CType(Me(Me.tablecomprobante.totalColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'cilindraje' de la tabla 'moto' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'total' de la tabla 'comprobante' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablemoto.cilindrajeColumn) = value
+                Me(Me.tablecomprobante.totalColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property precio_hora() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tablemoto.precio_horaColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'precio_hora' de la tabla 'moto' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablemoto.precio_horaColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property estado() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tablemoto.estadoColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'estado' de la tabla 'moto' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablemoto.estadoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function Isid_carajeNull() As Boolean
-            Return Me.IsNull(Me.tablemoto.id_carajeColumn)
+        Public Function Istipo_comprobanteNull() As Boolean
+            Return Me.IsNull(Me.tablecomprobante.tipo_comprobanteColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub Setid_carajeNull()
-            Me(Me.tablemoto.id_carajeColumn) = Global.System.Convert.DBNull
+        Public Sub Settipo_comprobanteNull()
+            Me(Me.tablecomprobante.tipo_comprobanteColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsplacaNull() As Boolean
-            Return Me.IsNull(Me.tablemoto.placaColumn)
+        Public Function Isforma_pagoNull() As Boolean
+            Return Me.IsNull(Me.tablecomprobante.forma_pagoColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetplacaNull()
-            Me(Me.tablemoto.placaColumn) = Global.System.Convert.DBNull
+        Public Sub Setforma_pagoNull()
+            Me(Me.tablecomprobante.forma_pagoColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsmarcaNull() As Boolean
-            Return Me.IsNull(Me.tablemoto.marcaColumn)
+        Public Function Isid_reservaNull() As Boolean
+            Return Me.IsNull(Me.tablecomprobante.id_reservaColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetmarcaNull()
-            Me(Me.tablemoto.marcaColumn) = Global.System.Convert.DBNull
+        Public Sub Setid_reservaNull()
+            Me(Me.tablecomprobante.id_reservaColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsmodeloNull() As Boolean
-            Return Me.IsNull(Me.tablemoto.modeloColumn)
+        Public Function IsfechaNull() As Boolean
+            Return Me.IsNull(Me.tablecomprobante.fechaColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetmodeloNull()
-            Me(Me.tablemoto.modeloColumn) = Global.System.Convert.DBNull
+        Public Sub SetfechaNull()
+            Me(Me.tablecomprobante.fechaColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IscolorNull() As Boolean
-            Return Me.IsNull(Me.tablemoto.colorColumn)
+        Public Function IssubtotalNull() As Boolean
+            Return Me.IsNull(Me.tablecomprobante.subtotalColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetcolorNull()
-            Me(Me.tablemoto.colorColumn) = Global.System.Convert.DBNull
+        Public Sub SetsubtotalNull()
+            Me(Me.tablecomprobante.subtotalColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsmotorNull() As Boolean
-            Return Me.IsNull(Me.tablemoto.motorColumn)
+        Public Function IsIGVNull() As Boolean
+            Return Me.IsNull(Me.tablecomprobante.IGVColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetmotorNull()
-            Me(Me.tablemoto.motorColumn) = Global.System.Convert.DBNull
+        Public Sub SetIGVNull()
+            Me(Me.tablecomprobante.IGVColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IscilindrajeNull() As Boolean
-            Return Me.IsNull(Me.tablemoto.cilindrajeColumn)
+        Public Function IstotalNull() As Boolean
+            Return Me.IsNull(Me.tablecomprobante.totalColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetcilindrajeNull()
-            Me(Me.tablemoto.cilindrajeColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function Isprecio_horaNull() As Boolean
-            Return Me.IsNull(Me.tablemoto.precio_horaColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub Setprecio_horaNull()
-            Me(Me.tablemoto.precio_horaColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsestadoNull() As Boolean
-            Return Me.IsNull(Me.tablemoto.estadoColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetestadoNull()
-            Me(Me.tablemoto.estadoColumn) = Global.System.Convert.DBNull
+        Public Sub SettotalNull()
+            Me(Me.tablecomprobante.totalColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -934,16 +851,16 @@ Partial Public Class Alquiler_motosDataSet2
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-    Public Class motoRowChangeEvent
+    Public Class comprobanteRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As motoRow
+        Private eventRow As comprobanteRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub New(ByVal row As motoRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As comprobanteRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -951,7 +868,7 @@ Partial Public Class Alquiler_motosDataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property Row() As motoRow
+        Public ReadOnly Property Row() As comprobanteRow
             Get
                 Return Me.eventRow
             End Get
@@ -967,7 +884,7 @@ Partial Public Class Alquiler_motosDataSet2
     End Class
 End Class
 
-Namespace Alquiler_motosDataSet2TableAdapters
+Namespace Alquiler_motosDataSet_comprobanteTableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -978,7 +895,7 @@ Namespace Alquiler_motosDataSet2TableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class motoTableAdapter
+    Partial Public Class comprobanteTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
@@ -1095,116 +1012,99 @@ Namespace Alquiler_motosDataSet2TableAdapters
             Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "moto"
-            tableMapping.ColumnMappings.Add("id_moto", "id_moto")
-            tableMapping.ColumnMappings.Add("id_caraje", "id_caraje")
-            tableMapping.ColumnMappings.Add("placa", "placa")
-            tableMapping.ColumnMappings.Add("marca", "marca")
-            tableMapping.ColumnMappings.Add("modelo", "modelo")
-            tableMapping.ColumnMappings.Add("color", "color")
-            tableMapping.ColumnMappings.Add("motor", "motor")
-            tableMapping.ColumnMappings.Add("cilindraje", "cilindraje")
-            tableMapping.ColumnMappings.Add("precio_hora", "precio_hora")
-            tableMapping.ColumnMappings.Add("estado", "estado")
+            tableMapping.DataSetTable = "comprobante"
+            tableMapping.ColumnMappings.Add("id_comprobante", "id_comprobante")
+            tableMapping.ColumnMappings.Add("tipo_comprobante", "tipo_comprobante")
+            tableMapping.ColumnMappings.Add("forma_pago", "forma_pago")
+            tableMapping.ColumnMappings.Add("id_reserva", "id_reserva")
+            tableMapping.ColumnMappings.Add("fecha", "fecha")
+            tableMapping.ColumnMappings.Add("subtotal", "subtotal")
+            tableMapping.ColumnMappings.Add("IGV", "IGV")
+            tableMapping.ColumnMappings.Add("total", "total")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[moto] WHERE (([id_moto] = @Original_id_moto) AND ((@IsNull_id_"& _ 
-                "caraje = 1 AND [id_caraje] IS NULL) OR ([id_caraje] = @Original_id_caraje)) AND "& _ 
-                "((@IsNull_placa = 1 AND [placa] IS NULL) OR ([placa] = @Original_placa)) AND ((@"& _ 
-                "IsNull_marca = 1 AND [marca] IS NULL) OR ([marca] = @Original_marca)) AND ((@IsN"& _ 
-                "ull_modelo = 1 AND [modelo] IS NULL) OR ([modelo] = @Original_modelo)) AND ((@Is"& _ 
-                "Null_color = 1 AND [color] IS NULL) OR ([color] = @Original_color)) AND ((@IsNul"& _ 
-                "l_motor = 1 AND [motor] IS NULL) OR ([motor] = @Original_motor)) AND ((@IsNull_c"& _ 
-                "ilindraje = 1 AND [cilindraje] IS NULL) OR ([cilindraje] = @Original_cilindraje)"& _ 
-                ") AND ((@IsNull_precio_hora = 1 AND [precio_hora] IS NULL) OR ([precio_hora] = @"& _ 
-                "Original_precio_hora)) AND ((@IsNull_estado = 1 AND [estado] IS NULL) OR ([estad"& _ 
-                "o] = @Original_estado)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[comprobante] WHERE (([id_comprobante] = @Original_id_comproban"& _ 
+                "te) AND ((@IsNull_tipo_comprobante = 1 AND [tipo_comprobante] IS NULL) OR ([tipo"& _ 
+                "_comprobante] = @Original_tipo_comprobante)) AND ((@IsNull_forma_pago = 1 AND [f"& _ 
+                "orma_pago] IS NULL) OR ([forma_pago] = @Original_forma_pago)) AND ((@IsNull_id_r"& _ 
+                "eserva = 1 AND [id_reserva] IS NULL) OR ([id_reserva] = @Original_id_reserva)) A"& _ 
+                "ND ((@IsNull_fecha = 1 AND [fecha] IS NULL) OR ([fecha] = @Original_fecha)) AND "& _ 
+                "((@IsNull_subtotal = 1 AND [subtotal] IS NULL) OR ([subtotal] = @Original_subtot"& _ 
+                "al)) AND ((@IsNull_IGV = 1 AND [IGV] IS NULL) OR ([IGV] = @Original_IGV)) AND (("& _ 
+                "@IsNull_total = 1 AND [total] IS NULL) OR ([total] = @Original_total)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_moto", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_moto", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_id_caraje", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_caraje", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_caraje", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_caraje", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_placa", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "placa", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_placa", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "placa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_marca", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "marca", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_marca", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "marca", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_modelo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "modelo", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_modelo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "modelo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_color", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "color", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_color", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "color", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_motor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "motor", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_motor", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "motor", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_cilindraje", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "cilindraje", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_cilindraje", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 2, "cilindraje", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_precio_hora", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "precio_hora", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_precio_hora", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "precio_hora", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_estado", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_comprobante", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_comprobante", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_tipo_comprobante", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tipo_comprobante", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_tipo_comprobante", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tipo_comprobante", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_forma_pago", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "forma_pago", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_forma_pago", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "forma_pago", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_id_reserva", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_reserva", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_reserva", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_reserva", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_fecha", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fecha", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_subtotal", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "subtotal", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_subtotal", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "subtotal", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_IGV", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IGV", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IGV", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 2, "IGV", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_total", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "total", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_total", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "total", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[moto] ([id_moto], [id_caraje], [placa], [marca], [modelo], [co"& _ 
-                "lor], [motor], [cilindraje], [precio_hora], [estado]) VALUES (@id_moto, @id_cara"& _ 
-                "je, @placa, @marca, @modelo, @color, @motor, @cilindraje, @precio_hora, @estado)"& _ 
-                ";"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_moto, id_caraje, placa, marca, modelo, color, motor, cilindraje, pr"& _ 
-                "ecio_hora, estado FROM moto WHERE (id_moto = @id_moto)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[comprobante] ([id_comprobante], [tipo_comprobante], [forma_pag"& _ 
+                "o], [id_reserva], [fecha], [subtotal], [IGV], [total]) VALUES (@id_comprobante, "& _ 
+                "@tipo_comprobante, @forma_pago, @id_reserva, @fecha, @subtotal, @IGV, @total);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)& _ 
+                "SELECT id_comprobante, tipo_comprobante, forma_pago, id_reserva, fecha, subtotal"& _ 
+                ", IGV, total FROM comprobante WHERE (id_comprobante = @id_comprobante)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_moto", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_moto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_caraje", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_caraje", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@placa", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "placa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@marca", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "marca", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@modelo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "modelo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@color", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "color", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@motor", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "motor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cilindraje", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 2, "cilindraje", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@precio_hora", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "precio_hora", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_comprobante", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_comprobante", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tipo_comprobante", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tipo_comprobante", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@forma_pago", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "forma_pago", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_reserva", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_reserva", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fecha", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@subtotal", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "subtotal", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IGV", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 2, "IGV", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@total", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "total", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[moto] SET [id_moto] = @id_moto, [id_caraje] = @id_caraje, [placa] ="& _ 
-                " @placa, [marca] = @marca, [modelo] = @modelo, [color] = @color, [motor] = @moto"& _ 
-                "r, [cilindraje] = @cilindraje, [precio_hora] = @precio_hora, [estado] = @estado "& _ 
-                "WHERE (([id_moto] = @Original_id_moto) AND ((@IsNull_id_caraje = 1 AND [id_caraj"& _ 
-                "e] IS NULL) OR ([id_caraje] = @Original_id_caraje)) AND ((@IsNull_placa = 1 AND "& _ 
-                "[placa] IS NULL) OR ([placa] = @Original_placa)) AND ((@IsNull_marca = 1 AND [ma"& _ 
-                "rca] IS NULL) OR ([marca] = @Original_marca)) AND ((@IsNull_modelo = 1 AND [mode"& _ 
-                "lo] IS NULL) OR ([modelo] = @Original_modelo)) AND ((@IsNull_color = 1 AND [colo"& _ 
-                "r] IS NULL) OR ([color] = @Original_color)) AND ((@IsNull_motor = 1 AND [motor] "& _ 
-                "IS NULL) OR ([motor] = @Original_motor)) AND ((@IsNull_cilindraje = 1 AND [cilin"& _ 
-                "draje] IS NULL) OR ([cilindraje] = @Original_cilindraje)) AND ((@IsNull_precio_h"& _ 
-                "ora = 1 AND [precio_hora] IS NULL) OR ([precio_hora] = @Original_precio_hora)) A"& _ 
-                "ND ((@IsNull_estado = 1 AND [estado] IS NULL) OR ([estado] = @Original_estado)))"& _ 
-                ";"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_moto, id_caraje, placa, marca, modelo, color, motor, cilindraje, pr"& _ 
-                "ecio_hora, estado FROM moto WHERE (id_moto = @id_moto)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[comprobante] SET [id_comprobante] = @id_comprobante, [tipo_comproba"& _ 
+                "nte] = @tipo_comprobante, [forma_pago] = @forma_pago, [id_reserva] = @id_reserva"& _ 
+                ", [fecha] = @fecha, [subtotal] = @subtotal, [IGV] = @IGV, [total] = @total WHERE"& _ 
+                " (([id_comprobante] = @Original_id_comprobante) AND ((@IsNull_tipo_comprobante ="& _ 
+                " 1 AND [tipo_comprobante] IS NULL) OR ([tipo_comprobante] = @Original_tipo_compr"& _ 
+                "obante)) AND ((@IsNull_forma_pago = 1 AND [forma_pago] IS NULL) OR ([forma_pago]"& _ 
+                " = @Original_forma_pago)) AND ((@IsNull_id_reserva = 1 AND [id_reserva] IS NULL)"& _ 
+                " OR ([id_reserva] = @Original_id_reserva)) AND ((@IsNull_fecha = 1 AND [fecha] I"& _ 
+                "S NULL) OR ([fecha] = @Original_fecha)) AND ((@IsNull_subtotal = 1 AND [subtotal"& _ 
+                "] IS NULL) OR ([subtotal] = @Original_subtotal)) AND ((@IsNull_IGV = 1 AND [IGV]"& _ 
+                " IS NULL) OR ([IGV] = @Original_IGV)) AND ((@IsNull_total = 1 AND [total] IS NUL"& _ 
+                "L) OR ([total] = @Original_total)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_comprobante, tipo_comprobante, f"& _ 
+                "orma_pago, id_reserva, fecha, subtotal, IGV, total FROM comprobante WHERE (id_co"& _ 
+                "mprobante = @id_comprobante)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_moto", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_moto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_caraje", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_caraje", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@placa", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "placa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@marca", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "marca", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@modelo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "modelo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@color", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "color", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@motor", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "motor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cilindraje", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 2, "cilindraje", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@precio_hora", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "precio_hora", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_moto", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_moto", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_id_caraje", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_caraje", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_caraje", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_caraje", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_placa", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "placa", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_placa", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "placa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_marca", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "marca", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_marca", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "marca", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_modelo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "modelo", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_modelo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "modelo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_color", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "color", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_color", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "color", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_motor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "motor", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_motor", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "motor", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_cilindraje", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "cilindraje", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_cilindraje", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 2, "cilindraje", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_precio_hora", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "precio_hora", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_precio_hora", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "precio_hora", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_estado", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_comprobante", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_comprobante", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tipo_comprobante", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tipo_comprobante", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@forma_pago", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "forma_pago", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_reserva", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_reserva", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fecha", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@subtotal", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "subtotal", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IGV", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 2, "IGV", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@total", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "total", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_comprobante", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_comprobante", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_tipo_comprobante", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tipo_comprobante", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_tipo_comprobante", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tipo_comprobante", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_forma_pago", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "forma_pago", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_forma_pago", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "forma_pago", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_id_reserva", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_reserva", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_reserva", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_reserva", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_fecha", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fecha", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_subtotal", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "subtotal", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_subtotal", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "subtotal", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_IGV", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IGV", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IGV", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 2, "IGV", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_total", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "total", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_total", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "total", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1217,48 +1117,25 @@ Namespace Alquiler_motosDataSet2TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(5) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT id_moto, id_caraje, placa, marca, modelo, color, motor, cilindraje, precio"& _ 
-                "_hora, estado FROM dbo.moto"
+            Me._commandCollection(0).CommandText = "SELECT id_comprobante, tipo_comprobante, forma_pago, id_reserva, fecha, subtotal,"& _ 
+                " IGV, total FROM dbo.comprobante"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "dbo.sp_mostrarmoto"
+            Me._commandCollection(1).CommandText = "dbo.sp_mostrarcomprobante"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.StoredProcedure
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id", Global.System.Data.SqlDbType.[Char], 4, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
-            Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "dbo.sp_mostrarmoto_filtercolor"
-            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.StoredProcedure
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@color", Global.System.Data.SqlDbType.VarChar, 40, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
-            Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "dbo.sp_mostrarmoto_filtermarca"
-            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.StoredProcedure
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@marca", Global.System.Data.SqlDbType.VarChar, 40, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
-            Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "dbo.sp_mostrarmoto_filtermodelo"
-            Me._commandCollection(4).CommandType = Global.System.Data.CommandType.StoredProcedure
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@modelo", Global.System.Data.SqlDbType.VarChar, 40, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
-            Me._commandCollection(5).Connection = Me.Connection
-            Me._commandCollection(5).CommandText = "dbo.sp_mostrarmoto_filterprecio_asc"
-            Me._commandCollection(5).CommandType = Global.System.Data.CommandType.StoredProcedure
-            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Alquiler_motosDataSet2.motoDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Alquiler_motosDataSet_comprobante.comprobanteDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -1271,9 +1148,9 @@ Namespace Alquiler_motosDataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Alquiler_motosDataSet2.motoDataTable
+        Public Overloads Overridable Function GetData() As Alquiler_motosDataSet_comprobante.comprobanteDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Alquiler_motosDataSet2.motoDataTable = New Alquiler_motosDataSet2.motoDataTable()
+            Dim dataTable As Alquiler_motosDataSet_comprobante.comprobanteDataTable = New Alquiler_motosDataSet_comprobante.comprobanteDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -1282,7 +1159,7 @@ Namespace Alquiler_motosDataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillBy(ByVal dataTable As Alquiler_motosDataSet2.motoDataTable, ByVal id As String) As Integer
+        Public Overloads Overridable Function FillBy(ByVal dataTable As Alquiler_motosDataSet_comprobante.comprobanteDataTable, ByVal id As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
             If (id Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
@@ -1300,140 +1177,14 @@ Namespace Alquiler_motosDataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBy(ByVal id As String) As Alquiler_motosDataSet2.motoDataTable
+        Public Overloads Overridable Function GetDataBy(ByVal id As String) As Alquiler_motosDataSet_comprobante.comprobanteDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
             If (id Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.SelectCommand.Parameters(1).Value = CType(id,String)
             End If
-            Dim dataTable As Alquiler_motosDataSet2.motoDataTable = New Alquiler_motosDataSet2.motoDataTable()
-            Me.Adapter.Fill(dataTable)
-            Return dataTable
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillBy_filtrocolor(ByVal dataTable As Alquiler_motosDataSet2.motoDataTable, ByVal color As String) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(2)
-            If (color Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(color,String)
-            End If
-            If (Me.ClearBeforeFill = true) Then
-                dataTable.Clear
-            End If
-            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
-            Return returnValue
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBy1(ByVal color As String) As Alquiler_motosDataSet2.motoDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(2)
-            If (color Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(color,String)
-            End If
-            Dim dataTable As Alquiler_motosDataSet2.motoDataTable = New Alquiler_motosDataSet2.motoDataTable()
-            Me.Adapter.Fill(dataTable)
-            Return dataTable
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillBy_filtromarca(ByVal dataTable As Alquiler_motosDataSet2.motoDataTable, ByVal marca As String) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(3)
-            If (marca Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(marca,String)
-            End If
-            If (Me.ClearBeforeFill = true) Then
-                dataTable.Clear
-            End If
-            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
-            Return returnValue
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBy2(ByVal marca As String) As Alquiler_motosDataSet2.motoDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(3)
-            If (marca Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(marca,String)
-            End If
-            Dim dataTable As Alquiler_motosDataSet2.motoDataTable = New Alquiler_motosDataSet2.motoDataTable()
-            Me.Adapter.Fill(dataTable)
-            Return dataTable
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillBy_filtromodelo(ByVal dataTable As Alquiler_motosDataSet2.motoDataTable, ByVal modelo As String) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(4)
-            If (modelo Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(modelo,String)
-            End If
-            If (Me.ClearBeforeFill = true) Then
-                dataTable.Clear
-            End If
-            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
-            Return returnValue
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBy3(ByVal modelo As String) As Alquiler_motosDataSet2.motoDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(4)
-            If (modelo Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(modelo,String)
-            End If
-            Dim dataTable As Alquiler_motosDataSet2.motoDataTable = New Alquiler_motosDataSet2.motoDataTable()
-            Me.Adapter.Fill(dataTable)
-            Return dataTable
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillBy_filtroprecio_asc(ByVal dataTable As Alquiler_motosDataSet2.motoDataTable) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(5)
-            If (Me.ClearBeforeFill = true) Then
-                dataTable.Clear
-            End If
-            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
-            Return returnValue
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBy4() As Alquiler_motosDataSet2.motoDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(5)
-            Dim dataTable As Alquiler_motosDataSet2.motoDataTable = New Alquiler_motosDataSet2.motoDataTable()
+            Dim dataTable As Alquiler_motosDataSet_comprobante.comprobanteDataTable = New Alquiler_motosDataSet_comprobante.comprobanteDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -1441,15 +1192,15 @@ Namespace Alquiler_motosDataSet2TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Alquiler_motosDataSet2.motoDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As Alquiler_motosDataSet_comprobante.comprobanteDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Alquiler_motosDataSet2) As Integer
-            Return Me.Adapter.Update(dataSet, "moto")
+        Public Overloads Overridable Function Update(ByVal dataSet As Alquiler_motosDataSet_comprobante) As Integer
+            Return Me.Adapter.Update(dataSet, "comprobante")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1470,74 +1221,60 @@ Namespace Alquiler_motosDataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_id_moto As String, ByVal Original_id_caraje As String, ByVal Original_placa As String, ByVal Original_marca As String, ByVal Original_modelo As String, ByVal Original_color As String, ByVal Original_motor As String, ByVal Original_cilindraje As Global.System.Nullable(Of Decimal), ByVal Original_precio_hora As Global.System.Nullable(Of Decimal), ByVal Original_estado As Global.System.Nullable(Of Boolean)) As Integer
-            If (Original_id_moto Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_id_moto")
+        Public Overloads Overridable Function Delete(ByVal Original_id_comprobante As String, ByVal Original_tipo_comprobante As String, ByVal Original_forma_pago As String, ByVal Original_id_reserva As String, ByVal Original_fecha As Global.System.Nullable(Of Date), ByVal Original_subtotal As Global.System.Nullable(Of Decimal), ByVal Original_IGV As Global.System.Nullable(Of Decimal), ByVal Original_total As Global.System.Nullable(Of Decimal)) As Integer
+            If (Original_id_comprobante Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_id_comprobante")
             Else
-                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_id_moto,String)
+                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_id_comprobante,String)
             End If
-            If (Original_id_caraje Is Nothing) Then
+            If (Original_tipo_comprobante Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_id_caraje,String)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_tipo_comprobante,String)
             End If
-            If (Original_placa Is Nothing) Then
+            If (Original_forma_pago Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_placa,String)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_forma_pago,String)
             End If
-            If (Original_marca Is Nothing) Then
+            If (Original_id_reserva Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_marca,String)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_id_reserva,String)
             End If
-            If (Original_modelo Is Nothing) Then
+            If (Original_fecha.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_fecha.Value,Date)
+            Else
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_modelo,String)
             End If
-            If (Original_color Is Nothing) Then
+            If (Original_subtotal.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_subtotal.Value,Decimal)
+            Else
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_color,String)
             End If
-            If (Original_motor Is Nothing) Then
+            If (Original_IGV.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_IGV.Value,Decimal)
+            Else
                 Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_motor,String)
             End If
-            If (Original_cilindraje.HasValue = true) Then
+            If (Original_total.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_cilindraje.Value,Decimal)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_total.Value,Decimal)
             Else
                 Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
-            End If
-            If (Original_precio_hora.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_precio_hora.Value,Decimal)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
-            End If
-            If (Original_estado.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_estado.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1558,56 +1295,46 @@ Namespace Alquiler_motosDataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal id_moto As String, ByVal id_caraje As String, ByVal placa As String, ByVal marca As String, ByVal modelo As String, ByVal color As String, ByVal motor As String, ByVal cilindraje As Global.System.Nullable(Of Decimal), ByVal precio_hora As Global.System.Nullable(Of Decimal), ByVal estado As Global.System.Nullable(Of Boolean)) As Integer
-            If (id_moto Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("id_moto")
+        Public Overloads Overridable Function Insert(ByVal id_comprobante As String, ByVal tipo_comprobante As String, ByVal forma_pago As String, ByVal id_reserva As String, ByVal fecha As Global.System.Nullable(Of Date), ByVal subtotal As Global.System.Nullable(Of Decimal), ByVal IGV As Global.System.Nullable(Of Decimal), ByVal total As Global.System.Nullable(Of Decimal)) As Integer
+            If (id_comprobante Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("id_comprobante")
             Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(id_moto,String)
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(id_comprobante,String)
             End If
-            If (id_caraje Is Nothing) Then
+            If (tipo_comprobante Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(id_caraje,String)
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(tipo_comprobante,String)
             End If
-            If (placa Is Nothing) Then
+            If (forma_pago Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(placa,String)
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(forma_pago,String)
             End If
-            If (marca Is Nothing) Then
+            If (id_reserva Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(marca,String)
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(id_reserva,String)
             End If
-            If (modelo Is Nothing) Then
+            If (fecha.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(fecha.Value,Date)
+            Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(modelo,String)
             End If
-            If (color Is Nothing) Then
+            If (subtotal.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(subtotal.Value,Decimal)
+            Else
                 Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(color,String)
             End If
-            If (motor Is Nothing) Then
+            If (IGV.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(IGV.Value,Decimal)
+            Else
                 Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(motor,String)
             End If
-            If (cilindraje.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(cilindraje.Value,Decimal)
+            If (total.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(total.Value,Decimal)
             Else
                 Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
-            If (precio_hora.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(precio_hora.Value,Decimal)
-            Else
-                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            If (estado.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(9).Value = CType(estado.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1629,143 +1356,115 @@ Namespace Alquiler_motosDataSet2TableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
-                    ByVal id_moto As String,  _
-                    ByVal id_caraje As String,  _
-                    ByVal placa As String,  _
-                    ByVal marca As String,  _
-                    ByVal modelo As String,  _
-                    ByVal color As String,  _
-                    ByVal motor As String,  _
-                    ByVal cilindraje As Global.System.Nullable(Of Decimal),  _
-                    ByVal precio_hora As Global.System.Nullable(Of Decimal),  _
-                    ByVal estado As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_id_moto As String,  _
-                    ByVal Original_id_caraje As String,  _
-                    ByVal Original_placa As String,  _
-                    ByVal Original_marca As String,  _
-                    ByVal Original_modelo As String,  _
-                    ByVal Original_color As String,  _
-                    ByVal Original_motor As String,  _
-                    ByVal Original_cilindraje As Global.System.Nullable(Of Decimal),  _
-                    ByVal Original_precio_hora As Global.System.Nullable(Of Decimal),  _
-                    ByVal Original_estado As Global.System.Nullable(Of Boolean)) As Integer
-            If (id_moto Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("id_moto")
+                    ByVal id_comprobante As String,  _
+                    ByVal tipo_comprobante As String,  _
+                    ByVal forma_pago As String,  _
+                    ByVal id_reserva As String,  _
+                    ByVal fecha As Global.System.Nullable(Of Date),  _
+                    ByVal subtotal As Global.System.Nullable(Of Decimal),  _
+                    ByVal IGV As Global.System.Nullable(Of Decimal),  _
+                    ByVal total As Global.System.Nullable(Of Decimal),  _
+                    ByVal Original_id_comprobante As String,  _
+                    ByVal Original_tipo_comprobante As String,  _
+                    ByVal Original_forma_pago As String,  _
+                    ByVal Original_id_reserva As String,  _
+                    ByVal Original_fecha As Global.System.Nullable(Of Date),  _
+                    ByVal Original_subtotal As Global.System.Nullable(Of Decimal),  _
+                    ByVal Original_IGV As Global.System.Nullable(Of Decimal),  _
+                    ByVal Original_total As Global.System.Nullable(Of Decimal)) As Integer
+            If (id_comprobante Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("id_comprobante")
             Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(id_moto,String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(id_comprobante,String)
             End If
-            If (id_caraje Is Nothing) Then
+            If (tipo_comprobante Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(id_caraje,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(tipo_comprobante,String)
             End If
-            If (placa Is Nothing) Then
+            If (forma_pago Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(placa,String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(forma_pago,String)
             End If
-            If (marca Is Nothing) Then
+            If (id_reserva Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(marca,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(id_reserva,String)
             End If
-            If (modelo Is Nothing) Then
+            If (fecha.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(fecha.Value,Date)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(modelo,String)
             End If
-            If (color Is Nothing) Then
+            If (subtotal.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(subtotal.Value,Decimal)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(color,String)
             End If
-            If (motor Is Nothing) Then
+            If (IGV.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(IGV.Value,Decimal)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(motor,String)
             End If
-            If (cilindraje.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(cilindraje.Value,Decimal)
+            If (total.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(total.Value,Decimal)
             Else
                 Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
-            If (precio_hora.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(precio_hora.Value,Decimal)
+            If (Original_id_comprobante Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_id_comprobante")
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_id_comprobante,String)
             End If
-            If (estado.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(estado.Value,Boolean)
+            If (Original_tipo_comprobante Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_tipo_comprobante,String)
             End If
-            If (Original_id_moto Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_id_moto")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_id_moto,String)
-            End If
-            If (Original_id_caraje Is Nothing) Then
+            If (Original_forma_pago Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_id_caraje,String)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_forma_pago,String)
             End If
-            If (Original_placa Is Nothing) Then
+            If (Original_id_reserva Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_placa,String)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_id_reserva,String)
             End If
-            If (Original_marca Is Nothing) Then
+            If (Original_fecha.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_fecha.Value,Date)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_marca,String)
             End If
-            If (Original_modelo Is Nothing) Then
+            If (Original_subtotal.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_subtotal.Value,Decimal)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_modelo,String)
             End If
-            If (Original_color Is Nothing) Then
+            If (Original_IGV.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_IGV.Value,Decimal)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_color,String)
             End If
-            If (Original_motor Is Nothing) Then
+            If (Original_total.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_total.Value,Decimal)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_motor,String)
-            End If
-            If (Original_cilindraje.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_cilindraje.Value,Decimal)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
-            End If
-            If (Original_precio_hora.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_precio_hora.Value,Decimal)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
-            End If
-            If (Original_estado.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_estado.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1786,27 +1485,8 @@ Namespace Alquiler_motosDataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update( _
-                    ByVal id_caraje As String,  _
-                    ByVal placa As String,  _
-                    ByVal marca As String,  _
-                    ByVal modelo As String,  _
-                    ByVal color As String,  _
-                    ByVal motor As String,  _
-                    ByVal cilindraje As Global.System.Nullable(Of Decimal),  _
-                    ByVal precio_hora As Global.System.Nullable(Of Decimal),  _
-                    ByVal estado As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_id_moto As String,  _
-                    ByVal Original_id_caraje As String,  _
-                    ByVal Original_placa As String,  _
-                    ByVal Original_marca As String,  _
-                    ByVal Original_modelo As String,  _
-                    ByVal Original_color As String,  _
-                    ByVal Original_motor As String,  _
-                    ByVal Original_cilindraje As Global.System.Nullable(Of Decimal),  _
-                    ByVal Original_precio_hora As Global.System.Nullable(Of Decimal),  _
-                    ByVal Original_estado As Global.System.Nullable(Of Boolean)) As Integer
-            Return Me.Update(Original_id_moto, id_caraje, placa, marca, modelo, color, motor, cilindraje, precio_hora, estado, Original_id_moto, Original_id_caraje, Original_placa, Original_marca, Original_modelo, Original_color, Original_motor, Original_cilindraje, Original_precio_hora, Original_estado)
+        Public Overloads Overridable Function Update(ByVal tipo_comprobante As String, ByVal forma_pago As String, ByVal id_reserva As String, ByVal fecha As Global.System.Nullable(Of Date), ByVal subtotal As Global.System.Nullable(Of Decimal), ByVal IGV As Global.System.Nullable(Of Decimal), ByVal total As Global.System.Nullable(Of Decimal), ByVal Original_id_comprobante As String, ByVal Original_tipo_comprobante As String, ByVal Original_forma_pago As String, ByVal Original_id_reserva As String, ByVal Original_fecha As Global.System.Nullable(Of Date), ByVal Original_subtotal As Global.System.Nullable(Of Decimal), ByVal Original_IGV As Global.System.Nullable(Of Decimal), ByVal Original_total As Global.System.Nullable(Of Decimal)) As Integer
+            Return Me.Update(Original_id_comprobante, tipo_comprobante, forma_pago, id_reserva, fecha, subtotal, IGV, total, Original_id_comprobante, Original_tipo_comprobante, Original_forma_pago, Original_id_reserva, Original_fecha, Original_subtotal, Original_IGV, Original_total)
         End Function
     End Class
     
@@ -1823,7 +1503,7 @@ Namespace Alquiler_motosDataSet2TableAdapters
         
         Private _updateOrder As UpdateOrderOption
         
-        Private _motoTableAdapter As motoTableAdapter
+        Private _comprobanteTableAdapter As comprobanteTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -1845,12 +1525,12 @@ Namespace Alquiler_motosDataSet2TableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property motoTableAdapter() As motoTableAdapter
+        Public Property comprobanteTableAdapter() As comprobanteTableAdapter
             Get
-                Return Me._motoTableAdapter
+                Return Me._comprobanteTableAdapter
             End Get
             Set
-                Me._motoTableAdapter = value
+                Me._comprobanteTableAdapter = value
             End Set
         End Property
         
@@ -1873,9 +1553,9 @@ Namespace Alquiler_motosDataSet2TableAdapters
                 If (Not (Me._connection) Is Nothing) Then
                     Return Me._connection
                 End If
-                If ((Not (Me._motoTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._motoTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._motoTableAdapter.Connection
+                If ((Not (Me._comprobanteTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._comprobanteTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._comprobanteTableAdapter.Connection
                 End If
                 Return Nothing
             End Get
@@ -1890,7 +1570,7 @@ Namespace Alquiler_motosDataSet2TableAdapters
         Public ReadOnly Property TableAdapterInstanceCount() As Integer
             Get
                 Dim count As Integer = 0
-                If (Not (Me._motoTableAdapter) Is Nothing) Then
+                If (Not (Me._comprobanteTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -1902,14 +1582,14 @@ Namespace Alquiler_motosDataSet2TableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As Alquiler_motosDataSet2, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As Alquiler_motosDataSet_comprobante, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._motoTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.moto.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._comprobanteTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.comprobante.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._motoTableAdapter.Update(updatedRows))
+                    result = (result + Me._comprobanteTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -1921,13 +1601,13 @@ Namespace Alquiler_motosDataSet2TableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As Alquiler_motosDataSet2, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As Alquiler_motosDataSet_comprobante, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._motoTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.moto.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._comprobanteTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.comprobante.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._motoTableAdapter.Update(addedRows))
+                    result = (result + Me._comprobanteTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -1939,13 +1619,13 @@ Namespace Alquiler_motosDataSet2TableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As Alquiler_motosDataSet2, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As Alquiler_motosDataSet_comprobante, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._motoTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.moto.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._comprobanteTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.comprobante.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._motoTableAdapter.Update(deletedRows))
+                    result = (result + Me._comprobanteTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -1983,15 +1663,15 @@ Namespace Alquiler_motosDataSet2TableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As Alquiler_motosDataSet2) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As Alquiler_motosDataSet_comprobante) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If
             If (dataSet.HasChanges = false) Then
                 Return 0
             End If
-            If ((Not (Me._motoTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._motoTableAdapter.Connection) = false)) Then
+            If ((Not (Me._comprobanteTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._comprobanteTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
@@ -2027,13 +1707,13 @@ Namespace Alquiler_motosDataSet2TableAdapters
             Try 
                 '---- Prepare for update -----------
                 '
-                If (Not (Me._motoTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._motoTableAdapter, Me._motoTableAdapter.Connection)
-                    Me._motoTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
-                    Me._motoTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
-                    If Me._motoTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._motoTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._motoTableAdapter.Adapter)
+                If (Not (Me._comprobanteTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._comprobanteTableAdapter, Me._comprobanteTableAdapter.Connection)
+                    Me._comprobanteTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._comprobanteTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._comprobanteTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._comprobanteTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._comprobanteTableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -2096,9 +1776,9 @@ Namespace Alquiler_motosDataSet2TableAdapters
                 If workConnOpened Then
                     workConnection.Close
                 End If
-                If (Not (Me._motoTableAdapter) Is Nothing) Then
-                    Me._motoTableAdapter.Connection = CType(revertConnections(Me._motoTableAdapter),Global.System.Data.SqlClient.SqlConnection)
-                    Me._motoTableAdapter.Transaction = Nothing
+                If (Not (Me._comprobanteTableAdapter) Is Nothing) Then
+                    Me._comprobanteTableAdapter.Connection = CType(revertConnections(Me._comprobanteTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._comprobanteTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter

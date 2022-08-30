@@ -110,7 +110,7 @@ Partial Class menu_principal
         '
         Me.DetalleReservaToolStripMenuItem1.Name = "DetalleReservaToolStripMenuItem1"
         Me.DetalleReservaToolStripMenuItem1.Size = New System.Drawing.Size(217, 22)
-        Me.DetalleReservaToolStripMenuItem1.Text = "Detalle de reservas"
+        Me.DetalleReservaToolStripMenuItem1.Text = "Detalle de Reserva"
         '
         'ComprobantesDePagoToolStripMenuItem2
         '

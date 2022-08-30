@@ -40,4 +40,6 @@ Public Class login
         cn = New SqlConnection("Data Source = DESKTOP-AHI2VUU;Initial Catalog=Alquiler_motos;Integrated Security=True")
 
     End Sub
+
+
 End Class
