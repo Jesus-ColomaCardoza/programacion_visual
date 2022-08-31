@@ -121,7 +121,7 @@
   <data name="Label12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAJzBJREFUeF7tnQeYFUW2x2VmGOLAkJkBCYICkkGSIhnEAAhKUlAxB8yIumDAgLqi
+        vwAADr8BOAVTJAAAJzBJREFUeF7tnQeYFUW2x2VmGOLAkJkBCYICkkGSIhnEAAhKUlAxB8yIumDAgLqi
         qKsoBsxrXPWt6z5937dvd9+6wfWp6DOsIrJmUYKCGAhz3vmd7nOnb08PzMVB0Ln1ff+v61adqjpVJ1R1
         dd3u3X5mIUeRF0RToVAxQjFX8RvFq4pPFRsUW0IQJ22pAhpoKUPZaKBu2siGXSxUU+SGV0KBYpLiYcUn
         ColCiRIRp1OgFI8pJivqKQhKmtZWNuzkgDDcKlsq5is+UyDAEq451aqV5OVU2ww0jsVbegwl5EXonMav
@@ -294,7 +294,7 @@
   <data name="btn_listar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAABaVJREFUWEfFV0tPG2cU/Wymi3bVTRUp+4hssmr+RatKqdo/QBaVIrZdBqqKRReh
+        vAAADrwBlbxySQAABaVJREFUWEfFV0tPG2cU/Wymi3bVTRUp+4hssmr+RatKqdo/QBaVIrZdBqqKRReh
         FSWYh3mER8AGQyitKiVt06pVkZJWvN+Yl8E2fmAwbzy2b8+9Mx+Yh8FEanulwwz2+DvnnnvnmzsqbxA5
         VDcVyZGjc/2Gag+XqPaQR7WFZlT72rZqW82oVuBJYFs9WZlRzQGvalq+r9wLN+Q3Z9coOMrJKT/keBq7
         DfJG1RlOqKdhUu3BrOoI8ZFU2xqpVuDJKqmWAKnmlSxAqnFlU7mXGlX90m1Zg9fiNQsKTewNvK08kUqQ
@@ -480,9 +480,6 @@
         11m6mg/gRYpE/wWy0UxUXi7o0QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="Alquiler_motosDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="TrabajadorTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>388, 17</value>
   </metadata>

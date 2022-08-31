@@ -48,6 +48,24 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -118,6 +136,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Alquiler_motosDataSet_garaje.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Alquiler_motosDataSet_reportes.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alquiler_motosDataSet_reportes.xsd</DependentUpon>
     </Compile>
     <Compile Include="Alquiler_motosDataSet_reserva.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -222,6 +245,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="reportes.Designer.vb">
+      <DependentUpon>reportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="reserva.Designer.vb">
       <DependentUpon>reserva.vb</DependentUpon>
     </Compile>
@@ -278,6 +307,12 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report_cliente.rdlc" />
+    <EmbeddedResource Include="reportes.resx">
+      <DependentUpon>reportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_motos.rdlc" />
+    <EmbeddedResource Include="Report_reserva.rdlc" />
     <EmbeddedResource Include="reserva.resx">
       <DependentUpon>reserva.vb</DependentUpon>
     </EmbeddedResource>
@@ -379,6 +414,17 @@
     </None>
     <None Include="Alquiler_motosDataSet_garaje.xss">
       <DependentUpon>Alquiler_motosDataSet_garaje.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet_reportes.xsc">
+      <DependentUpon>Alquiler_motosDataSet_reportes.xsd</DependentUpon>
+    </None>
+    <None Include="Alquiler_motosDataSet_reportes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Alquiler_motosDataSet_reportes.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Alquiler_motosDataSet_reportes.xss">
+      <DependentUpon>Alquiler_motosDataSet_reportes.xsd</DependentUpon>
     </None>
     <None Include="Alquiler_motosDataSet_reserva.xsc">
       <DependentUpon>Alquiler_motosDataSet_reserva.xsd</DependentUpon>
@@ -489,6 +535,23 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

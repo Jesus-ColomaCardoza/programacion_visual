@@ -121,7 +121,7 @@
   <data name="Label12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAIYRJREFUeF7tnQmUHFW5x6PvnaeA4HaeeA4gPBDPY1UMhCwzVTOJbFkgBEQizwUE
+        vgAADr4B6kKxwAAAIYRJREFUeF7tnQmUHFW5x6PvnaeA4HaeeA4gPBDPY1UMhCwzVTOJbFkgBEQizwUE
         FRRZJLNkls7s+0wQZFGUfTWggkxm7+npmUmEIUThuEEii4DCe6ImZOuevu/736qv+vbt6p7e05mZO+d3
         qteqe7///3731tI1cw60IsSc93m85r8DPLZfdkrL6MJDa4eNU+qHii6q85plxJ21XrO7xmtuqRkyt9cO
         Ge/UeI2dtAzQ89A6ooYer6PXaPnOukFzO7HFM2R20/JOz6BZVkProu19rrn/Cx+2NxMuSn3w2H51tmSy
@@ -456,9 +456,6 @@
         11m6mg/gRYpE/wWy0UxUXi7o0QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="Alquiler_motosDataSet_agencia.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="AgenciaTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>414, 17</value>
   </metadata>

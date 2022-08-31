@@ -59,4 +59,8 @@
     Private Sub ComprobantesDePagoToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ComprobantesDePagoToolStripMenuItem2.Click
         comprobante.Show()
     End Sub
+
+    Private Sub ReportesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportesToolStripMenuItem.Click
+        reportes.Show()
+    End Sub
 End Class

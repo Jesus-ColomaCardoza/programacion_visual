@@ -24,7 +24,7 @@ Partial Class agencia
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(agencia))
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -32,6 +32,11 @@ Partial Class agencia
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btn_listar = New System.Windows.Forms.Button()
         Me.tablacliente = New System.Windows.Forms.DataGridView()
+        Me.IdagenciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreagenciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AgenciaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Alquiler_motosDataSet_agencia = New Alquiler_motos.Alquiler_motosDataSet_agencia()
         Me.p_cliente = New System.Windows.Forms.Panel()
         Me.txt_direccion = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -44,18 +49,13 @@ Partial Class agencia
         Me.btn_eliminar = New System.Windows.Forms.Button()
         Me.btn_actualizar = New System.Windows.Forms.Button()
         Me.btn_buscar = New System.Windows.Forms.Button()
-        Me.IdagenciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreagenciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AgenciaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Alquiler_motosDataSet_agencia = New Alquiler_motos.Alquiler_motosDataSet_agencia()
         Me.AgenciaTableAdapter = New Alquiler_motos.Alquiler_motosDataSet_agenciaTableAdapters.agenciaTableAdapter()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.tablacliente, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.p_cliente.SuspendLayout()
         CType(Me.AgenciaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Alquiler_motosDataSet_agencia, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.p_cliente.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -126,14 +126,14 @@ Partial Class agencia
         '
         Me.tablacliente.AutoGenerateColumns = False
         Me.tablacliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.tablacliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tablacliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdagenciaDataGridViewTextBoxColumn, Me.NombreagenciaDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn})
         Me.tablacliente.DataSource = Me.AgenciaBindingSource
@@ -141,6 +141,34 @@ Partial Class agencia
         Me.tablacliente.Name = "tablacliente"
         Me.tablacliente.Size = New System.Drawing.Size(347, 185)
         Me.tablacliente.TabIndex = 20
+        '
+        'IdagenciaDataGridViewTextBoxColumn
+        '
+        Me.IdagenciaDataGridViewTextBoxColumn.DataPropertyName = "id_agencia"
+        Me.IdagenciaDataGridViewTextBoxColumn.HeaderText = "id_agencia"
+        Me.IdagenciaDataGridViewTextBoxColumn.Name = "IdagenciaDataGridViewTextBoxColumn"
+        '
+        'NombreagenciaDataGridViewTextBoxColumn
+        '
+        Me.NombreagenciaDataGridViewTextBoxColumn.DataPropertyName = "nombre_agencia"
+        Me.NombreagenciaDataGridViewTextBoxColumn.HeaderText = "nombre_agencia"
+        Me.NombreagenciaDataGridViewTextBoxColumn.Name = "NombreagenciaDataGridViewTextBoxColumn"
+        '
+        'DireccionDataGridViewTextBoxColumn
+        '
+        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
+        '
+        'AgenciaBindingSource
+        '
+        Me.AgenciaBindingSource.DataMember = "agencia"
+        Me.AgenciaBindingSource.DataSource = Me.Alquiler_motosDataSet_agencia
+        '
+        'Alquiler_motosDataSet_agencia
+        '
+        Me.Alquiler_motosDataSet_agencia.DataSetName = "Alquiler_motosDataSet_agencia"
+        Me.Alquiler_motosDataSet_agencia.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'p_cliente
         '
@@ -280,34 +308,6 @@ Partial Class agencia
         Me.btn_buscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_buscar.UseVisualStyleBackColor = False
         '
-        'IdagenciaDataGridViewTextBoxColumn
-        '
-        Me.IdagenciaDataGridViewTextBoxColumn.DataPropertyName = "id_agencia"
-        Me.IdagenciaDataGridViewTextBoxColumn.HeaderText = "id_agencia"
-        Me.IdagenciaDataGridViewTextBoxColumn.Name = "IdagenciaDataGridViewTextBoxColumn"
-        '
-        'NombreagenciaDataGridViewTextBoxColumn
-        '
-        Me.NombreagenciaDataGridViewTextBoxColumn.DataPropertyName = "nombre_agencia"
-        Me.NombreagenciaDataGridViewTextBoxColumn.HeaderText = "nombre_agencia"
-        Me.NombreagenciaDataGridViewTextBoxColumn.Name = "NombreagenciaDataGridViewTextBoxColumn"
-        '
-        'DireccionDataGridViewTextBoxColumn
-        '
-        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
-        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "direccion"
-        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
-        '
-        'AgenciaBindingSource
-        '
-        Me.AgenciaBindingSource.DataMember = "agencia"
-        Me.AgenciaBindingSource.DataSource = Me.Alquiler_motosDataSet_agencia
-        '
-        'Alquiler_motosDataSet_agencia
-        '
-        Me.Alquiler_motosDataSet_agencia.DataSetName = "Alquiler_motosDataSet_agencia"
-        Me.Alquiler_motosDataSet_agencia.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'AgenciaTableAdapter
         '
         Me.AgenciaTableAdapter.ClearBeforeFill = True
@@ -327,6 +327,8 @@ Partial Class agencia
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btn_buscar)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "agencia"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Agencia"
@@ -334,10 +336,10 @@ Partial Class agencia
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.tablacliente, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.p_cliente.ResumeLayout(False)
-        Me.p_cliente.PerformLayout()
         CType(Me.AgenciaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Alquiler_motosDataSet_agencia, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.p_cliente.ResumeLayout(False)
+        Me.p_cliente.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -39,6 +39,7 @@ Partial Class menu_principal
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TiposDeClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TiposDeComprobanteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -120,6 +121,7 @@ Partial Class menu_principal
         '
         'ConsultasToolStripMenuItem
         '
+        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesToolStripMenuItem})
         Me.ConsultasToolStripMenuItem.Image = CType(resources.GetObject("ConsultasToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem"
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(159, 21)
@@ -150,6 +152,12 @@ Partial Class menu_principal
         Me.TiposDeComprobanteToolStripMenuItem.Name = "TiposDeComprobanteToolStripMenuItem"
         Me.TiposDeComprobanteToolStripMenuItem.Size = New System.Drawing.Size(210, 22)
         Me.TiposDeComprobanteToolStripMenuItem.Text = "Tipos de comprobante"
+        '
+        'ReportesToolStripMenuItem
+        '
+        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReportesToolStripMenuItem.Text = "Reportes"
         '
         'menu_principal
         '
@@ -186,4 +194,5 @@ Partial Class menu_principal
     Friend WithEvents CerrarSesiónToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TiposDeClienteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TiposDeComprobanteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
 End Class

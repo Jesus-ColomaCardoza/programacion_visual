@@ -496,6 +496,8 @@ Partial Class cliente
         Me.Controls.Add(Me.btn_buscar)
         Me.Controls.Add(Me.txt_id)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "cliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cliente"

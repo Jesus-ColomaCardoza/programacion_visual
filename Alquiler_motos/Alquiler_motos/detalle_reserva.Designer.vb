@@ -514,6 +514,8 @@ Partial Class detalle_reserva
         Me.Controls.Add(Me.btn_buscar)
         Me.Controls.Add(Me.txt_id)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "detalle_reserva"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Detalle de Reserva"

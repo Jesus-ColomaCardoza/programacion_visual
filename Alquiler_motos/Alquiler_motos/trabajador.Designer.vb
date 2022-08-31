@@ -24,7 +24,7 @@ Partial Class trabajador
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(trabajador))
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -32,6 +32,16 @@ Partial Class trabajador
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btn_listar = New System.Windows.Forms.Button()
         Me.tablacliente = New System.Windows.Forms.DataGridView()
+        Me.IdtrabajorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DniDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CorreoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TrabajadorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Alquiler_motosDataSet1 = New Alquiler_motos.Alquiler_motosDataSet1()
         Me.p_cliente = New System.Windows.Forms.Panel()
         Me.txt_c = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -54,23 +64,13 @@ Partial Class trabajador
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_buscar = New System.Windows.Forms.Button()
         Me.txt_id = New System.Windows.Forms.TextBox()
-        Me.IdtrabajorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DniDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CorreoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TrabajadorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Alquiler_motosDataSet1 = New Alquiler_motos.Alquiler_motosDataSet1()
         Me.TrabajadorTableAdapter = New Alquiler_motos.Alquiler_motosDataSet1TableAdapters.trabajadorTableAdapter()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.tablacliente, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.p_cliente.SuspendLayout()
         CType(Me.TrabajadorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Alquiler_motosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.p_cliente.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -143,14 +143,14 @@ Partial Class trabajador
         '
         Me.tablacliente.AutoGenerateColumns = False
         Me.tablacliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.tablacliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tablacliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdtrabajorDataGridViewTextBoxColumn, Me.CargoDataGridViewTextBoxColumn, Me.DniDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn})
         Me.tablacliente.DataSource = Me.TrabajadorBindingSource
@@ -158,6 +158,64 @@ Partial Class trabajador
         Me.tablacliente.Name = "tablacliente"
         Me.tablacliente.Size = New System.Drawing.Size(851, 201)
         Me.tablacliente.TabIndex = 20
+        '
+        'IdtrabajorDataGridViewTextBoxColumn
+        '
+        Me.IdtrabajorDataGridViewTextBoxColumn.DataPropertyName = "id_trabajor"
+        Me.IdtrabajorDataGridViewTextBoxColumn.HeaderText = "id_trabajor"
+        Me.IdtrabajorDataGridViewTextBoxColumn.Name = "IdtrabajorDataGridViewTextBoxColumn"
+        '
+        'CargoDataGridViewTextBoxColumn
+        '
+        Me.CargoDataGridViewTextBoxColumn.DataPropertyName = "cargo"
+        Me.CargoDataGridViewTextBoxColumn.HeaderText = "cargo"
+        Me.CargoDataGridViewTextBoxColumn.Name = "CargoDataGridViewTextBoxColumn"
+        '
+        'DniDataGridViewTextBoxColumn
+        '
+        Me.DniDataGridViewTextBoxColumn.DataPropertyName = "dni"
+        Me.DniDataGridViewTextBoxColumn.HeaderText = "dni"
+        Me.DniDataGridViewTextBoxColumn.Name = "DniDataGridViewTextBoxColumn"
+        '
+        'NombresDataGridViewTextBoxColumn
+        '
+        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
+        Me.NombresDataGridViewTextBoxColumn.HeaderText = "nombres"
+        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
+        '
+        'ApellidosDataGridViewTextBoxColumn
+        '
+        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
+        '
+        'DireccionDataGridViewTextBoxColumn
+        '
+        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        '
+        'CorreoDataGridViewTextBoxColumn
+        '
+        Me.CorreoDataGridViewTextBoxColumn.DataPropertyName = "correo"
+        Me.CorreoDataGridViewTextBoxColumn.HeaderText = "correo"
+        Me.CorreoDataGridViewTextBoxColumn.Name = "CorreoDataGridViewTextBoxColumn"
+        '
+        'TrabajadorBindingSource
+        '
+        Me.TrabajadorBindingSource.DataMember = "trabajador"
+        Me.TrabajadorBindingSource.DataSource = Me.Alquiler_motosDataSet1
+        '
+        'Alquiler_motosDataSet1
+        '
+        Me.Alquiler_motosDataSet1.DataSetName = "Alquiler_motosDataSet1"
+        Me.Alquiler_motosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'p_cliente
         '
@@ -397,64 +455,6 @@ Partial Class trabajador
         Me.txt_id.Size = New System.Drawing.Size(228, 22)
         Me.txt_id.TabIndex = 27
         '
-        'IdtrabajorDataGridViewTextBoxColumn
-        '
-        Me.IdtrabajorDataGridViewTextBoxColumn.DataPropertyName = "id_trabajor"
-        Me.IdtrabajorDataGridViewTextBoxColumn.HeaderText = "id_trabajor"
-        Me.IdtrabajorDataGridViewTextBoxColumn.Name = "IdtrabajorDataGridViewTextBoxColumn"
-        '
-        'CargoDataGridViewTextBoxColumn
-        '
-        Me.CargoDataGridViewTextBoxColumn.DataPropertyName = "cargo"
-        Me.CargoDataGridViewTextBoxColumn.HeaderText = "cargo"
-        Me.CargoDataGridViewTextBoxColumn.Name = "CargoDataGridViewTextBoxColumn"
-        '
-        'DniDataGridViewTextBoxColumn
-        '
-        Me.DniDataGridViewTextBoxColumn.DataPropertyName = "dni"
-        Me.DniDataGridViewTextBoxColumn.HeaderText = "dni"
-        Me.DniDataGridViewTextBoxColumn.Name = "DniDataGridViewTextBoxColumn"
-        '
-        'NombresDataGridViewTextBoxColumn
-        '
-        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
-        Me.NombresDataGridViewTextBoxColumn.HeaderText = "nombres"
-        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
-        '
-        'ApellidosDataGridViewTextBoxColumn
-        '
-        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
-        '
-        'DireccionDataGridViewTextBoxColumn
-        '
-        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
-        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "direccion"
-        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
-        '
-        'TelefonoDataGridViewTextBoxColumn
-        '
-        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
-        '
-        'CorreoDataGridViewTextBoxColumn
-        '
-        Me.CorreoDataGridViewTextBoxColumn.DataPropertyName = "correo"
-        Me.CorreoDataGridViewTextBoxColumn.HeaderText = "correo"
-        Me.CorreoDataGridViewTextBoxColumn.Name = "CorreoDataGridViewTextBoxColumn"
-        '
-        'TrabajadorBindingSource
-        '
-        Me.TrabajadorBindingSource.DataMember = "trabajador"
-        Me.TrabajadorBindingSource.DataSource = Me.Alquiler_motosDataSet1
-        '
-        'Alquiler_motosDataSet1
-        '
-        Me.Alquiler_motosDataSet1.DataSetName = "Alquiler_motosDataSet1"
-        Me.Alquiler_motosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'TrabajadorTableAdapter
         '
         Me.TrabajadorTableAdapter.ClearBeforeFill = True
@@ -475,6 +475,8 @@ Partial Class trabajador
         Me.Controls.Add(Me.btn_buscar)
         Me.Controls.Add(Me.txt_id)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "trabajador"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Trabajador"
@@ -483,10 +485,10 @@ Partial Class trabajador
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.tablacliente, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.p_cliente.ResumeLayout(False)
-        Me.p_cliente.PerformLayout()
         CType(Me.TrabajadorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Alquiler_motosDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.p_cliente.ResumeLayout(False)
+        Me.p_cliente.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

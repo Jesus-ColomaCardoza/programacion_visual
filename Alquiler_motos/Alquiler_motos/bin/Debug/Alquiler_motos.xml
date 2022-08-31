@@ -32,7 +32,17 @@ Represents a strongly typed in-memory cache of data.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet.sp_mostrarempresaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:Alquiler_motos.Alquiler_motosDataSet.clienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet.sp_mostrarempresaRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -42,7 +52,17 @@ Represents strongly named DataRow class.
 Row event argument class
 </summary>
 </member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet.sp_mostrarempresaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:Alquiler_motos.Alquiler_motosDataSetTableAdapters.clienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSetTableAdapters.sp_mostrarempresaTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -538,6 +558,291 @@ Update Order Option
 </summary>
 </member>
 <member name="T:Alquiler_motos.Alquiler_motosDataSet_garajeTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.agenciaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.clienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.comprobanteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.detalle_reservaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.empresaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.garajeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.motoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.reservaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.tipo_clienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.tipo_comprobanteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.trabajadorDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.usuariosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.agenciaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.clienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.comprobanteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.detalle_reservaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.empresaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.garajeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.motoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.reservaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.tipo_clienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.tipo_comprobanteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.trabajadorRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.usuariosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.agenciaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.clienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.comprobanteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.detalle_reservaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.empresaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.garajeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.motoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.reservaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.tipo_clienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.tipo_comprobanteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.trabajadorRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportes.usuariosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.agenciaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.clienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.comprobanteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.detalle_reservaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.empresaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.garajeTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.motoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.reservaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.tipo_clienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.tipo_comprobanteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.trabajadorTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.usuariosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.TableAdapterManager.UpdateUpdatedRows(Alquiler_motos.Alquiler_motosDataSet_reportes,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.TableAdapterManager.UpdateInsertedRows(Alquiler_motos.Alquiler_motosDataSet_reportes,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.TableAdapterManager.UpdateDeletedRows(Alquiler_motos.Alquiler_motosDataSet_reportes,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.TableAdapterManager.UpdateAll(Alquiler_motos.Alquiler_motosDataSet_reportes)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reportesTableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
 </summary>
