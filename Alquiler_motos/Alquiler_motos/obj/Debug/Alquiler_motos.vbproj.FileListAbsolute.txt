@@ -76,3 +76,4 @@ C:\Users\LENOVIO\Desktop\SAVE\trabajos\ciclo VII\programacion visual\sistema_alq
 C:\Users\LENOVIO\Desktop\SAVE\trabajos\ciclo VII\programacion visual\sistema_alquiler_motos\Alquiler_motos\Alquiler_motos\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\LENOVIO\Desktop\SAVE\trabajos\ciclo VII\programacion visual\sistema_alquiler_motos\Alquiler_motos\Alquiler_motos\obj\Debug\Alquiler_motos.vbproj.CopyComplete
 C:\Users\LENOVIO\Desktop\SAVE\trabajos\ciclo VII\programacion visual\sistema_alquiler_motos\Alquiler_motos\Alquiler_motos\obj\Debug\Alquiler_motos.reportes.resources
+C:\Users\LENOVIO\Desktop\SAVE\trabajos\ciclo VII\programacion visual\sistema_alquiler_motos\Alquiler_motos\Alquiler_motos\obj\Debug\Alquiler_motos.Alquiler.resources

@@ -56,7 +56,7 @@ Public Class trabajador
             comando.CommandText = "exec sp_insertartrabajador " + "'" + txt_c.Text + "','" + txt_dni.Text + "','" + txt_nom.Text + "','" + txt_ape.Text + "','" + txt_direc.Text + "','" + txt_tele.Text + "','" + txt_correo.Text + "'"
             data = comando.ExecuteReader()
             If (data.RecordsAffected) Then
-                MessageBox.Show("Trabajador Agregado", "Trabajador", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                'MessageBox.Show("Trabajador Agregado", "Trabajador", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
                 txt_id.Text = ""
                 txt_c.Text = ""
                 txt_dni.Text = ""

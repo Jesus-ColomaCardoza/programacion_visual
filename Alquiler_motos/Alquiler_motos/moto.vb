@@ -165,7 +165,8 @@ Public Class moto
     End Sub
 
     Private Sub btn_seleccionar_Click(sender As Object, e As EventArgs) Handles btn_seleccionar.Click
-        detalle_reserva.txt_idmoto.Text = Me.txt_id.Text
+        'detalle_reserva.txt_idmoto.Text = Me.txt_id.Text
+        Alquiler.txt_idmoto.Text = txt_id.Text
         Me.Close()
     End Sub
 

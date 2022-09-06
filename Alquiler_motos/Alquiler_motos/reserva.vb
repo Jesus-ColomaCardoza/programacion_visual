@@ -154,11 +154,8 @@ Public Class reserva
     End Sub
 
     Private Sub btn_dreserva_Click(sender As Object, e As EventArgs) Handles btn_dreserva.Click
-        detalle_reserva.Show()
-        Dim d As String
-        d = Me.txt_id.Text
-        detalle_reserva.cbx_idreserva.Text = d
-        'detalle_reserva.cbx_idreserva.Enabled = False
+        Alquiler.txt_idreserva.Text = Me.txt_id.Text
+        'llenar todo lo que tenga q ver con esta reserva , programarlooooo
         Me.Close()
     End Sub
 End Class

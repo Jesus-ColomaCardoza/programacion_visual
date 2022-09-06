@@ -58,12 +58,9 @@ Public Class cliente
             comando = cn.CreateCommand()
 
             tc = Tipo_clienteTableAdapter.FillBygettipo(cbx_tc.Text)
-
-            comando.CommandText = "exec sp_insertarcliente " + "'" + tc + "','" + txt_dni.Text + "','" + txt_nom.Text + "','" + txt_ape.Text + "','" + txt_direc.Text + "','" + txt_tele.Text + "','" + txt_correo.Text + "'"
+            comando.CommandText = "declare @id char(4) exec sp_insertarcliente " + "'" + tc + "','" + txt_dni.Text + "','" + txt_nom.Text + "','" + txt_ape.Text + "','" + txt_direc.Text + "','" + txt_tele.Text + "','" + txt_correo.Text + "',@id output select @id as id"
             data = comando.ExecuteReader()
             If (data.RecordsAffected) Then
-                MessageBox.Show("Cliente Agregado", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-                txt_id.Text = ""
                 cbx_tc.Text = ""
                 txt_dni.Text = ""
                 txt_nom.Text = ""
@@ -71,9 +68,16 @@ Public Class cliente
                 txt_direc.Text = ""
                 txt_tele.Text = ""
                 txt_correo.Text = ""
+
             Else
                 MessageBox.Show("Cliente No Agregado", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
+
+            If (data.Read) Then
+                MessageBox.Show("Cliente Agregado con id: " + data(0), "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                txt_id.Text = data(0)
+            End If
+
             cn.Close()
 
         Catch ex As Exception
@@ -139,4 +143,6 @@ Public Class cliente
     Private Sub btn_listar_Click(sender As Object, e As EventArgs) Handles btn_listar.Click
         Me.ClienteTableAdapter.Fill(Me.Alquiler_motosDataSet.cliente)
     End Sub
+
+
 End Class

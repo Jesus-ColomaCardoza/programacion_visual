@@ -97,6 +97,12 @@
     <Compile Include="agencia.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Alquiler.Designer.vb">
+      <DependentUpon>Alquiler.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alquiler.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Alquiler_motosDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -280,6 +286,9 @@
     <EmbeddedResource Include="agencia.resx">
       <DependentUpon>agencia.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Alquiler.resx">
+      <DependentUpon>Alquiler.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cliente.resx">
       <DependentUpon>cliente.vb</DependentUpon>
     </EmbeddedResource>
@@ -311,8 +320,10 @@
     <EmbeddedResource Include="reportes.resx">
       <DependentUpon>reportes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report_comprobante.rdlc" />
     <EmbeddedResource Include="Report_motos.rdlc" />
     <EmbeddedResource Include="Report_reserva.rdlc" />
+    <EmbeddedResource Include="Report_trabajador.rdlc" />
     <EmbeddedResource Include="reserva.resx">
       <DependentUpon>reserva.vb</DependentUpon>
     </EmbeddedResource>

@@ -93,36 +93,22 @@ Public Class detalle_reserva
     End Sub
 
     Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
-        Try
-            cn.Open()
-            comando = cn.CreateCommand()
-            comando.CommandText = "exec sp_eliminardreserva" + "'" + txt_id.Text + "'"
-            data = comando.ExecuteReader()
-            If (data.RecordsAffected) Then
-                MessageBox.Show("Detalle Eliminado", "Detalle", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-                cbx_idreserva.Text = ""
-                txt_idmoto.Text = ""
+        If eliminar_dreserva(txt_id.Text) Then
+            cbx_idreserva.Text = ""
+            txt_idmoto.Text = ""
 
-                datetime_finicio.Value = DateTime.Now
-                nud_hinicio.Value = 0
-                nud_mininicio.Value = 0
+            datetime_finicio.Value = DateTime.Now
+            nud_hinicio.Value = 0
+            nud_mininicio.Value = 0
 
-                datetime_ffin.Value = DateTime.Now
-                nud_hfin.Value = 0
-                nud_minfin.Value = 0
-            Else
-                MessageBox.Show("Detalle No Eliminado", "Detalle", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-            cn.Close()
-
-        Catch ex As Exception
-
-        End Try
+            datetime_ffin.Value = DateTime.Now
+            nud_hfin.Value = 0
+            nud_minfin.Value = 0
+        End If
     End Sub
 
     Private Sub btn_actualizar_Click(sender As Object, e As EventArgs) Handles btn_actualizar.Click
         Dim finicio, ffin, hinicio, hfin, minicio, mfin As String
-
 
         Try
             cn.Open()
@@ -163,42 +149,79 @@ Public Class detalle_reserva
     End Sub
 
     Private Sub btn_insertar_Click(sender As Object, e As EventArgs) Handles btn_insertar.Click
-        Dim finicio, ffin, hinicio, hfin, minicio, mfin As String
+        If insertar_dreserva(cbx_idreserva.Text, txt_idmoto.Text, datetime_finicio, nud_hinicio, nud_mininicio, datetime_ffin, nud_hfin, nud_minfin) Then
+            txt_id.Text = ""
+            cbx_idreserva.Text = ""
+            txt_idmoto.Text = ""
 
+            datetime_finicio.Value = DateTime.Now
+            nud_hinicio.Value = 0
+            nud_mininicio.Value = 0
+
+            datetime_ffin.Value = DateTime.Now
+            nud_hfin.Value = 0
+            nud_minfin.Value = 0
+        End If
+
+    End Sub
+
+
+    Public Function insertar_dreserva(idrerserva As String, idmoto As String, p_datetime_finicio As DateTimePicker, p_nud_hinicio As NumericUpDown, p_nud_mininicio As NumericUpDown, p_datetime_ffin As DateTimePicker, p_nud_hfin As NumericUpDown, p_nud_minfin As NumericUpDown) As Boolean
+        Dim finicio, ffin, hinicio, hfin, minicio, mfin As String
+        Dim respuesta As Boolean
+        respuesta = False
         Try
+            cn = New SqlConnection("Data Source = DESKTOP-AHI2VUU;Initial Catalog=Alquiler_motos;Integrated Security=True")
             cn.Open()
             comando = cn.CreateCommand()
 
-            finicio = datetime_finicio.Value.Date
-            hinicio = nud_hinicio.Value.ToString
-            minicio = nud_mininicio.Value.ToString
+            finicio = p_datetime_finicio.Value.Date
+            hinicio = p_nud_hinicio.Value.ToString
+            minicio = p_nud_mininicio.Value.ToString
 
-            ffin = datetime_finicio.Value.Date
-            hfin = nud_hfin.Value.ToString
-            mfin = nud_minfin.Value.ToString
+            ffin = p_datetime_ffin.Value.Date
+            hfin = p_nud_hfin.Value.ToString
+            mfin = p_nud_minfin.Value.ToString
 
-            comando.CommandText = "set dateformat dmy exec sp_insertardreserva '" + cbx_idreserva.Text + "','" + txt_idmoto.Text + "','" + finicio + " " + hinicio + ":" + minicio + "','" + ffin + " " + hfin + ":" + mfin + "'"
+            comando.CommandText = "set dateformat dmy exec sp_insertardreserva '" + idrerserva + "','" + idmoto + "','" + finicio + " " + hinicio + ":" + minicio + "','" + ffin + " " + hfin + ":" + mfin + "'"
             data = comando.ExecuteReader()
             If (data.RecordsAffected) Then
                 MessageBox.Show("Detalle Agregado", "Detalle", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-                txt_id.Text = ""
-                cbx_idreserva.Text = ""
-                txt_idmoto.Text = ""
-
-                datetime_finicio.Value = DateTime.Now
-                nud_hinicio.Value = 0
-                nud_mininicio.Value = 0
-
-                datetime_ffin.Value = DateTime.Now
-                nud_hfin.Value = 0
-                nud_minfin.Value = 0
+                respuesta = True
             Else
                 MessageBox.Show("Detalle No Agregado", "Detalle", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
             End If
             cn.Close()
 
         Catch ex As Exception
 
         End Try
-    End Sub
+        Return respuesta
+    End Function
+
+    Public Function eliminar_dreserva(id As String) As Boolean
+        Dim respuesta As Boolean
+        respuesta = False
+        Try
+            cn = New SqlConnection("Data Source = DESKTOP-AHI2VUU;Initial Catalog=Alquiler_motos;Integrated Security=True")
+            cn.Open()
+            comando = cn.CreateCommand()
+            comando.CommandText = "exec sp_eliminardreserva" + "'" + id + "'"
+            data = comando.ExecuteReader()
+            If (data.RecordsAffected) Then
+                MessageBox.Show("Detalle Eliminado", "Detalle", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                respuesta = True
+            Else
+                MessageBox.Show("Detalle No Eliminado", "Detalle", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+            cn.Close()
+
+        Catch ex As Exception
+
+        End Try
+        Return respuesta
+    End Function
+
+
 End Class

@@ -35,11 +35,12 @@ Partial Class menu_principal
         Me.DetalleReservaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ComprobantesDePagoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TiposDeClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TiposDeComprobanteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AlquilerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -95,7 +96,7 @@ Partial Class menu_principal
         '
         'GestiónToolStripMenuItem
         '
-        Me.GestiónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReservaToolStripMenuItem, Me.DetalleReservaToolStripMenuItem1, Me.ComprobantesDePagoToolStripMenuItem2})
+        Me.GestiónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReservaToolStripMenuItem, Me.DetalleReservaToolStripMenuItem1, Me.ComprobantesDePagoToolStripMenuItem2, Me.AlquilerToolStripMenuItem})
         Me.GestiónToolStripMenuItem.Image = CType(resources.GetObject("GestiónToolStripMenuItem.Image"), System.Drawing.Image)
         Me.GestiónToolStripMenuItem.Name = "GestiónToolStripMenuItem"
         Me.GestiónToolStripMenuItem.Size = New System.Drawing.Size(80, 21)
@@ -127,6 +128,12 @@ Partial Class menu_principal
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(159, 21)
         Me.ConsultasToolStripMenuItem.Text = "Consultas y Reportes"
         '
+        'ReportesToolStripMenuItem
+        '
+        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.ReportesToolStripMenuItem.Text = "Reportes"
+        '
         'AcercaDeToolStripMenuItem
         '
         Me.AcercaDeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CerrarSesiónToolStripMenuItem, Me.TiposDeClienteToolStripMenuItem, Me.TiposDeComprobanteToolStripMenuItem})
@@ -153,11 +160,11 @@ Partial Class menu_principal
         Me.TiposDeComprobanteToolStripMenuItem.Size = New System.Drawing.Size(210, 22)
         Me.TiposDeComprobanteToolStripMenuItem.Text = "Tipos de comprobante"
         '
-        'ReportesToolStripMenuItem
+        'AlquilerToolStripMenuItem
         '
-        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
-        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ReportesToolStripMenuItem.Text = "Reportes"
+        Me.AlquilerToolStripMenuItem.Name = "AlquilerToolStripMenuItem"
+        Me.AlquilerToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
+        Me.AlquilerToolStripMenuItem.Text = "Registrar Alquiler"
         '
         'menu_principal
         '
@@ -195,4 +202,5 @@ Partial Class menu_principal
     Friend WithEvents TiposDeClienteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TiposDeComprobanteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AlquilerToolStripMenuItem As ToolStripMenuItem
 End Class

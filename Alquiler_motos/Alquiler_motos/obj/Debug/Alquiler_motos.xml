@@ -117,7 +117,17 @@ Represents a strongly typed in-memory cache of data.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet1.sp_mostrarempresaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:Alquiler_motos.Alquiler_motosDataSet1.trabajadorRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet1.sp_mostrarempresaRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -127,7 +137,17 @@ Represents strongly named DataRow class.
 Row event argument class
 </summary>
 </member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet1.sp_mostrarempresaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:Alquiler_motos.Alquiler_motosDataSet1TableAdapters.trabajadorTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet1TableAdapters.sp_mostrarempresaTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -182,7 +202,17 @@ Represents a strongly typed in-memory cache of data.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet2.sp_mostrarempresaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:Alquiler_motos.Alquiler_motosDataSet2.motoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet2.sp_mostrarempresaRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -192,7 +222,17 @@ Represents strongly named DataRow class.
 Row event argument class
 </summary>
 </member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet2.sp_mostrarempresaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:Alquiler_motos.Alquiler_motosDataSet2TableAdapters.motoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet2TableAdapters.sp_mostrarempresaTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -377,7 +417,17 @@ Represents a strongly typed in-memory cache of data.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_comprobante.sp_mostrarempresaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:Alquiler_motos.Alquiler_motosDataSet_comprobante.comprobanteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_comprobante.sp_mostrarempresaRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -387,7 +437,17 @@ Represents strongly named DataRow class.
 Row event argument class
 </summary>
 </member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_comprobante.sp_mostrarempresaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:Alquiler_motos.Alquiler_motosDataSet_comprobanteTableAdapters.comprobanteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_comprobanteTableAdapters.sp_mostrarempresaTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -857,7 +917,17 @@ Represents a strongly typed in-memory cache of data.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reserva.sp_mostrarempresaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:Alquiler_motos.Alquiler_motosDataSet_reserva.reservaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reserva.sp_mostrarempresaRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -867,7 +937,17 @@ Represents strongly named DataRow class.
 Row event argument class
 </summary>
 </member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reserva.sp_mostrarempresaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:Alquiler_motos.Alquiler_motosDataSet_reservaTableAdapters.reservaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Alquiler_motos.Alquiler_motosDataSet_reservaTableAdapters.sp_mostrarempresaTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

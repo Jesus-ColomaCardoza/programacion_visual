@@ -24,7 +24,7 @@ Partial Class reserva
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(reserva))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -155,14 +155,14 @@ Partial Class reserva
         '
         Me.tablacliente.AutoGenerateColumns = False
         Me.tablacliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.tablacliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tablacliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdreservaDataGridViewTextBoxColumn, Me.IdagenciaDataGridViewTextBoxColumn, Me.IdtrabajadorDataGridViewTextBoxColumn, Me.IdclienteDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn, Me.EstadoDataGridViewCheckBoxColumn})
         Me.tablacliente.DataSource = Me.ReservaBindingSource
@@ -447,11 +447,11 @@ Partial Class reserva
         Me.btn_dreserva.ForeColor = System.Drawing.Color.White
         Me.btn_dreserva.Image = CType(resources.GetObject("btn_dreserva.Image"), System.Drawing.Image)
         Me.btn_dreserva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_dreserva.Location = New System.Drawing.Point(641, 11)
+        Me.btn_dreserva.Location = New System.Drawing.Point(641, 14)
         Me.btn_dreserva.Name = "btn_dreserva"
-        Me.btn_dreserva.Size = New System.Drawing.Size(217, 45)
+        Me.btn_dreserva.Size = New System.Drawing.Size(217, 33)
         Me.btn_dreserva.TabIndex = 36
-        Me.btn_dreserva.Text = "Detalle de Reserva"
+        Me.btn_dreserva.Text = "Seleccionar Reserva"
         Me.btn_dreserva.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_dreserva.UseVisualStyleBackColor = False
         '

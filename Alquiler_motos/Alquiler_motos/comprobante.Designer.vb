@@ -270,9 +270,9 @@ Partial Class comprobante
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(3, 4)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(187, 25)
+        Me.Label9.Size = New System.Drawing.Size(253, 25)
         Me.Label9.TabIndex = 21
-        Me.Label9.Text = "Datos de Cliente"
+        Me.Label9.Text = "Datos de Comprobante"
         '
         'txt_idreserva
         '
