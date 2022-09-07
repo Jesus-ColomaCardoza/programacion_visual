@@ -120,7 +120,7 @@ Public Class comprobante
             idcomprobante = Tipo_comprobanteTableAdapter.FillBygettipo(cbx_tcomprobante.Text)
 
 
-            comando.CommandText = "exec sp_insertarcomprobante " + "'" + idcomprobante + "','" + txt_formapago.Text + "','" + txt_idreserva.Text + "'"
+            comando.CommandText = "declare @id char(4) exec sp_insertarcomprobante " + "'" + idcomprobante + "','" + txt_formapago.Text + "','" + txt_idreserva.Text + "',@id output select @id as id"
             data = comando.ExecuteReader()
             If (data.RecordsAffected) Then
                 MessageBox.Show("Comprobante Agregado", "Comprobante", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)

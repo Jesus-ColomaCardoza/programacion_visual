@@ -14,6 +14,7 @@ Public Class cliente
         cn = New SqlConnection("Data Source = DESKTOP-AHI2VUU;Initial Catalog=Alquiler_motos;Integrated Security=True")
         'Data Source = DESKTOP-AHI2VUU;Initial Catalog=Alquiler_motos;Integrated Security=True
 
+
     End Sub
     Private Sub btn_buscar_Click(sender As Object, e As EventArgs) Handles btn_buscar.Click
         Try
@@ -144,5 +145,9 @@ Public Class cliente
         Me.ClienteTableAdapter.Fill(Me.Alquiler_motosDataSet.cliente)
     End Sub
 
+    Private Sub btn_seleccionar_Click(sender As Object, e As EventArgs) Handles btn_seleccionar.Click
+        Alquiler.cbx_idcliente.Text = Me.txt_id.Text
+        Me.Close()
 
+    End Sub
 End Class

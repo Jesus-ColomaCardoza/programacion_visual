@@ -2,7 +2,10 @@
 
 
     Private Sub ClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClienteToolStripMenuItem.Click
+        cliente.btn_seleccionar.Enabled = False
+        cliente.btn_seleccionar.Visible = False
         cliente.Show()
+
     End Sub
 
     Private Sub CerrarSesiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
@@ -24,8 +27,8 @@
 
     Private Sub ReservaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReservaToolStripMenuItem.Click
         reserva.Show()
-        reserva.btn_dreserva.Visible() = False
-        reserva.btn_dreserva.Enabled() = False
+        reserva.btn_seleccionarreserva.Visible() = False
+        reserva.btn_seleccionarreserva.Enabled() = False
 
     End Sub
 

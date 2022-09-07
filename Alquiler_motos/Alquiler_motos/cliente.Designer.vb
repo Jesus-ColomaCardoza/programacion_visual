@@ -68,6 +68,7 @@ Partial Class cliente
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Tipo_clienteTableAdapter = New Alquiler_motos.modelo_cbx_tclienteTableAdapters.tipo_clienteTableAdapter()
+        Me.btn_seleccionar = New System.Windows.Forms.Button()
         CType(Me.tablacliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Alquiler_motosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -481,11 +482,27 @@ Partial Class cliente
         '
         Me.Tipo_clienteTableAdapter.ClearBeforeFill = True
         '
+        'btn_seleccionar
+        '
+        Me.btn_seleccionar.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btn_seleccionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_seleccionar.ForeColor = System.Drawing.Color.White
+        Me.btn_seleccionar.Image = CType(resources.GetObject("btn_seleccionar.Image"), System.Drawing.Image)
+        Me.btn_seleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_seleccionar.Location = New System.Drawing.Point(809, 24)
+        Me.btn_seleccionar.Name = "btn_seleccionar"
+        Me.btn_seleccionar.Size = New System.Drawing.Size(184, 33)
+        Me.btn_seleccionar.TabIndex = 27
+        Me.btn_seleccionar.Text = "seleccionar cliente"
+        Me.btn_seleccionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_seleccionar.UseVisualStyleBackColor = False
+        '
         'cliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1094, 611)
+        Me.Controls.Add(Me.btn_seleccionar)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.p_cliente)
@@ -560,4 +577,5 @@ Partial Class cliente
     Friend WithEvents Modelo_cbx_tcliente As modelo_cbx_tcliente
     Friend WithEvents TipoclienteBindingSource As BindingSource
     Friend WithEvents Tipo_clienteTableAdapter As modelo_cbx_tclienteTableAdapters.tipo_clienteTableAdapter
+    Friend WithEvents btn_seleccionar As Button
 End Class

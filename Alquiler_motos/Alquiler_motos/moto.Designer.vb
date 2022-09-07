@@ -667,7 +667,7 @@ Partial Class moto
     Friend WithEvents Alquiler_motosDataSet3 As Alquiler_motosDataSet3
     Friend WithEvents GarajeBindingSource As BindingSource
     Friend WithEvents GarajeTableAdapter As Alquiler_motosDataSet3TableAdapters.garajeTableAdapter
-    Friend WithEvents btn_seleccionar As Button
     Friend WithEvents txt_filtro As TextBox
     Friend WithEvents cbx_filtro As ComboBox
+    Friend WithEvents btn_seleccionar As Button
 End Class

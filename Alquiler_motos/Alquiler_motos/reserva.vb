@@ -14,8 +14,8 @@ Public Class reserva
     End Sub
 
     Private Sub reserva_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: esta línea de código carga datos en la tabla 'Modelo_cbx_tcomprobante.tipo_comprobante' Puede moverla o quitarla según sea necesario.
-        Me.Tipo_comprobanteTableAdapter.Fill(Me.Modelo_cbx_tcomprobante.tipo_comprobante)
+
+
         'TODO: esta línea de código carga datos en la tabla 'Modelo_cbx_cliente.cliente' Puede moverla o quitarla según sea necesario.
         Me.ClienteTableAdapter.Fill(Me.Modelo_cbx_cliente.cliente)
         cbx_idcliente.Text = ""
@@ -59,9 +59,7 @@ Public Class reserva
                 cbox_estado.Checked = False
             End If
             cn.Close()
-
         Catch ex As Exception
-
         End Try
     End Sub
 
@@ -153,9 +151,17 @@ Public Class reserva
         End Try
     End Sub
 
-    Private Sub btn_dreserva_Click(sender As Object, e As EventArgs) Handles btn_dreserva.Click
+    Private Sub btn_seleccionarreserva_Click(sender As Object, e As EventArgs) Handles btn_seleccionarreserva.Click
+
+        'realizar la busqueda en la interfaz de reserva y luego click en selecionarreserva
+        Alquiler.cbx_agencia.Text = Me.cbx_agencia.Text
+        Alquiler.cbx_idtrabajador.Text = Me.cbx_idtrabajador.Text
+        Alquiler.cbx_idcliente.Text = Me.cbx_idcliente.Text
+        Alquiler.cbox_estado.Checked = Me.cbox_estado.Checked
+
         Alquiler.txt_idreserva.Text = Me.txt_id.Text
-        'llenar todo lo que tenga q ver con esta reserva , programarlooooo
+        Alquiler.Detalle_reservaTableAdapter.FillByidreserva(Alquiler.Alquiler_motosDataSet_dreserva.detalle_reserva, Alquiler.txt_idreserva.Text)
+
         Me.Close()
     End Sub
 End Class

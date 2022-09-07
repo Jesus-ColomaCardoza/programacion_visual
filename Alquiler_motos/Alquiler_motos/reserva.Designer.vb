@@ -24,7 +24,7 @@ Partial Class reserva
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(reserva))
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -62,7 +62,7 @@ Partial Class reserva
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_buscar = New System.Windows.Forms.Button()
         Me.txt_id = New System.Windows.Forms.TextBox()
-        Me.btn_dreserva = New System.Windows.Forms.Button()
+        Me.btn_seleccionarreserva = New System.Windows.Forms.Button()
         Me.ReservaTableAdapter = New Alquiler_motos.Alquiler_motosDataSet_reservaTableAdapters.reservaTableAdapter()
         Me.AgenciaTableAdapter = New Alquiler_motos.modelo_cbx_agenciaTableAdapters.agenciaTableAdapter()
         Me.TrabajadorTableAdapter = New Alquiler_motos.modelo_cbx_trabajadorTableAdapters.trabajadorTableAdapter()
@@ -155,14 +155,14 @@ Partial Class reserva
         '
         Me.tablacliente.AutoGenerateColumns = False
         Me.tablacliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.tablacliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tablacliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdreservaDataGridViewTextBoxColumn, Me.IdagenciaDataGridViewTextBoxColumn, Me.IdtrabajadorDataGridViewTextBoxColumn, Me.IdclienteDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn, Me.EstadoDataGridViewCheckBoxColumn})
         Me.tablacliente.DataSource = Me.ReservaBindingSource
@@ -440,20 +440,20 @@ Partial Class reserva
         Me.txt_id.Size = New System.Drawing.Size(228, 22)
         Me.txt_id.TabIndex = 27
         '
-        'btn_dreserva
+        'btn_seleccionarreserva
         '
-        Me.btn_dreserva.BackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.btn_dreserva.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_dreserva.ForeColor = System.Drawing.Color.White
-        Me.btn_dreserva.Image = CType(resources.GetObject("btn_dreserva.Image"), System.Drawing.Image)
-        Me.btn_dreserva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_dreserva.Location = New System.Drawing.Point(641, 14)
-        Me.btn_dreserva.Name = "btn_dreserva"
-        Me.btn_dreserva.Size = New System.Drawing.Size(217, 33)
-        Me.btn_dreserva.TabIndex = 36
-        Me.btn_dreserva.Text = "Seleccionar Reserva"
-        Me.btn_dreserva.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_dreserva.UseVisualStyleBackColor = False
+        Me.btn_seleccionarreserva.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btn_seleccionarreserva.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_seleccionarreserva.ForeColor = System.Drawing.Color.White
+        Me.btn_seleccionarreserva.Image = CType(resources.GetObject("btn_seleccionarreserva.Image"), System.Drawing.Image)
+        Me.btn_seleccionarreserva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_seleccionarreserva.Location = New System.Drawing.Point(641, 14)
+        Me.btn_seleccionarreserva.Name = "btn_seleccionarreserva"
+        Me.btn_seleccionarreserva.Size = New System.Drawing.Size(217, 33)
+        Me.btn_seleccionarreserva.TabIndex = 36
+        Me.btn_seleccionarreserva.Text = "Seleccionar Reserva"
+        Me.btn_seleccionarreserva.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_seleccionarreserva.UseVisualStyleBackColor = False
         '
         'ReservaTableAdapter
         '
@@ -490,7 +490,7 @@ Partial Class reserva
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(900, 611)
-        Me.Controls.Add(Me.btn_dreserva)
+        Me.Controls.Add(Me.btn_seleccionarreserva)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.p_cliente)
@@ -560,7 +560,7 @@ Partial Class reserva
     Friend WithEvents IdclienteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FechaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EstadoDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
-    Friend WithEvents btn_dreserva As Button
+    Friend WithEvents btn_seleccionarreserva As Button
     Friend WithEvents Modelo_cbx_agencia As modelo_cbx_agencia
     Friend WithEvents AgenciaBindingSource As BindingSource
     Friend WithEvents AgenciaTableAdapter As modelo_cbx_agenciaTableAdapters.agenciaTableAdapter
