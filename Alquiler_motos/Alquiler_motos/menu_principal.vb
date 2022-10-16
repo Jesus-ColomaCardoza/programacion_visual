@@ -13,6 +13,8 @@
     End Sub
 
     Private Sub TrabajadorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TrabajadorToolStripMenuItem.Click
+        trabajador.btn_seleccionar.Enabled = False
+        trabajador.btn_seleccionar.Visible = False
         trabajador.Show()
     End Sub
 
@@ -38,9 +40,7 @@
         'reserva.btn_dreserva.Enabled() = True
     End Sub
 
-    Private Sub TiposDeClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TiposDeClienteToolStripMenuItem.Click
-        tipo_cliente.Show()
-    End Sub
+
 
     Private Sub AgenciasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgenciasToolStripMenuItem.Click
         agencia.Show()
@@ -50,9 +50,6 @@
         garaje.Show()
     End Sub
 
-    Private Sub TiposDeComprobanteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TiposDeComprobanteToolStripMenuItem.Click
-        tipo_comprobante.Show()
-    End Sub
 
     Private Sub menu_principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Hide()
@@ -69,5 +66,25 @@
 
     Private Sub AlquilerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AlquilerToolStripMenuItem.Click
         Alquiler.Show()
+    End Sub
+
+    Private Sub TipoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TipoToolStripMenuItem.Click
+        tipo_cliente.Show()
+    End Sub
+
+    Private Sub TipoComprobanteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TipoComprobanteToolStripMenuItem.Click
+        tipo_comprobante.Show()
+    End Sub
+
+    Private Sub TipoUsuariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TipoUsuariosToolStripMenuItem.Click
+        tipo_usuario.Show()
+    End Sub
+
+    Private Sub UsuariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsuariosToolStripMenuItem.Click
+        usuarios.Show()
+    End Sub
+
+    Private Sub FormasDePagoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FormasDePagoToolStripMenuItem.Click
+        Forma_pago.Show()
     End Sub
 End Class

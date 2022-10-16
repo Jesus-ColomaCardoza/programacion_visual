@@ -24,7 +24,7 @@ Partial Class Alquiler
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Alquiler))
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.p_cliente = New System.Windows.Forms.Panel()
         Me.btn_seleccionarcliente = New System.Windows.Forms.Button()
         Me.cbx_idcliente = New System.Windows.Forms.ComboBox()
@@ -76,6 +76,9 @@ Partial Class Alquiler
         Me.AlquilermotosDataSetdreservaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Alquiler_motosDataSet_dreserva = New Alquiler_motos.Alquiler_motosDataSet_dreserva()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.cbx_formapago = New System.Windows.Forms.ComboBox()
+        Me.FormapagoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Modelo_cbx_formapago = New Alquiler_motos.modelo_cbx_formapago()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.txt_idcomprobante = New System.Windows.Forms.TextBox()
         Me.btn_imprimir = New System.Windows.Forms.Button()
@@ -94,7 +97,6 @@ Partial Class Alquiler
         Me.txt_igv = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.txt_formapago = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txt_subtotal = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -105,6 +107,7 @@ Partial Class Alquiler
         Me.ClienteTableAdapter = New Alquiler_motos.Modelo_cbx_clienteTableAdapters.clienteTableAdapter()
         Me.Tipo_comprobanteTableAdapter = New Alquiler_motos.modelo_cbx_tcomprobanteTableAdapters.tipo_comprobanteTableAdapter()
         Me.Detalle_reservaTableAdapter = New Alquiler_motos.Alquiler_motosDataSet_dreservaTableAdapters.detalle_reservaTableAdapter()
+        Me.Forma_pagoTableAdapter = New Alquiler_motos.modelo_cbx_formapagoTableAdapters.forma_pagoTableAdapter()
         Me.p_cliente.SuspendLayout()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ModelocbxclienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -125,6 +128,8 @@ Partial Class Alquiler
         CType(Me.AlquilermotosDataSetdreservaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Alquiler_motosDataSet_dreserva, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.FormapagoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Modelo_cbx_formapago, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nud_minuto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nud_hora, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TipocomprobanteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -173,6 +178,7 @@ Partial Class Alquiler
         '
         Me.cbx_idcliente.DataSource = Me.ClienteBindingSource
         Me.cbx_idcliente.DisplayMember = "id_cliente"
+        Me.cbx_idcliente.Enabled = False
         Me.cbx_idcliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbx_idcliente.FormattingEnabled = True
         Me.cbx_idcliente.Location = New System.Drawing.Point(563, 99)
@@ -200,6 +206,7 @@ Partial Class Alquiler
         '
         Me.cbx_idtrabajador.DataSource = Me.TrabajadorBindingSource
         Me.cbx_idtrabajador.DisplayMember = "id_trabajor"
+        Me.cbx_idtrabajador.Enabled = False
         Me.cbx_idtrabajador.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbx_idtrabajador.FormattingEnabled = True
         Me.cbx_idtrabajador.Location = New System.Drawing.Point(160, 157)
@@ -227,6 +234,7 @@ Partial Class Alquiler
         '
         Me.cbx_agencia.DataSource = Me.AgenciaBindingSource
         Me.cbx_agencia.DisplayMember = "nombre_agencia"
+        Me.cbx_agencia.Enabled = False
         Me.cbx_agencia.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbx_agencia.FormattingEnabled = True
         Me.cbx_agencia.Location = New System.Drawing.Point(160, 100)
@@ -367,7 +375,7 @@ Partial Class Alquiler
         Me.btn_eliminar.ForeColor = System.Drawing.Color.White
         Me.btn_eliminar.Image = CType(resources.GetObject("btn_eliminar.Image"), System.Drawing.Image)
         Me.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_eliminar.Location = New System.Drawing.Point(295, 369)
+        Me.btn_eliminar.Location = New System.Drawing.Point(378, 369)
         Me.btn_eliminar.Name = "btn_eliminar"
         Me.btn_eliminar.Size = New System.Drawing.Size(175, 45)
         Me.btn_eliminar.TabIndex = 38
@@ -462,9 +470,9 @@ Partial Class Alquiler
         Me.btn_seleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_seleccionar.Location = New System.Drawing.Point(257, 29)
         Me.btn_seleccionar.Name = "btn_seleccionar"
-        Me.btn_seleccionar.Size = New System.Drawing.Size(144, 47)
+        Me.btn_seleccionar.Size = New System.Drawing.Size(115, 47)
         Me.btn_seleccionar.TabIndex = 61
-        Me.btn_seleccionar.Text = "Ver de moto"
+        Me.btn_seleccionar.Text = "Ver moto"
         Me.btn_seleccionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_seleccionar.UseVisualStyleBackColor = False
         '
@@ -545,14 +553,14 @@ Partial Class Alquiler
         Me.tablaproductos.AllowUserToDeleteRows = False
         Me.tablaproductos.AutoGenerateColumns = False
         Me.tablaproductos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.tablaproductos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.tablaproductos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.tablaproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tablaproductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IddetalleDataGridViewTextBoxColumn, Me.IdreservaDataGridViewTextBoxColumn, Me.IdmotoDataGridViewTextBoxColumn, Me.FechainicioDataGridViewTextBoxColumn, Me.FechafinDataGridViewTextBoxColumn})
         Me.tablaproductos.DataSource = Me.DetallereservaBindingSource
@@ -616,6 +624,7 @@ Partial Class Alquiler
         '
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.cbx_formapago)
         Me.Panel2.Controls.Add(Me.Label23)
         Me.Panel2.Controls.Add(Me.txt_idcomprobante)
         Me.Panel2.Controls.Add(Me.btn_imprimir)
@@ -631,7 +640,6 @@ Partial Class Alquiler
         Me.Panel2.Controls.Add(Me.txt_igv)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Label11)
-        Me.Panel2.Controls.Add(Me.txt_formapago)
         Me.Panel2.Controls.Add(Me.Label12)
         Me.Panel2.Controls.Add(Me.txt_subtotal)
         Me.Panel2.Controls.Add(Me.Label13)
@@ -641,6 +649,28 @@ Partial Class Alquiler
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(402, 430)
         Me.Panel2.TabIndex = 46
+        '
+        'cbx_formapago
+        '
+        Me.cbx_formapago.DataSource = Me.FormapagoBindingSource
+        Me.cbx_formapago.DisplayMember = "descripcion"
+        Me.cbx_formapago.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbx_formapago.FormattingEnabled = True
+        Me.cbx_formapago.Location = New System.Drawing.Point(174, 126)
+        Me.cbx_formapago.Name = "cbx_formapago"
+        Me.cbx_formapago.Size = New System.Drawing.Size(180, 24)
+        Me.cbx_formapago.TabIndex = 63
+        Me.cbx_formapago.ValueMember = "descripcion"
+        '
+        'FormapagoBindingSource
+        '
+        Me.FormapagoBindingSource.DataMember = "forma_pago"
+        Me.FormapagoBindingSource.DataSource = Me.Modelo_cbx_formapago
+        '
+        'Modelo_cbx_formapago
+        '
+        Me.Modelo_cbx_formapago.DataSetName = "modelo_cbx_formapago"
+        Me.Modelo_cbx_formapago.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label23
         '
@@ -663,7 +693,7 @@ Partial Class Alquiler
         '
         'btn_imprimir
         '
-        Me.btn_imprimir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btn_imprimir.BackColor = System.Drawing.Color.Teal
         Me.btn_imprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_imprimir.ForeColor = System.Drawing.Color.White
         Me.btn_imprimir.Image = CType(resources.GetObject("btn_imprimir.Image"), System.Drawing.Image)
@@ -810,14 +840,6 @@ Partial Class Alquiler
         Me.Label11.TabIndex = 16
         Me.Label11.Text = "Total"
         '
-        'txt_formapago
-        '
-        Me.txt_formapago.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_formapago.Location = New System.Drawing.Point(174, 126)
-        Me.txt_formapago.Name = "txt_formapago"
-        Me.txt_formapago.Size = New System.Drawing.Size(180, 22)
-        Me.txt_formapago.TabIndex = 10
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
@@ -886,6 +908,10 @@ Partial Class Alquiler
         '
         Me.Detalle_reservaTableAdapter.ClearBeforeFill = True
         '
+        'Forma_pagoTableAdapter
+        '
+        Me.Forma_pagoTableAdapter.ClearBeforeFill = True
+        '
         'Alquiler
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -920,6 +946,8 @@ Partial Class Alquiler
         CType(Me.Alquiler_motosDataSet_dreserva, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.FormapagoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Modelo_cbx_formapago, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nud_minuto, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nud_hora, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TipocomprobanteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -954,7 +982,6 @@ Partial Class Alquiler
     Friend WithEvents txt_igv As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents txt_formapago As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents txt_subtotal As TextBox
     Friend WithEvents Label13 As Label
@@ -1009,4 +1036,8 @@ Partial Class Alquiler
     Friend WithEvents Label21 As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents txt_idcomprobante As TextBox
+    Friend WithEvents cbx_formapago As ComboBox
+    Friend WithEvents Modelo_cbx_formapago As modelo_cbx_formapago
+    Friend WithEvents FormapagoBindingSource As BindingSource
+    Friend WithEvents Forma_pagoTableAdapter As modelo_cbx_formapagoTableAdapters.forma_pagoTableAdapter
 End Class

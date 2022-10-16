@@ -147,7 +147,18 @@ Public Class cliente
 
     Private Sub btn_seleccionar_Click(sender As Object, e As EventArgs) Handles btn_seleccionar.Click
         Alquiler.cbx_idcliente.Text = Me.txt_id.Text
+        reserva.cbx_idcliente.Text = Me.txt_id.Text
         Me.Close()
 
+    End Sub
+
+    Private Sub txt_filtro_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_filtro.KeyPress
+        If (cbx_filtro.Text Like "DNI") Then
+            ClienteTableAdapter.FillBy_filtrodni(Alquiler_motosDataSet.cliente, txt_filtro.Text)
+        ElseIf (cbx_filtro.Text Like "Nombres") Then
+            ClienteTableAdapter.FillBy_filtronombres(Alquiler_motosDataSet.cliente, txt_filtro.Text)
+        ElseIf (cbx_filtro.Text Like "Apellidos") Then
+            ClienteTableAdapter.FillBy_filtroapellidos(Alquiler_motosDataSet.cliente, txt_filtro.Text)
+        End If
     End Sub
 End Class

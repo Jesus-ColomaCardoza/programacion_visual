@@ -13,11 +13,13 @@ Public Class impresicion
         Dim nuevaFuenteDatos1 As ReportDataSource
         Dim nuevaFuenteDatos2 As ReportDataSource
         Dim nuevaFuenteDatos3 As ReportDataSource
+        Dim nuevaFuenteDatos4 As ReportDataSource
 
         nuevaFuenteDatos = New ReportDataSource()
         nuevaFuenteDatos1 = New ReportDataSource()
         nuevaFuenteDatos2 = New ReportDataSource()
         nuevaFuenteDatos3 = New ReportDataSource()
+        nuevaFuenteDatos4 = New ReportDataSource()
 
 
         ReportViewer1.LocalReport.ReportEmbeddedResource = "Alquiler_motos.Report_impresicion.rdlc"
@@ -40,6 +42,10 @@ Public Class impresicion
         nuevaFuenteDatos.Value = ComprobanteBindingSource
         ReportViewer1.LocalReport.DataSources.Add(nuevaFuenteDatos)
 
+        nuevaFuenteDatos4.Name = "dsdetallescomprobante"
+        nuevaFuenteDatos4.Value = SpmostrardetallescomprobanteBindingSource
+        ReportViewer1.LocalReport.DataSources.Add(nuevaFuenteDatos4)
+
         'TODO: esta línea de código carga datos en la tabla 'Alquiler_motosDataSet.cliente' Puede moverla o quitarla según sea necesario.
 
 
@@ -51,6 +57,8 @@ Public Class impresicion
         Me.TrabajadorTableAdapter.FillBy(Me.Alquiler_motosDataSet1.trabajador, Alquiler.cbx_idtrabajador.Text)
 
         Me.ComprobanteTableAdapter.FillBy(Me.Alquiler_motosDataSet_comprobante.comprobante, Alquiler.txt_idcomprobante.Text)
+
+        Me.Sp_mostrardetallescomprobanteTableAdapter.Fill(Me.Alquiler_motosDataSet_comprobante.sp_mostrardetallescomprobante, Alquiler.cbx_idcliente.Text)
 
 
 

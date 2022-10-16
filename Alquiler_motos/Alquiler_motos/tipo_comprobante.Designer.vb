@@ -24,7 +24,7 @@ Partial Class tipo_comprobante
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(tipo_comprobante))
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -32,6 +32,10 @@ Partial Class tipo_comprobante
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btn_listar = New System.Windows.Forms.Button()
         Me.tablacliente = New System.Windows.Forms.DataGridView()
+        Me.TipocomprobanteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TipocomprobanteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Alquiler_motosDataSet_tcomprobante = New Alquiler_motos.Alquiler_motosDataSet_tcomprobante()
         Me.p_cliente = New System.Windows.Forms.Panel()
         Me.txt_descripcion = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -42,17 +46,13 @@ Partial Class tipo_comprobante
         Me.btn_eliminar = New System.Windows.Forms.Button()
         Me.btn_actualizar = New System.Windows.Forms.Button()
         Me.btn_buscar = New System.Windows.Forms.Button()
-        Me.TipocomprobanteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TipocomprobanteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Alquiler_motosDataSet_tcomprobante = New Alquiler_motos.Alquiler_motosDataSet_tcomprobante()
         Me.Tipo_comprobanteTableAdapter = New Alquiler_motos.Alquiler_motosDataSet_tcomprobanteTableAdapters.tipo_comprobanteTableAdapter()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.tablacliente, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.p_cliente.SuspendLayout()
         CType(Me.TipocomprobanteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Alquiler_motosDataSet_tcomprobante, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.p_cliente.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -124,14 +124,14 @@ Partial Class tipo_comprobante
         '
         Me.tablacliente.AutoGenerateColumns = False
         Me.tablacliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.tablacliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tablacliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TipocomprobanteDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn})
         Me.tablacliente.DataSource = Me.TipocomprobanteBindingSource
@@ -139,6 +139,28 @@ Partial Class tipo_comprobante
         Me.tablacliente.Name = "tablacliente"
         Me.tablacliente.Size = New System.Drawing.Size(258, 185)
         Me.tablacliente.TabIndex = 20
+        '
+        'TipocomprobanteDataGridViewTextBoxColumn
+        '
+        Me.TipocomprobanteDataGridViewTextBoxColumn.DataPropertyName = "tipo_comprobante"
+        Me.TipocomprobanteDataGridViewTextBoxColumn.HeaderText = "tipo_comprobante"
+        Me.TipocomprobanteDataGridViewTextBoxColumn.Name = "TipocomprobanteDataGridViewTextBoxColumn"
+        '
+        'DescripcionDataGridViewTextBoxColumn
+        '
+        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
+        '
+        'TipocomprobanteBindingSource
+        '
+        Me.TipocomprobanteBindingSource.DataMember = "tipo_comprobante"
+        Me.TipocomprobanteBindingSource.DataSource = Me.Alquiler_motosDataSet_tcomprobante
+        '
+        'Alquiler_motosDataSet_tcomprobante
+        '
+        Me.Alquiler_motosDataSet_tcomprobante.DataSetName = "Alquiler_motosDataSet_tcomprobante"
+        Me.Alquiler_motosDataSet_tcomprobante.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'p_cliente
         '
@@ -258,28 +280,6 @@ Partial Class tipo_comprobante
         Me.btn_buscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_buscar.UseVisualStyleBackColor = False
         '
-        'TipocomprobanteDataGridViewTextBoxColumn
-        '
-        Me.TipocomprobanteDataGridViewTextBoxColumn.DataPropertyName = "tipo_comprobante"
-        Me.TipocomprobanteDataGridViewTextBoxColumn.HeaderText = "tipo_comprobante"
-        Me.TipocomprobanteDataGridViewTextBoxColumn.Name = "TipocomprobanteDataGridViewTextBoxColumn"
-        '
-        'DescripcionDataGridViewTextBoxColumn
-        '
-        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
-        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "descripcion"
-        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
-        '
-        'TipocomprobanteBindingSource
-        '
-        Me.TipocomprobanteBindingSource.DataMember = "tipo_comprobante"
-        Me.TipocomprobanteBindingSource.DataSource = Me.Alquiler_motosDataSet_tcomprobante
-        '
-        'Alquiler_motosDataSet_tcomprobante
-        '
-        Me.Alquiler_motosDataSet_tcomprobante.DataSetName = "Alquiler_motosDataSet_tcomprobante"
-        Me.Alquiler_motosDataSet_tcomprobante.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Tipo_comprobanteTableAdapter
         '
         Me.Tipo_comprobanteTableAdapter.ClearBeforeFill = True
@@ -298,16 +298,17 @@ Partial Class tipo_comprobante
         Me.Controls.Add(Me.btn_eliminar)
         Me.Controls.Add(Me.btn_actualizar)
         Me.Controls.Add(Me.btn_buscar)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "tipo_comprobante"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tipo Comprobante"
         Me.Panel2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         CType(Me.tablacliente, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.p_cliente.ResumeLayout(False)
-        Me.p_cliente.PerformLayout()
         CType(Me.TipocomprobanteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Alquiler_motosDataSet_tcomprobante, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.p_cliente.ResumeLayout(False)
+        Me.p_cliente.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

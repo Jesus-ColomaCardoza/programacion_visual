@@ -48,20 +48,30 @@ SELECT id_trabajor FROM trabajador WHERE (id_trabajor = @id_trabajor)</CommandTe
             <Mappings>
               <Mapping SourceColumn="id_trabajor" DataSetColumn="id_trabajor" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="Alquiler_motosConnectionString (MySettings)" DbObjectName="Alquiler_motos.dbo.trabajador" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy_trabajadorconcuentausuario" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy_trabajadorconcuentausuario" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy_trabajadorconcuentausuario">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select id_trabajor from trabajador where id_trabajor in (select id_trabajor from usuarios )
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="modelo_cbx_trabajador" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="modelo_cbx_trabajador" msprop:Generator_DataSetName="modelo_cbx_trabajador">
+  <xs:element name="modelo_cbx_trabajador" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="modelo_cbx_trabajador" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="modelo_cbx_trabajador">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="trabajador" msprop:Generator_RowEvHandlerName="trabajadorRowChangeEventHandler" msprop:Generator_RowDeletedName="trabajadorRowDeleted" msprop:Generator_RowDeletingName="trabajadorRowDeleting" msprop:Generator_RowEvArgName="trabajadorRowChangeEvent" msprop:Generator_TablePropName="trabajador" msprop:Generator_RowChangedName="trabajadorRowChanged" msprop:Generator_RowChangingName="trabajadorRowChanging" msprop:Generator_TableClassName="trabajadorDataTable" msprop:Generator_RowClassName="trabajadorRow" msprop:Generator_TableVarName="tabletrabajador" msprop:Generator_UserTableName="trabajador">
+        <xs:element name="trabajador" msprop:Generator_RowClassName="trabajadorRow" msprop:Generator_RowEvHandlerName="trabajadorRowChangeEventHandler" msprop:Generator_RowDeletedName="trabajadorRowDeleted" msprop:Generator_RowDeletingName="trabajadorRowDeleting" msprop:Generator_RowEvArgName="trabajadorRowChangeEvent" msprop:Generator_TablePropName="trabajador" msprop:Generator_RowChangedName="trabajadorRowChanged" msprop:Generator_UserTableName="trabajador" msprop:Generator_RowChangingName="trabajadorRowChanging" msprop:Generator_TableClassName="trabajadorDataTable" msprop:Generator_TableVarName="tabletrabajador">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id_trabajor" msprop:Generator_ColumnPropNameInRow="id_trabajor" msprop:Generator_ColumnPropNameInTable="id_trabajorColumn" msprop:Generator_ColumnVarNameInTable="columnid_trabajor" msprop:Generator_UserColumnName="id_trabajor">
+              <xs:element name="id_trabajor" msprop:Generator_UserColumnName="id_trabajor" msprop:Generator_ColumnPropNameInTable="id_trabajorColumn" msprop:Generator_ColumnPropNameInRow="id_trabajor" msprop:Generator_ColumnVarNameInTable="columnid_trabajor">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="4" />

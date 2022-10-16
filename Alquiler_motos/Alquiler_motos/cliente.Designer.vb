@@ -64,6 +64,8 @@ Partial Class cliente
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btn_listar = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txt_filtro = New System.Windows.Forms.TextBox()
+        Me.cbx_filtro = New System.Windows.Forms.ComboBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -440,6 +442,8 @@ Partial Class cliente
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.txt_filtro)
+        Me.Panel1.Controls.Add(Me.cbx_filtro)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.btn_listar)
         Me.Panel1.Controls.Add(Me.tablacliente)
@@ -447,6 +451,24 @@ Partial Class cliente
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(873, 274)
         Me.Panel1.TabIndex = 25
+        '
+        'txt_filtro
+        '
+        Me.txt_filtro.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_filtro.Location = New System.Drawing.Point(389, 16)
+        Me.txt_filtro.Name = "txt_filtro"
+        Me.txt_filtro.Size = New System.Drawing.Size(205, 22)
+        Me.txt_filtro.TabIndex = 59
+        '
+        'cbx_filtro
+        '
+        Me.cbx_filtro.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbx_filtro.FormattingEnabled = True
+        Me.cbx_filtro.Items.AddRange(New Object() {"DNI", "Nombres", "Apellidos"})
+        Me.cbx_filtro.Location = New System.Drawing.Point(256, 15)
+        Me.cbx_filtro.Name = "cbx_filtro"
+        Me.cbx_filtro.Size = New System.Drawing.Size(120, 24)
+        Me.cbx_filtro.TabIndex = 60
         '
         'Panel2
         '
@@ -517,7 +539,7 @@ Partial Class cliente
         Me.MinimizeBox = False
         Me.Name = "cliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Cliente"
+        Me.Text = "Mantenimiento Cliente"
         CType(Me.tablacliente, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Alquiler_motosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -578,4 +600,6 @@ Partial Class cliente
     Friend WithEvents TipoclienteBindingSource As BindingSource
     Friend WithEvents Tipo_clienteTableAdapter As modelo_cbx_tclienteTableAdapters.tipo_clienteTableAdapter
     Friend WithEvents btn_seleccionar As Button
+    Friend WithEvents txt_filtro As TextBox
+    Friend WithEvents cbx_filtro As ComboBox
 End Class

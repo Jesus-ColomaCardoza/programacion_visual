@@ -18,10 +18,14 @@ Public Class Alquiler
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_seleccionarcliente.Click
         cliente.btn_seleccionar.Enabled = True
         cliente.btn_seleccionar.Visible = True
+        cliente.txt_id.Text = Me.cbx_idcliente.Text
         cliente.ShowDialog()
     End Sub
 
     Private Sub Alquiler_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'Modelo_cbx_formapago.forma_pago' Puede moverla o quitarla según sea necesario.
+        Me.Forma_pagoTableAdapter.Fill(Me.Modelo_cbx_formapago.forma_pago)
+        cbx_formapago.Text = ""
         'TODO: esta línea de código carga datos en la tabla 'Alquiler_motosDataSet_dreserva.detalle_reserva' Puede moverla o quitarla según sea necesario.
         'Me.Detalle_reservaTableAdapter.Fill(Me.Alquiler_motosDataSet_dreserva.detalle_reserva)
 
@@ -43,6 +47,10 @@ Public Class Alquiler
         'TODO: esta línea de código carga datos en la tabla 'Modelo_cbx_agencia.agencia' Puede moverla o quitarla según sea necesario.
         Me.AgenciaTableAdapter.Fill(Me.Modelo_cbx_agencia.agencia)
         cbx_agencia.Text = ""
+
+        btn_seleccionarcliente.Enabled = False
+        btn_seleccionarcliente.Visible = False
+
 
     End Sub
 
@@ -125,7 +133,7 @@ Public Class Alquiler
 
             If (data.Read) Then
                 cbx_tcomprobante.Text = Tipo_comprobanteTableAdapter.FillBygetdescripcion(data(1))
-                txt_formapago.Text = data(2)
+                cbx_formapago.Text = data(2)
                 txt_idreserva.Text = data(3)
 
                 fecha_datetime = data(4)
@@ -153,14 +161,14 @@ Public Class Alquiler
 
         Dim idcomprobante As String
 
-        If cbx_tcomprobante.Text <> "" And txt_formapago.Text <> "" Then
+        If cbx_tcomprobante.Text <> "" And cbx_formapago.Text <> "" Then
             Try
                 cn.Open()
                 comando = cn.CreateCommand()
 
                 idcomprobante = Tipo_comprobanteTableAdapter.FillBygettipo(cbx_tcomprobante.Text)
 
-                comando.CommandText = "declare @id char(4) exec sp_insertarcomprobante " + "'" + idcomprobante + "','" + txt_formapago.Text + "','" + txt_idreserva.Text + "',@id output select @id as id"
+                comando.CommandText = "declare @id char(4) exec sp_insertarcomprobante " + "'" + idcomprobante + "','" + cbx_formapago.Text + "','" + txt_idreserva.Text + "',@id output select @id as id"
                 data = comando.ExecuteReader()
                 If (data.RecordsAffected = False) Then
                     MessageBox.Show("Comprobante No Agregado", "Comprobante", MessageBoxButtons.OK, MessageBoxIcon.Error)

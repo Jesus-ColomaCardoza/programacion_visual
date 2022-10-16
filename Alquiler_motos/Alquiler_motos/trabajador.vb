@@ -126,4 +126,19 @@ Public Class trabajador
 
         End Try
     End Sub
+
+    Private Sub btn_seleccionar_Click(sender As Object, e As EventArgs) Handles btn_seleccionar.Click
+        usuarios.txt_idtrabajador.Text = Me.txt_id.Text
+        Me.Close()
+    End Sub
+
+    Private Sub txt_filtro_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_filtro.KeyPress
+        If (cbx_filtro.Text Like "DNI") Then
+            TrabajadorTableAdapter.FillBy_filtrodni(Alquiler_motosDataSet1.trabajador, txt_filtro.Text)
+        ElseIf (cbx_filtro.Text Like "Nombres") Then
+            TrabajadorTableAdapter.FillBy_filtronombres(Alquiler_motosDataSet1.trabajador, txt_filtro.Text)
+        ElseIf (cbx_filtro.Text Like "Apellidos") Then
+            TrabajadorTableAdapter.FillBy_filtroapellidos(Alquiler_motosDataSet1.trabajador, txt_filtro.Text)
+        End If
+    End Sub
 End Class

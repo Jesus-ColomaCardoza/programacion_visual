@@ -22,6 +22,7 @@ Partial Class login
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(login))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -36,6 +37,22 @@ Partial Class login
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.cbx_tipousuario = New System.Windows.Forms.ComboBox()
+        Me.TipousuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Modelo_cbx_tusuario = New Alquiler_motos.modelo_cbx_tusuario()
+        Me.Tipo_usuarioTableAdapter = New Alquiler_motos.modelo_cbx_tusuarioTableAdapters.tipo_usuarioTableAdapter()
+        Me.cbx_idtrabajador = New System.Windows.Forms.ComboBox()
+        Me.TrabajadorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ModelocbxtrabajadorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Modelo_cbx_trabajador = New Alquiler_motos.modelo_cbx_trabajador()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TrabajadorTableAdapter = New Alquiler_motos.modelo_cbx_trabajadorTableAdapters.trabajadorTableAdapter()
+        CType(Me.TipousuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Modelo_cbx_tusuario, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrabajadorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ModelocbxtrabajadorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Modelo_cbx_trabajador, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -43,7 +60,7 @@ Partial Class login
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(64, 247)
+        Me.Label1.Location = New System.Drawing.Point(63, 369)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(71, 20)
         Me.Label1.TabIndex = 0
@@ -54,7 +71,7 @@ Partial Class login
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(64, 315)
+        Me.Label2.Location = New System.Drawing.Point(63, 447)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 20)
         Me.Label2.TabIndex = 1
@@ -63,23 +80,21 @@ Partial Class login
         'txtuser
         '
         Me.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtuser.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtuser.Location = New System.Drawing.Point(141, 248)
+        Me.txtuser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtuser.Location = New System.Drawing.Point(140, 370)
         Me.txtuser.Name = "txtuser"
-        Me.txtuser.Size = New System.Drawing.Size(210, 29)
+        Me.txtuser.Size = New System.Drawing.Size(210, 26)
         Me.txtuser.TabIndex = 2
-        Me.txtuser.Text = "Jesus"
         '
         'txtpassword
         '
         Me.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtpassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtpassword.Location = New System.Drawing.Point(141, 310)
+        Me.txtpassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtpassword.Location = New System.Drawing.Point(140, 442)
         Me.txtpassword.Name = "txtpassword"
         Me.txtpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtpassword.Size = New System.Drawing.Size(210, 29)
+        Me.txtpassword.Size = New System.Drawing.Size(210, 26)
         Me.txtpassword.TabIndex = 3
-        Me.txtpassword.Text = "1234"
         '
         'btn_aceptar
         '
@@ -88,7 +103,7 @@ Partial Class login
         Me.btn_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_aceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_aceptar.ForeColor = System.Drawing.Color.White
-        Me.btn_aceptar.Location = New System.Drawing.Point(28, 440)
+        Me.btn_aceptar.Location = New System.Drawing.Point(27, 536)
         Me.btn_aceptar.Name = "btn_aceptar"
         Me.btn_aceptar.Size = New System.Drawing.Size(120, 35)
         Me.btn_aceptar.TabIndex = 4
@@ -102,7 +117,7 @@ Partial Class login
         Me.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_cancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_cancelar.ForeColor = System.Drawing.Color.White
-        Me.btn_cancelar.Location = New System.Drawing.Point(231, 440)
+        Me.btn_cancelar.Location = New System.Drawing.Point(230, 536)
         Me.btn_cancelar.Name = "btn_cancelar"
         Me.btn_cancelar.Size = New System.Drawing.Size(120, 35)
         Me.btn_cancelar.TabIndex = 5
@@ -113,9 +128,9 @@ Partial Class login
         '
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Image = CType(resources.GetObject("Label3.Image"), System.Drawing.Image)
-        Me.Label3.Location = New System.Drawing.Point(55, 70)
+        Me.Label3.Location = New System.Drawing.Point(66, 50)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(266, 117)
+        Me.Label3.Size = New System.Drawing.Size(266, 134)
         Me.Label3.TabIndex = 6
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
@@ -140,7 +155,7 @@ Partial Class login
         'Label6
         '
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(-3, 549)
+        Me.Label6.Location = New System.Drawing.Point(-3, 618)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(198, 18)
         Me.Label6.TabIndex = 10
@@ -150,7 +165,7 @@ Partial Class login
         Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.Label7.CausesValidation = False
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(192, 549)
+        Me.Label7.Location = New System.Drawing.Point(192, 618)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(195, 18)
         Me.Label7.TabIndex = 9
@@ -158,7 +173,7 @@ Partial Class login
         'Label8
         '
         Me.Label8.Image = CType(resources.GetObject("Label8.Image"), System.Drawing.Image)
-        Me.Label8.Location = New System.Drawing.Point(25, 238)
+        Me.Label8.Location = New System.Drawing.Point(24, 358)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(41, 38)
         Me.Label8.TabIndex = 11
@@ -166,17 +181,100 @@ Partial Class login
         'Label9
         '
         Me.Label9.Image = CType(resources.GetObject("Label9.Image"), System.Drawing.Image)
-        Me.Label9.Location = New System.Drawing.Point(25, 305)
+        Me.Label9.Location = New System.Drawing.Point(24, 437)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(41, 36)
         Me.Label9.TabIndex = 12
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(28, 233)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(110, 20)
+        Me.Label10.TabIndex = 13
+        Me.Label10.Text = "Tipo Usuario"
+        '
+        'cbx_tipousuario
+        '
+        Me.cbx_tipousuario.DataSource = Me.TipousuarioBindingSource
+        Me.cbx_tipousuario.DisplayMember = "descripcion"
+        Me.cbx_tipousuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbx_tipousuario.FormattingEnabled = True
+        Me.cbx_tipousuario.Location = New System.Drawing.Point(140, 227)
+        Me.cbx_tipousuario.Name = "cbx_tipousuario"
+        Me.cbx_tipousuario.Size = New System.Drawing.Size(210, 28)
+        Me.cbx_tipousuario.TabIndex = 59
+        Me.cbx_tipousuario.ValueMember = "descripcion"
+        '
+        'TipousuarioBindingSource
+        '
+        Me.TipousuarioBindingSource.DataMember = "tipo_usuario"
+        Me.TipousuarioBindingSource.DataSource = Me.Modelo_cbx_tusuario
+        '
+        'Modelo_cbx_tusuario
+        '
+        Me.Modelo_cbx_tusuario.DataSetName = "modelo_cbx_tusuario"
+        Me.Modelo_cbx_tusuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Tipo_usuarioTableAdapter
+        '
+        Me.Tipo_usuarioTableAdapter.ClearBeforeFill = True
+        '
+        'cbx_idtrabajador
+        '
+        Me.cbx_idtrabajador.DataSource = Me.TrabajadorBindingSource
+        Me.cbx_idtrabajador.DisplayMember = "id_trabajor"
+        Me.cbx_idtrabajador.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbx_idtrabajador.FormattingEnabled = True
+        Me.cbx_idtrabajador.Location = New System.Drawing.Point(140, 291)
+        Me.cbx_idtrabajador.Name = "cbx_idtrabajador"
+        Me.cbx_idtrabajador.Size = New System.Drawing.Size(210, 28)
+        Me.cbx_idtrabajador.TabIndex = 61
+        Me.cbx_idtrabajador.ValueMember = "id_trabajor"
+        '
+        'TrabajadorBindingSource
+        '
+        Me.TrabajadorBindingSource.DataMember = "trabajador"
+        Me.TrabajadorBindingSource.DataSource = Me.ModelocbxtrabajadorBindingSource
+        '
+        'ModelocbxtrabajadorBindingSource
+        '
+        Me.ModelocbxtrabajadorBindingSource.DataSource = Me.Modelo_cbx_trabajador
+        Me.ModelocbxtrabajadorBindingSource.Position = 0
+        '
+        'Modelo_cbx_trabajador
+        '
+        Me.Modelo_cbx_trabajador.DataSetName = "modelo_cbx_trabajador"
+        Me.Modelo_cbx_trabajador.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(100, 294)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(25, 20)
+        Me.Label11.TabIndex = 60
+        Me.Label11.Text = "Id"
+        '
+        'TrabajadorTableAdapter
+        '
+        Me.TrabajadorTableAdapter.ClearBeforeFill = True
         '
         'login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(140, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(386, 567)
+        Me.ClientSize = New System.Drawing.Size(386, 634)
+        Me.Controls.Add(Me.cbx_idtrabajador)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.cbx_tipousuario)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label6)
@@ -195,6 +293,11 @@ Partial Class login
         Me.Name = "login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "login"
+        CType(Me.TipousuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Modelo_cbx_tusuario, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrabajadorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ModelocbxtrabajadorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Modelo_cbx_trabajador, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -213,4 +316,15 @@ Partial Class login
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents cbx_tipousuario As ComboBox
+    Friend WithEvents Modelo_cbx_tusuario As modelo_cbx_tusuario
+    Friend WithEvents TipousuarioBindingSource As BindingSource
+    Friend WithEvents Tipo_usuarioTableAdapter As modelo_cbx_tusuarioTableAdapters.tipo_usuarioTableAdapter
+    Friend WithEvents cbx_idtrabajador As ComboBox
+    Friend WithEvents ModelocbxtrabajadorBindingSource As BindingSource
+    Friend WithEvents Modelo_cbx_trabajador As modelo_cbx_trabajador
+    Friend WithEvents Label11 As Label
+    Friend WithEvents TrabajadorBindingSource As BindingSource
+    Friend WithEvents TrabajadorTableAdapter As modelo_cbx_trabajadorTableAdapters.trabajadorTableAdapter
 End Class

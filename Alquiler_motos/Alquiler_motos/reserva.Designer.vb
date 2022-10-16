@@ -70,6 +70,7 @@ Partial Class reserva
         Me.Modelo_cbx_tcomprobante = New Alquiler_motos.modelo_cbx_tcomprobante()
         Me.TipocomprobanteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tipo_comprobanteTableAdapter = New Alquiler_motos.modelo_cbx_tcomprobanteTableAdapters.tipo_comprobanteTableAdapter()
+        Me.btn_seleccionarcliente = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.tablacliente, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -221,6 +222,7 @@ Partial Class reserva
         '
         Me.p_cliente.BackColor = System.Drawing.Color.Transparent
         Me.p_cliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.p_cliente.Controls.Add(Me.btn_seleccionarcliente)
         Me.p_cliente.Controls.Add(Me.cbx_idcliente)
         Me.p_cliente.Controls.Add(Me.cbx_idtrabajador)
         Me.p_cliente.Controls.Add(Me.cbx_agencia)
@@ -243,7 +245,7 @@ Partial Class reserva
         Me.cbx_idcliente.FormattingEnabled = True
         Me.cbx_idcliente.Location = New System.Drawing.Point(160, 129)
         Me.cbx_idcliente.Name = "cbx_idcliente"
-        Me.cbx_idcliente.Size = New System.Drawing.Size(237, 24)
+        Me.cbx_idcliente.Size = New System.Drawing.Size(108, 24)
         Me.cbx_idcliente.TabIndex = 31
         Me.cbx_idcliente.ValueMember = "id_cliente"
         '
@@ -485,6 +487,21 @@ Partial Class reserva
         '
         Me.Tipo_comprobanteTableAdapter.ClearBeforeFill = True
         '
+        'btn_seleccionarcliente
+        '
+        Me.btn_seleccionarcliente.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btn_seleccionarcliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_seleccionarcliente.ForeColor = System.Drawing.Color.White
+        Me.btn_seleccionarcliente.Image = CType(resources.GetObject("btn_seleccionarcliente.Image"), System.Drawing.Image)
+        Me.btn_seleccionarcliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_seleccionarcliente.Location = New System.Drawing.Point(274, 123)
+        Me.btn_seleccionarcliente.Name = "btn_seleccionarcliente"
+        Me.btn_seleccionarcliente.Size = New System.Drawing.Size(115, 36)
+        Me.btn_seleccionarcliente.TabIndex = 38
+        Me.btn_seleccionarcliente.Text = "ver cliente"
+        Me.btn_seleccionarcliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_seleccionarcliente.UseVisualStyleBackColor = False
+        '
         'reserva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -573,4 +590,5 @@ Partial Class reserva
     Friend WithEvents Modelo_cbx_tcomprobante As modelo_cbx_tcomprobante
     Friend WithEvents TipocomprobanteBindingSource As BindingSource
     Friend WithEvents Tipo_comprobanteTableAdapter As modelo_cbx_tcomprobanteTableAdapters.tipo_comprobanteTableAdapter
+    Friend WithEvents btn_seleccionarcliente As Button
 End Class

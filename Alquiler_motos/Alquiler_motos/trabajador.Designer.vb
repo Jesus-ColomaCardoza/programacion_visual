@@ -24,7 +24,7 @@ Partial Class trabajador
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(trabajador))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -65,6 +65,9 @@ Partial Class trabajador
         Me.btn_buscar = New System.Windows.Forms.Button()
         Me.txt_id = New System.Windows.Forms.TextBox()
         Me.TrabajadorTableAdapter = New Alquiler_motos.Alquiler_motosDataSet1TableAdapters.trabajadorTableAdapter()
+        Me.btn_seleccionar = New System.Windows.Forms.Button()
+        Me.txt_filtro = New System.Windows.Forms.TextBox()
+        Me.cbx_filtro = New System.Windows.Forms.ComboBox()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.tablacliente, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,6 +109,8 @@ Partial Class trabajador
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.txt_filtro)
+        Me.Panel1.Controls.Add(Me.cbx_filtro)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.btn_listar)
         Me.Panel1.Controls.Add(Me.tablacliente)
@@ -143,14 +148,14 @@ Partial Class trabajador
         '
         Me.tablacliente.AutoGenerateColumns = False
         Me.tablacliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.tablacliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.tablacliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tablacliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdtrabajorDataGridViewTextBoxColumn, Me.CargoDataGridViewTextBoxColumn, Me.DniDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn})
         Me.tablacliente.DataSource = Me.TrabajadorBindingSource
@@ -459,12 +464,46 @@ Partial Class trabajador
         '
         Me.TrabajadorTableAdapter.ClearBeforeFill = True
         '
+        'btn_seleccionar
+        '
+        Me.btn_seleccionar.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btn_seleccionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_seleccionar.ForeColor = System.Drawing.Color.White
+        Me.btn_seleccionar.Image = CType(resources.GetObject("btn_seleccionar.Image"), System.Drawing.Image)
+        Me.btn_seleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_seleccionar.Location = New System.Drawing.Point(795, 17)
+        Me.btn_seleccionar.Name = "btn_seleccionar"
+        Me.btn_seleccionar.Size = New System.Drawing.Size(205, 33)
+        Me.btn_seleccionar.TabIndex = 36
+        Me.btn_seleccionar.Text = "seleccionar trabajador"
+        Me.btn_seleccionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_seleccionar.UseVisualStyleBackColor = False
+        '
+        'txt_filtro
+        '
+        Me.txt_filtro.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_filtro.Location = New System.Drawing.Point(416, 12)
+        Me.txt_filtro.Name = "txt_filtro"
+        Me.txt_filtro.Size = New System.Drawing.Size(205, 22)
+        Me.txt_filtro.TabIndex = 61
+        '
+        'cbx_filtro
+        '
+        Me.cbx_filtro.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbx_filtro.FormattingEnabled = True
+        Me.cbx_filtro.Items.AddRange(New Object() {"DNI", "Nombres", "Apellidos"})
+        Me.cbx_filtro.Location = New System.Drawing.Point(283, 11)
+        Me.cbx_filtro.Name = "cbx_filtro"
+        Me.cbx_filtro.Size = New System.Drawing.Size(120, 24)
+        Me.cbx_filtro.TabIndex = 62
+        '
         'trabajador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1094, 611)
+        Me.Controls.Add(Me.btn_seleccionar)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.p_cliente)
@@ -534,4 +573,7 @@ Partial Class trabajador
     Friend WithEvents DireccionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CorreoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents btn_seleccionar As Button
+    Friend WithEvents txt_filtro As TextBox
+    Friend WithEvents cbx_filtro As ComboBox
 End Class

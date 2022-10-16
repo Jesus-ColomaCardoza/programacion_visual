@@ -164,4 +164,8 @@ Public Class reserva
 
         Me.Close()
     End Sub
+
+    Private Sub btn_seleccionarcliente_Click(sender As Object, e As EventArgs) Handles btn_seleccionarcliente.Click
+        cliente.Show()
+    End Sub
 End Class

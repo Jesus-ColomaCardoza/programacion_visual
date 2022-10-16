@@ -282,6 +282,22 @@
   <metadata name="Alquiler_motosDataSet_reserva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="btn_seleccionarcliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAgCAYAAADnnNMGAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAklJREFUSEvtljtv1EAQxx0QUCEhBHQUoAikg/OufSHxrsNLQggQIkS6s3e35FXy
+        EeATJPAZEB2iSQc14tkTHg1KBSKCBqpAwoxvTvhOY9bJueQv/WXJM/Nbr70768CnVqu3M1LmWpTaJ1K5
+        r1LZNbxGyj6Vqbs+OXlhF6VuTVJlJyLtPsSp26iy0OajSOw0lWxOkcpOxcr84MCjltr+lIk9TaX1dKRj
+        98EMPnPAKkep+SJldz8h/JLKLHAgn2FG9wjhU287flgO4rPUZhXrCVStUGXHOUBdtxPXJlS1ZOLOccV1
+        LXR+nlDVCmfsLFdc17gqCVWtTrGyzG8O4DPWhWr+AKH+LUh+xkF8Fol7Tgi/YuUuR9quc6AqY77U+Rwh
+        6klo+4CDVTlK3UMqra+iMWr7iAOOGjbv43Ea5QTs4hvQeVd4uF2BBnkT8/rpW1T/Ce9uC1M7C53gNgx6
+        B69tnZ/E3T1Wq4ez4iI86Us0vjq6PaRO59YOeFUvoJm+gsEv0W2/hJjbg9+ivLpgSd+n8JBkahf/5th1
+        rMN6CvM6NpUfhGW4PCgsA+LEzFNaIaHs1fKDDCy1W0YOpQ2rlXT3wpnwbrRoYDiCv7en3GHMDae7h+D4
+        /cbloSH2HnkFuCyp8iWuoGyR2jdH9ZXdMIPXXHzIyi0Rui9YLT1u6qy1+cTeHzHyRGIyGiKYiLV9yyWO
+        beAiPxAz+Rk2oSELnZ0N8Fzmgk25WP642bhgU0Y+zMSscsGmXPxcwEhrXLApA/9XwAWa9v9BNmG38QcH
+        Grd5J5YPDwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="ClienteBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>359, 95</value>
   </metadata>
